@@ -8,12 +8,12 @@ $bsds-breadcrumb-divider: url('../../assets/images/icon-slash.svg');
   margin: 0;
   padding: 0;
   list-style: none;
-  gap: space(sm) space(md);
+  gap: var(--space-sm) var(--space-md);
 
   .bsds-breadcrumb-item {
     &.bsds-breadcrumb-item {
       margin-top: 0; // TODO: ADS-101 reduce specificity when we revisit default spacing on elements
-      @include font-size($fs-body-subtle);
+      font-size: var(--fs-body-subtle);
 
       &:not(:first-child) {
         display: flex;
@@ -23,7 +23,7 @@ $bsds-breadcrumb-divider: url('../../assets/images/icon-slash.svg');
           display: inline-block;
           width: 1ch;
           height: 1em;
-          margin-right: space(md);
+          margin-right: var(--space-md);
           background-image: $bsds-breadcrumb-divider;
           background-position: center;
           background-repeat: no-repeat;
@@ -40,7 +40,7 @@ $bsds-breadcrumb-divider: url('../../assets/images/icon-slash.svg');
   .bsds-link {
     &.bsds-breadcrumb-link {
       @include link-navigation;
-      @include font-size($fs-body-subtle);
+      font-size: var(--fs-body-subtle);
     }
   }
 
@@ -49,7 +49,7 @@ $bsds-breadcrumb-divider: url('../../assets/images/icon-slash.svg');
       .bsds-dropdown-trigger {
         &.has-icon {
           border-radius: 0;
-          padding: space(lg) space(sm);
+          padding: var(--space-lg) var(--space-sm);
 
           &::after {
             display: none;
