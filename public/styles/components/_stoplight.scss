@@ -7,8 +7,8 @@
     display: inline-block;
     flex-shrink: 0;
     align-self: flex-start;
-    width: space(3x);
-    height: space(3x);
+    width: var(--space-3x);
+    height: var(--space-3x);
     margin-right: var(--space-md);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -17,8 +17,8 @@
 
   &.bsds-body-subtle {
     &::before {
-      width: space(2x);
-      height: space(2x);
+      width: var(--space-2x);
+      height: var(--space-2x);
       transform: translateY(var(--space-negative-xxs));
     }
   }

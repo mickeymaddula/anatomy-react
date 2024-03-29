@@ -23,7 +23,7 @@
     border-right: 0;
     border-bottom: 0;
     border-left: 0;
-    padding: space(2x);
+    padding: var(--space-2x);
     background: transparent;
     color: var(--text-color-primary);
     @include font-family-base-regular;
@@ -31,7 +31,7 @@
     text-align: left;
 
     svg {
-      margin-left: space(3x);
+      margin-left: var(--space-3x);
     }
 
     &[aria-expanded='true'] {
@@ -87,7 +87,7 @@
   }
 
   .bsds-accordion-panel-body {
-    padding: var(--space-md) space(2x) space(3x);
+    padding: var(--space-md) var(--space-2x) var(--space-3x);
   }
 
   // Stoplight styles
@@ -99,24 +99,24 @@
 
       &::before {
         align-self: stretch;
-        width: space(6x);
-        margin-right: space(2x);
+        width: var(--space-6x);
+        margin-right: var(--space-2x);
         border-left-width: var(--border-width-sm);
         border-left-style: solid;
-        padding: space(3x) var(--space-md);
+        padding: var(--space-3x) var(--space-md);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: space(3x);
+        background-size: var(--space-3x);
         content: '';
       }
 
       .bsds-accordion-trigger-text {
         flex: 1;
-        padding: space(2x) 0;
+        padding: var(--space-2x) 0;
       }
 
       svg {
-        margin-right: space(2x);
+        margin-right: var(--space-2x);
       }
 
       &:focus {
@@ -127,7 +127,7 @@
 
     ~ .bsds-accordion-panel {
       .bsds-accordion-panel-body {
-        padding: var(--space-md) space(8x) space(3x);
+        padding: var(--space-md) var(--space-8x) var(--space-3x);
       }
     }
   }

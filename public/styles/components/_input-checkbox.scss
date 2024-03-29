@@ -38,7 +38,7 @@
 
 .bsds-fieldset {
   .bsds-input-checkbox-label {
-    margin-top: space(2x);
+    margin-top: var(--space-2x);
   }
 
   &[aria-invalid='true'] {
@@ -54,7 +54,7 @@
 
   + .bsds-input-checkbox-label {
     position: relative;
-    padding-left: calc(space(3x) + var(--space-xs));
+    padding-left: calc(var(--space-3x) + var(--space-xs));
     cursor: pointer;
 
     &::before {

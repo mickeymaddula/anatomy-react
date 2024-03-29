@@ -31,12 +31,12 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      min-width: space(12x);
-      border-radius: space(3x);
+      min-width: var(--space-12x);
+      border-radius: var(--space-3x);
       border-width: var(--border-width-xxs);
       border-style: solid;
       border-color: inherit;
-      padding: var(--space-md) space(3x);
+      padding: var(--space-md) var(--space-3x);
       background: var(--neutral-100);
       color: var(--text-color-subtle);
       font-size: var(--ffs-body-assertive);

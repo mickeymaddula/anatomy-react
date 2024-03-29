@@ -19,7 +19,7 @@
     @extend .bsds-card;
     box-sizing: border-box;
     border: var(--border-width-xxs) solid var(--border-color-subtle);
-    padding: space(3x);
+    padding: var(--space-3x);
     background: var(--neutral-100);
 
     &.bsds-card-with-image {
@@ -28,7 +28,7 @@
       // TODO: ADS-611 this is repeated in product card, level up
       .bsds-card-content {
         margin-top: 0;
-        padding: space(3x);
+        padding: var(--space-3x);
 
         &:not(:first-child) {
           border-top: var(--border-width-xxs) solid var(--border-color-subtle);
@@ -87,7 +87,7 @@
 
 .bsds-card-content {
   &:not(:first-child) {
-    margin-top: space(3x);
+    margin-top: var(--space-3x);
   }
 }
 
@@ -109,7 +109,7 @@
   + .bsds-card-title {
     &.bsds-card-title {
       // TODO: temporarily increasing specificity while refactoring, reduce later
-      margin-top: space(3x);
+      margin-top: var(--space-3x);
     }
   }
 }
@@ -124,7 +124,7 @@
 .bsds-card-description {
   + .bsds-link {
     display: inline-block;
-    margin-top: space(2x);
+    margin-top: var(--space-2x);
   }
 }
 

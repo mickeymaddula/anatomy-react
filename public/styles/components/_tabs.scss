@@ -40,7 +40,7 @@
       right: 0;
       display: block;
       width: var(--space-xxs);
-      height: space(6x);
+      height: var(--space-6x);
       box-shadow: var(--space-negative-xxs) 0 var(--space-md) var(--space-xs) rgba(var(--neutral-00), 0.2);
       border-width: 0;
       content: '';
@@ -50,9 +50,9 @@
 
   .bsds-tab {
     position: relative;
-    margin-right: space(2x);
+    margin-right: var(--space-2x);
     border: 0;
-    padding: var(--space-lg) space(2x);
+    padding: var(--space-lg) var(--space-2x);
     background: transparent;
     color: var(--text-color-subtle);
     @include font-family-base-regular;
@@ -106,7 +106,7 @@
     .bsds-tab-overflow-control {
       border: 0;
       border-color: transparent;
-      padding: var(--space-lg) space(2x);
+      padding: var(--space-lg) var(--space-2x);
 
       &:focus {
         @include focus-default-inset;
@@ -121,7 +121,7 @@
 
   .bsds-tab-panels {
     border-top: var(--border-width-xxs) solid var(--border-color-subtle);
-    padding-top: space(3x);
+    padding-top: var(--space-3x);
   }
 
   .bsds-tab-panel {

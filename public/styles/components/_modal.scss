@@ -7,7 +7,7 @@
   max-width: 90vw;
   box-shadow: var(--box-shadow-primary);
   border: 0;
-  padding: space(4x);
+  padding: var(--space-4x);
   background: var(--neutral-100);
 
   &::backdrop {
@@ -21,7 +21,7 @@
       'title close';
     grid-template-columns: 1fr auto;
     align-items: start;
-    gap: space(3x);
+    gap: var(--space-3x);
   }
 
   .bsds-modal-title {
@@ -34,7 +34,7 @@
   .bsds-modal-logo {
     grid-area: logo;
     width: auto;
-    height: space(6x);
+    height: var(--space-6x);
     margin-top: 0;
 
     + .bsds-modal-title {
@@ -47,14 +47,14 @@
   }
 
   .bsds-modal-body {
-    margin-top: space(4x);
+    margin-top: var(--space-4x);
   }
 
   .bsds-modal-footer {
     display: flex;
     flex-wrap: wrap;
-    gap: space(2x);
-    margin-top: space(8x);
+    gap: var(--space-2x);
+    margin-top: var(--space-8x);
   }
 }
 

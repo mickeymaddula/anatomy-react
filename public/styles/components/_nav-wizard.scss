@@ -2,7 +2,7 @@
   @include bsds-defaults-type;
   position: relative;
   box-shadow: var(--box-shadow-tertiary);
-  padding: space(4x);
+  padding: var(--space-4x);
   background: var(--neutral-100);
 
   .bsds-nav-wizard-header {
@@ -22,18 +22,18 @@
 
   .bsds-nav-breadcrumb {
     grid-area: breadcrumb;
-    margin-top: space(4x);
+    margin-top: var(--space-4x);
     font-size: var(--fs-body-subtle);
   }
 
   .bsds-nav-title {
     grid-area: title;
-    margin-top: space(2x);
+    margin-top: var(--space-2x);
   }
 
   .bsds-nav-description {
     grid-area: description;
-    margin-top: space(3x);
+    margin-top: var(--space-3x);
   }
 
   &::after {
@@ -45,9 +45,9 @@
   }
 
   .bsds-nav-wizard-menu {
-    margin-top: space(4x);
+    margin-top: var(--space-4x);
     border-top: var(--border-width-xs) var(--border-color-subtle) subtle;
-    padding-top: space(4x);
+    padding-top: var(--space-4x);
 
     .bsds-nav-item,
     .bsds-nav-item-parent {
@@ -63,7 +63,7 @@
     width: 100%;
     height: 100%;
     border: var(--border-width-xxs) var(--border-color-subtle) subtle;
-    padding: space(3x);
+    padding: var(--space-3x);
     text-align: left;
     @include link-navigation;
 
@@ -85,7 +85,7 @@
 
       > .bsds-nav-link-text,
       > .bsds-nav-link-addon {
-        padding: space(3x);
+        padding: var(--space-3x);
       }
 
       > .bsds-nav-link-addon {
@@ -133,7 +133,7 @@
       display: grid;
       grid-auto-flow: row;
       grid-template-columns: 1fr;
-      gap: space(2x) space(4x);
+      gap: var(--space-2x) var(--space-4x);
     }
 
     &:not(.bsds-nav-active-list) {
@@ -149,7 +149,7 @@
 
 @media (min-width: $breakpoint-lg-min) {
   .bsds-nav-wizard {
-    padding: space(6x) space(8x);
+    padding: var(--space-6x) var(--space-8x);
 
     .bsds-nav-wizard-header {
       display: grid;

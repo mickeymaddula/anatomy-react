@@ -1,11 +1,11 @@
 // TODO: ADS-697 Proposed addition to anatomy-tokens/src/sass/mixins/space.scss
 @mixin padding-x($space) {
-  padding-right: space($space);
-  padding-left: space($space);
+  padding-right: $space;
+  padding-left: $space;
 }
 @mixin padding-y($space) {
-  padding-top: space($space);
-  padding-bottom: space($space);
+  padding-top: $space;
+  padding-bottom: $space;
 }
 @mixin padding($space) {
   @include padding-x($space);

@@ -59,8 +59,8 @@
 
   &::before {
     position: absolute;
-    top: space(6x);
-    right: space(6x);
+    top: var(--space-6x);
+    right: var(--space-6x);
     bottom: 0;
     left: 0;
     background: var(--gradient-accent);
@@ -69,14 +69,14 @@
 
   .bsds-image {
     position: relative;
-    padding: 0 0 space(2x) space(2x);
+    padding: 0 0 var(--space-2x) var(--space-2x);
   }
 
   .bsds-image-caption {
     position: absolute;
     right: 0;
-    bottom: space(2x);
-    left: space(2x);
+    bottom: var(--space-2x);
+    left: var(--space-2x);
     margin: 0;
     padding: var(--space-md) var(--space-lg);
     background: rgba(var(--neutral-00), 0.6);

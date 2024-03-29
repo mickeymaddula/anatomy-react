@@ -27,15 +27,15 @@
 
   .bsds-nav-footer-column {
     > .bsds-nav {
-      padding-right: space(3x);
-      padding-left: space(3x);
+      padding-right: var(--space-3x);
+      padding-left: var(--space-3x);
     }
 
     &:first-of-type {
       > .bsds-nav {
         &:first-of-type {
           margin-top: 0;
-          padding-top: space(6x);
+          padding-top: var(--space-6x);
         }
       }
     }
@@ -43,7 +43,7 @@
     &:last-of-type {
       > .bsds-nav {
         &:last-of-type {
-          padding-bottom: space(4x);
+          padding-bottom: var(--space-4x);
         }
       }
     }
@@ -67,7 +67,7 @@
   }
 
   .bsds-nav {
-    margin: space(6x) 0 0 0;
+    margin: var(--space-6x) 0 0 0;
     padding: 0;
   }
 
@@ -81,20 +81,20 @@
 
   .bsds-footer-base {
     border-top: var(--border-width-xxs) var(--border-color-subtle) subtle;
-    padding-bottom: space(6x);
+    padding-bottom: var(--space-6x);
 
     .bsds-footer-base-container {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      padding: 0 space(3x);
+      padding: 0 var(--space-3x);
       font-size: var(--fs-body-subtle);
 
       .bsds-footer-logo {
         width: auto;
-        max-height: space(8x);
-        margin-top: space(3x);
+        max-height: var(--space-8x);
+        margin-top: var(--space-3x);
       }
 
       .bsds-footer-text-small {
@@ -114,7 +114,7 @@
     .bsds-nav-footer-legal {
       width: 100%;
       border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
-      padding: space(3x) 0;
+      padding: var(--space-3x) 0;
 
       .bsds-nav {
         display: flex;
@@ -122,7 +122,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         margin: 0;
-        padding-left: space(3x);
+        padding-left: var(--space-3x);
         list-style: none;
 
         .bsds-nav-item {
@@ -150,7 +150,7 @@
 
         .bsds-footer-social-media-icon {
           width: 100%;
-          height: space(2x);
+          height: var(--space-2x);
         }
 
         .bsds-link-subtle {
@@ -172,7 +172,7 @@
     .bsds-nav-footer {
       display: flex;
       border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
-      padding: space(4x) space(3x);
+      padding: var(--space-4x) var(--space-3x);
 
       > .bsds-nav-footer-column {
         flex: 1;
@@ -210,7 +210,7 @@
 
     .bsds-nav-group {
       &:not(:first-of-type) {
-        margin-top: space(6x);
+        margin-top: var(--space-6x);
       }
     }
 
@@ -230,7 +230,7 @@
           flex-direction: row;
           justify-content: center;
           align-items: center;
-          gap: space(3x);
+          gap: var(--space-3x);
           padding: 0;
 
           .bsds-nav-item {

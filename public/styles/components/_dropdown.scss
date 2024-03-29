@@ -8,7 +8,7 @@
   display: inline-block;
 
   .bsds-dropdown-trigger {
-    padding-right: calc(var(--space-lg) + var(--icon-size) + space(3x)); // gap + icon width + padding
+    padding-right: calc(var(--space-lg) + var(--icon-size) + var(--space-3x)); // gap + icon width + padding
 
     &.has-icon {
       padding-right: calc(var(--space-md) + var(--icon-size) + var(--space-lg)); // gap + icon width + padding
@@ -21,7 +21,7 @@
 
     &::after {
       position: absolute;
-      right: space(3x);
+      right: var(--space-3x);
       width: var(--icon-size);
       height: var(--icon-size);
       content: '';
@@ -133,7 +133,7 @@
       display: block;
       width: 100%;
       border: 0;
-      padding: var(--space-lg) space(2x);
+      padding: var(--space-lg) var(--space-2x);
       color: var(--text-color-primary);
       font-size: var(--fs-body);
       text-align: inherit;

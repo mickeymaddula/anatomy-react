@@ -96,7 +96,7 @@
     justify-content: flex-start;
     width: 100%;
     box-shadow: var(--box-shadow-secondary);
-    padding: var(--space-lg) space(2x);
+    padding: var(--space-lg) var(--space-2x);
     font-size: var(--fs-body);
 
     &:focus {
@@ -131,7 +131,7 @@
 
     .bsds-nav-menu-panel-header {
       border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
-      padding: var(--space-lg) space(3x) space(4x);
+      padding: var(--space-lg) var(--space-3x) var(--space-4x);
 
       .bsds-nav-menu-panel-title {
         @extend .bsds-h3;
@@ -164,7 +164,7 @@
 
   .bsds-nav-menu-panel-header-link {
     display: inline-block;
-    margin-top: space(3x);
+    margin-top: var(--space-3x);
   }
 
   .bsds-nav-link-see-all {
@@ -211,9 +211,9 @@
       .bsds-nav-logo-secondary {
         box-sizing: content-box;
         width: auto;
-        max-height: space(4x);
+        max-height: var(--space-4x);
         margin-right: auto;
-        padding: space(2x) space(3x);
+        padding: var(--space-2x) var(--space-3x);
       }
     }
   }
@@ -234,7 +234,7 @@
     }
 
     .bsds-form-search {
-      padding: space(2x) space(3x);
+      padding: var(--space-2x) var(--space-3x);
     }
   }
 }
@@ -251,7 +251,7 @@
       .bsds-nav-menu-panel-header {
         border-right: var(--border-width-xxs) var(--border-color-subtle) subtle;
         border-bottom: 0;
-        padding: space(4x) space(4x) space(3x);
+        padding: var(--space-4x) var(--space-4x) var(--space-3x);
       }
 
       .bsds-nav-menu-panel {
@@ -273,7 +273,7 @@
           z-index: var(--nav-list-z-index);
 
           > .bsds-nav {
-            padding: space(4x) 0 space(3x);
+            padding: var(--space-4x) 0 var(--space-3x);
 
             /* stylelint-disable scss/selector-nest-combinators */
             > .bsds-nav-item:not(.bsds-nav-item-parent),
@@ -318,7 +318,7 @@
       .bsds-nav {
         height: 100%;
         overflow-y: auto;
-        padding: space(4x) 0 space(3x);
+        padding: var(--space-4x) 0 var(--space-3x);
       }
 
       .bsds-nav-link {

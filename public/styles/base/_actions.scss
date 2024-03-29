@@ -46,7 +46,7 @@
   border-radius: 0;
   border-width: var(--border-width-xs);
   border-style: solid;
-  padding: var(--space-lg) space(3x) 0.6875rem; // NOTE: this is a one-off size because var(--space-lg) - var(--space-xxs) was rounding up
+  padding: var(--space-lg) var(--space-3x) 0.6875rem; // NOTE: this is a one-off size because var(--space-lg) - var(--space-xxs) was rounding up
   font-size: var(--ffs-body-assertive);
   line-height: inherit;
   text-align: center;
@@ -83,7 +83,7 @@
   @include button-default;
   @include link-default;
   border-color: transparent;
-  padding: var(--space-lg) space(3x) 0.6875rem;
+  padding: var(--space-lg) var(--space-3x) 0.6875rem;
   background: transparent;
   text-decoration: none;
   @include button-focus;
@@ -144,7 +144,7 @@
 
 @mixin button-icon {
   border-radius: var(--border-radius-circle);
-  padding: calc(space(2x) + var(--space-xxs));
+  padding: calc(var(--space-2x) + var(--space-xxs));
 }
 
 @mixin button-small {

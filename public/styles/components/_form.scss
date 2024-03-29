@@ -3,7 +3,7 @@
   width: 100%;
   margin-top: var(--field-control-margin-top);
   border: var(--border-width-xxs) var(--border-color-assertive) ertive;
-  padding: var(--space-lg) space(2x);
+  padding: var(--space-lg) var(--space-2x);
   background: var(--neutral-100);
   font-family: inherit;
   font-size: inherit;
@@ -52,7 +52,7 @@
 
   &:first-child {
     .bsds-form-control {
-      margin-top: space(2x);
+      margin-top: var(--space-2x);
     }
   }
 }
@@ -92,8 +92,8 @@
       display: inline-block;
       flex-shrink: 0;
       align-self: flex-start;
-      width: space(3x);
-      height: space(3x);
+      width: var(--space-3x);
+      height: var(--space-3x);
       margin-right: var(--space-md);
       background-image: url('../../assets/images/icon-error.svg');
       background-repeat: no-repeat;
@@ -115,10 +115,10 @@
 
 // TODO: ADS-334 Should we have spacing here? If not, can we get rid of class bsds-margin-top-remove?
 .bsds-form-control {
-  margin-top: space(3x);
+  margin-top: var(--space-3x);
 
   .bsds-fieldset {
-    margin-top: space(4x);
+    margin-top: var(--space-4x);
   }
 }
 

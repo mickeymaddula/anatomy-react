@@ -11,37 +11,37 @@
   }
 
   h1 {
-    margin: space(8x) 0 0;
+    margin: var(--space-8x) 0 0;
     font-size: var(--fs-h1);
     line-height: 1.4;
   }
 
   h2 {
-    margin: space(6x) 0 0;
+    margin: var(--space-6x) 0 0;
     font-size: var(--fs-h2);
     line-height: 1.4;
   }
 
   h3 {
-    margin: space(6x) 0 0;
+    margin: var(--space-6x) 0 0;
     font-size: var(--fs-h3);
     line-height: 1.4;
   }
 
   h4 {
-    margin: space(4x) 0 0;
+    margin: var(--space-4x) 0 0;
     font-size: var(--fs-h4);
     line-height: 1.4;
   }
 
   h5 {
-    margin: space(3x) 0 0;
+    margin: var(--space-3x) 0 0;
     font-size: var(--fs-h5);
     line-height: 1.5;
   }
 
   h6 {
-    margin: space(3x) 0 0;
+    margin: var(--space-3x) 0 0;
     font-size: var(--fs-h6);
     line-height: 1.5;
   }
@@ -49,24 +49,24 @@
   p,
   dl,
   small {
-    margin: space(2x) 0 0;
+    margin: var(--space-2x) 0 0;
   }
 
   ul,
   ol {
-    margin: space(2x) 0 0;
-    padding-left: space(4x);
+    margin: var(--space-2x) 0 0;
+    padding-left: var(--space-4x);
   }
 
   li {
     &:not(:first-of-type) {
-      margin: space(2x) 0 0;
+      margin: var(--space-2x) 0 0;
     }
   }
 
   figure {
     position: relative;
-    margin: space(4x) space(4x) 0;
+    margin: var(--space-4x) var(--space-4x) 0;
 
     blockquote {
       margin: 0;
@@ -74,7 +74,7 @@
 
     figcaption {
       margin: var(--space-md) 0 0;
-      padding-left: space(3x);
+      padding-left: var(--space-3x);
 
       &::before {
         position: absolute;
@@ -89,12 +89,12 @@
   }
 
   .bsds-body-assertive {
-    margin: space(3x) 0 0;
+    margin: var(--space-3x) 0 0;
     font-size: var(--fs-body-assertive);
 
     li {
       &:not(:first-of-type) {
-        margin: space(3x) 0 0;
+        margin: var(--space-3x) 0 0;
       }
     }
   }

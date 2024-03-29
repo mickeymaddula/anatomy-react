@@ -27,31 +27,31 @@
 }
 
 .bsds-mt-2x {
-  margin-top: space(2x);
+  margin-top: var(--space-2x);
 }
 
 .bsds-mt-3x {
-  margin-top: space(3x);
+  margin-top: var(--space-3x);
 }
 
 .bsds-mt-4x {
-  margin-top: space(4x);
+  margin-top: var(--space-4x);
 }
 
 .bsds-mt-6x {
-  margin-top: space(6x);
+  margin-top: var(--space-6x);
 }
 
 .bsds-mt-8x {
-  margin-top: space(8x);
+  margin-top: var(--space-8x);
 }
 
 .bsds-mt-12x {
-  margin-top: space(12x);
+  margin-top: var(--space-12x);
 }
 
 .bsds-mt-15x {
-  margin-top: space(15x);
+  margin-top: var(--space-15x);
 }
 
 // TODO: ADS-631 Standardize utility names
