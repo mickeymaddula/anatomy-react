@@ -28,18 +28,21 @@
   &-red {
     &::before {
       // TODO: dark mode should map to url('../../assets/images/icon-stoplight-red-inverse.svg');
+      // TODO: Refactor icon to be able to change its color for theming
       background-image: url('../../assets/images/icon-stoplight-red.svg');
     }
   }
 
   &-yellow {
     &::before {
+      // TODO: Refactor icon to be able to change its color for theming
       background-image: url('../../assets/images/icon-stoplight-yellow.svg');
     }
   }
 
   &-green {
     &::before {
+      // TODO: Refactor icon to be able to change its color for theming
       background-image: url('../../assets/images/icon-stoplight-green.svg');
     }
   }
