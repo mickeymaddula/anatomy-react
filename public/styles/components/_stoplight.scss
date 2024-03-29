@@ -27,13 +27,8 @@
 .bsds-stoplight {
   &-red {
     &::before {
+      // TODO: dark mode should map to url('../../assets/images/icon-stoplight-red-inverse.svg');
       background-image: url('../../assets/images/icon-stoplight-red.svg');
-    }
-
-    &.bsds-stoplight-inverse {
-      &::before {
-        background-image: url('../../assets/images/icon-stoplight-red-inverse.svg');
-      }
     }
   }
 
@@ -47,9 +42,5 @@
     &::before {
       background-image: url('../../assets/images/icon-stoplight-green.svg');
     }
-  }
-
-  &-inverse {
-    color: var(--text-color-inverse);
   }
 }
