@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { errorText, helpText } from '../../stories/helpers';
+import { componentDecorators } from '../../../.storybook/decorators';
 import { useState, ChangeEvent } from 'react';
 
 import RadioGroup from './RadioGroup';
@@ -8,6 +9,7 @@ import InputRadio from '../InputRadio';
 const meta = {
   title: 'Components/Radio group',
   component: RadioGroup,
+  decorators: componentDecorators,
   argTypes: {
     children: {
       control: false

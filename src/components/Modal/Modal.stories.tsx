@@ -1,6 +1,7 @@
 // TODO: Figure out why enter to open modal doesn't work in Docs but does in Playground
 
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 import { createRef } from 'react';
 
 import Modal, { ModalRef } from './Modal';
@@ -13,6 +14,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
   tags: ['autodocs'],
   argTypes: {
     children: {

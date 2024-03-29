@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Stoplight from './Stoplight';
 import { STOPLIGHT_COLORS, STOPLIGHT_SIZES, STOPLIGHT_TEXT_COLORS } from './Stoplight.types';
@@ -6,6 +7,7 @@ import { STOPLIGHT_COLORS, STOPLIGHT_SIZES, STOPLIGHT_TEXT_COLORS } from './Stop
 const meta = {
   title: 'Components/Stoplight',
   component: Stoplight,
+  decorators: componentDecorators,
   parameters: {
     layout: 'centered'
   },

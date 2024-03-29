@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 import Form from './Form';
 import InputText from '../InputText';
 import { WithHelp } from '../InputText/InputText.stories';
@@ -23,6 +24,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
   tags: ['autodocs']
 } satisfies Meta<typeof Form>;
 
