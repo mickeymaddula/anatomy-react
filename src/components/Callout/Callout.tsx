@@ -4,7 +4,7 @@ export interface CalloutProps {
   children: ReactNode;
   className?: string;
   isCentered?: boolean;
-  isGhost?: boolean;
+  isinverse?: boolean;
 }
 
 const Callout = (props: CalloutProps): JSX.Element => {
@@ -17,13 +17,13 @@ const Callout = (props: CalloutProps): JSX.Element => {
       calloutClass ? (calloutClass += ' bsds-callout-centered') : (calloutClass += ' bsds-callout-centered');
     }
 
-    if (props.isGhost) {
-      // TODO: replace isGhost with theming
-      calloutClass ? (calloutClass += ' bsds-callout-ghost') : (calloutClass += ' bsds-callout-ghost');
+    if (props.isinverse) {
+      // TODO: replace isinverse with theming
+      calloutClass ? (calloutClass += ' bsds-callout-inverse') : (calloutClass += ' bsds-callout-inverse');
     }
 
     setClasses(calloutClass);
-  }, [props.isCentered, props.isGhost]);
+  }, [props.isCentered, props.isinverse]);
 
   return <p className={`bsds-callout${classes} ${props.className || ''}`}>{props.children}</p>;
 };

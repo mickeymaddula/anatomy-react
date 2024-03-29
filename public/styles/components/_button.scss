@@ -9,8 +9,8 @@
     @include button-subtle;
   }
 
-  &-ghost {
-    @include button-ghost;
+  &-inverse {
+    @include button-inverse;
   }
 
   &-icon {

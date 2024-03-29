@@ -33,11 +33,11 @@ const Stoplight = ({ children, lightColor, textColor, size, className }: Stoplig
       break;
   }
 
-  // TODO: replace ghost with theming
+  // TODO: replace inverse with theming
   let textColorClasses = '';
   switch (textColor) {
-    case 'ghost':
-      textColorClasses = 'bsds-stoplight-ghost';
+    case 'inverse':
+      textColorClasses = 'bsds-stoplight-inverse';
       break;
   }
 

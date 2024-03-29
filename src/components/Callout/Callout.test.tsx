@@ -2,11 +2,11 @@ import { render, screen } from '@testing-library/react';
 import Callout from './Callout';
 
 describe('Callout', () => {
-  it('Renders ghost when prop is present', () => {
-    render(<Callout isGhost>Ghost callout!</Callout>);
+  it('Renders inverse when prop is present', () => {
+    render(<Callout isinverse>inverse callout!</Callout>);
 
-    expect(screen.getByText('Ghost callout!')).toBeInTheDocument();
-    expect(screen.getByText('Ghost callout!')).toHaveClass('bsds-callout-ghost');
+    expect(screen.getByText('inverse callout!')).toBeInTheDocument();
+    expect(screen.getByText('inverse callout!')).toHaveClass('bsds-callout-inverse');
   });
 
   it('Renders centered when prop is present', () => {

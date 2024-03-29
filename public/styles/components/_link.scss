@@ -26,7 +26,7 @@ a {
   }
 
   &.bsds-button-assertive,
-  &.bsds-button-ghost {
+  &.bsds-button-inverse {
     color: var(--neutral-100);
 
     &:visited {
@@ -42,8 +42,8 @@ a {
     @include link-subtle;
   }
 
-  &-ghost {
-    @include link-ghost;
+  &-inverse {
+    @include link-inverse;
   }
 
   &-nav {

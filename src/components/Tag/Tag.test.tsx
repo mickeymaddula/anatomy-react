@@ -8,11 +8,11 @@ describe('Tag', () => {
     expect(screen.getByText('Sample Tag!')).toHaveClass('bsds-tag');
   });
 
-  it('Renders ghost variant', () => {
-    render(<Tag isGhost>Variant Tag!</Tag>);
+  it('Renders inverse variant', () => {
+    render(<Tag isinverse>Variant Tag!</Tag>);
 
     expect(screen.getByText('Variant Tag!')).toBeInTheDocument();
-    expect(screen.getByText('Variant Tag!')).toHaveClass('bsds-tag-ghost');
+    expect(screen.getByText('Variant Tag!')).toHaveClass('bsds-tag-inverse');
   });
 
   it('Renders accent variation', () => {
@@ -21,15 +21,15 @@ describe('Tag', () => {
     expect(screen.getByText('Sample Tag!')).toHaveClass('bsds-tag-accent');
   });
 
-  it('Renders accent-ghost variation', () => {
+  it('Renders accent-inverse variation', () => {
     render(
-      <Tag variant="accent" isGhost>
+      <Tag variant="accent" isinverse>
         Sample Tag!
       </Tag>
     );
 
     expect(screen.getByText('Sample Tag!')).toBeInTheDocument();
-    expect(screen.getByText('Sample Tag!')).toHaveClass('bsds-tag-accent-ghost');
+    expect(screen.getByText('Sample Tag!')).toHaveClass('bsds-tag-accent-inverse');
   });
 
   it('Renders assertive variation', () => {
@@ -39,15 +39,15 @@ describe('Tag', () => {
     expect(screen.getByText('Variant Tag!')).toHaveClass('bsds-tag-assertive');
   });
 
-  it('Renders assertive-ghost variation', () => {
+  it('Renders assertive-inverse variation', () => {
     render(
-      <Tag variant="assertive" isGhost>
+      <Tag variant="assertive" isinverse>
         Variant Tag!
       </Tag>
     );
 
     expect(screen.getByText('Variant Tag!')).toBeInTheDocument();
-    expect(screen.getByText('Variant Tag!')).toHaveClass('bsds-tag-assertive-ghost');
+    expect(screen.getByText('Variant Tag!')).toHaveClass('bsds-tag-assertive-inverse');
   });
 
   it("Renders featured variation with 'featured' as tag text", () => {
@@ -57,14 +57,14 @@ describe('Tag', () => {
     expect(screen.getByText('Featured')).toHaveClass('bsds-tag-featured');
   });
 
-  it("Renders featured-ghost variation with 'featured' as tag text", () => {
+  it("Renders featured-inverse variation with 'featured' as tag text", () => {
     render(
-      <Tag variant="featured" isGhost>
+      <Tag variant="featured" isinverse>
         Variant Tag!
       </Tag>
     );
 
     expect(screen.getByText('Featured')).toBeInTheDocument();
-    expect(screen.getByText('Featured')).toHaveClass('bsds-tag-featured-ghost');
+    expect(screen.getByText('Featured')).toHaveClass('bsds-tag-featured-inverse');
   });
 });

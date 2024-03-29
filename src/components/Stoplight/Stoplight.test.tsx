@@ -21,20 +21,20 @@ describe('Stoplight', () => {
     expect(screen.getByText('Sample Stoplight!')).toHaveClass('bsds-stoplight-green');
   });
 
-  it('Renders ghost variation when prop is present', () => {
+  it('Renders inverse variation when prop is present', () => {
     render(
-      <Stoplight lightColor="green" textColor="ghost">
+      <Stoplight lightColor="green" textColor="inverse">
         Variant Stoplight!
       </Stoplight>
     );
 
     expect(screen.getByText('Variant Stoplight!')).toBeInTheDocument();
-    expect(screen.getByText('Variant Stoplight!')).toHaveClass('bsds-stoplight-ghost');
+    expect(screen.getByText('Variant Stoplight!')).toHaveClass('bsds-stoplight-inverse');
   });
 
   it('Renders assertive size when prop is present', () => {
     render(
-      <Stoplight lightColor="green" textColor="ghost" size="assertive">
+      <Stoplight lightColor="green" textColor="inverse" size="assertive">
         Variant Stoplight!
       </Stoplight>
     );

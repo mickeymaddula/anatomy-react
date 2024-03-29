@@ -34,10 +34,10 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
     linkClasses: 'bsds-product-card-ns-title'
   };
 
-  const ghostStyle = {
-    classes: 'bsds-card-ghost',
-    titleLinkClasses: 'bsds-link-ghost',
-    linkClasses: 'bsds-product-card-ns-title-ghost'
+  const inverseStyle = {
+    classes: 'bsds-card-inverse',
+    titleLinkClasses: 'bsds-link-inverse',
+    linkClasses: 'bsds-product-card-ns-title-inverse'
   };
 
   const borderLightStyle = {
@@ -46,10 +46,10 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
     linkClasses: 'bsds-product-card-ns-title'
   };
 
-  const borderGhostStyle = {
-    classes: 'bsds-card-border-ghost',
-    titleLinkClasses: 'bsds-link-ghost',
-    linkClasses: 'bsds-product-card-ns-title-ghost'
+  const borderinverseStyle = {
+    classes: 'bsds-card-border-inverse',
+    titleLinkClasses: 'bsds-link-inverse',
+    linkClasses: 'bsds-product-card-ns-title-inverse'
   };
 
   const [style, setStyle] = useState(cardStyles.classes);
@@ -61,14 +61,14 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
   const imageLink = useRef<HTMLAnchorElement>(null);
 
   switch (variant) {
-    case 'ghost':
-      cardStyles = { ...ghostStyle };
+    case 'inverse':
+      cardStyles = { ...inverseStyle };
       break;
     case 'border-light':
       cardStyles = { ...borderLightStyle };
       break;
-    case 'border-ghost':
-      cardStyles = { ...borderGhostStyle };
+    case 'border-inverse':
+      cardStyles = { ...borderinverseStyle };
       break;
 
     default:
@@ -77,15 +77,15 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
   }
 
   let decorativeState = '';
-  if (gradientBrand && variant?.includes('ghost')) {
+  if (gradientBrand && variant?.includes('inverse')) {
     decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderGhostStyle };
+    cardStyles = { ...borderinverseStyle };
   } else if (gradientBrand) {
     decorativeState = 'bsds-card-gradient';
     cardStyles = { ...borderLightStyle };
-  } else if (dropShadow && variant?.includes('ghost')) {
+  } else if (dropShadow && variant?.includes('inverse')) {
     decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderGhostStyle };
+    cardStyles = { ...borderinverseStyle };
   } else if (dropShadow) {
     decorativeState = 'bsds-card-shadow';
     cardStyles = { ...borderLightStyle };
@@ -111,7 +111,7 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
     if (tag) {
       setClonedTag(
         cloneElement(tag as ReactElement, {
-          isGhost: variant === 'ghost' || variant === 'border-ghost'
+          isinverse: variant === 'inverse' || variant === 'border-inverse'
         })
       );
     }
@@ -123,7 +123,7 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
         cloneElement(image as ReactElement, {
           ratio: image.props.ratio ? image.props.ratio : '1:1',
           isDecorative: false,
-          isGhost: variant === 'ghost' || variant === 'border-ghost',
+          isinverse: variant === 'inverse' || variant === 'border-inverse',
           onClick: () => imageLink.current?.click()
         })
       );

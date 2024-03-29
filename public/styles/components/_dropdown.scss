@@ -76,13 +76,13 @@
         }
       }
 
-      &-ghost {
+      &-inverse {
         &::after {
           background: var(--neutral-100);
         }
 
         &[aria-expanded='true'] {
-          @include button-ghost-active;
+          @include button-inverse-active;
         }
       }
     }
@@ -168,7 +168,7 @@
     .bsds-button {
       &:hover,
       &:active {
-        color: var(--text-color-ghost);
+        color: var(--text-color-inverse);
       }
 
       &:hover {

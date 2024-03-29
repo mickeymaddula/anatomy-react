@@ -164,14 +164,14 @@ describe('Product Card', () => {
           description: 'Product card description'
         }}
         linkTo="docs-demo-link"
-        variant="ghost"
+        variant="inverse"
       />
     );
 
     expect(screen.getByTestId('bsdsProductCard')).toHaveClass('bsds-product-card');
   });
 
-  it("Adds class 'bsds-card-ghost' when 'ghost' variant is declared", () => {
+  it("Adds class 'bsds-card-inverse' when 'inverse' variant is declared", () => {
     render(
       <ProductCard
         texts={{
@@ -179,11 +179,11 @@ describe('Product Card', () => {
           description: 'Product card description'
         }}
         linkTo="docs-demo-link"
-        variant="ghost"
+        variant="inverse"
       />
     );
 
-    expect(screen.getByTestId('bsdsProductCard')).toHaveClass('bsds-card-ghost');
+    expect(screen.getByTestId('bsdsProductCard')).toHaveClass('bsds-card-inverse');
   });
 
   it("Adds class 'bsds-card-border-light' when 'border-light' variant is declared", () => {
@@ -201,7 +201,7 @@ describe('Product Card', () => {
     expect(screen.getByTestId('bsdsProductCard')).toHaveClass('bsds-card-border-light');
   });
 
-  it("Adds class 'bsds-card-border-ghost' when 'border-ghost' variant is declared", () => {
+  it("Adds class 'bsds-card-border-inverse' when 'border-inverse' variant is declared", () => {
     render(
       <ProductCard
         texts={{
@@ -209,10 +209,10 @@ describe('Product Card', () => {
           description: 'Product card description'
         }}
         linkTo="docs-demo-link"
-        variant="border-ghost"
+        variant="border-inverse"
       />
     );
 
-    expect(screen.getByTestId('bsdsProductCard')).toHaveClass('bsds-card-border-ghost');
+    expect(screen.getByTestId('bsdsProductCard')).toHaveClass('bsds-card-border-inverse');
   });
 });

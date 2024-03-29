@@ -76,10 +76,10 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
     linkClasses: ''
   };
 
-  const ghostStyle = {
-    classes: 'bsds-card-ghost',
-    titleLinkClasses: 'bsds-link-ghost',
-    linkClasses: 'bsds-link-ghost'
+  const inverseStyle = {
+    classes: 'bsds-card-inverse',
+    titleLinkClasses: 'bsds-link-inverse',
+    linkClasses: 'bsds-link-inverse'
   };
 
   const borderLightStyle = {
@@ -88,21 +88,21 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
     linkClasses: ''
   };
 
-  const borderGhostStyle = {
-    classes: 'bsds-card-border-ghost',
-    titleLinkClasses: 'bsds-link-ghost',
-    linkClasses: 'bsds-link-ghost'
+  const borderinverseStyle = {
+    classes: 'bsds-card-border-inverse',
+    titleLinkClasses: 'bsds-link-inverse',
+    linkClasses: 'bsds-link-inverse'
   };
 
   switch (variant) {
-    case 'ghost':
-      cardStyles = { ...ghostStyle };
+    case 'inverse':
+      cardStyles = { ...inverseStyle };
       break;
     case 'border-light':
       cardStyles = { ...borderLightStyle };
       break;
-    case 'border-ghost':
-      cardStyles = { ...borderGhostStyle };
+    case 'border-inverse':
+      cardStyles = { ...borderinverseStyle };
       break;
 
     default:
@@ -111,15 +111,15 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
   }
 
   let decorativeState = '';
-  if (gradientBrand && variant?.includes('ghost')) {
+  if (gradientBrand && variant?.includes('inverse')) {
     decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderGhostStyle };
+    cardStyles = { ...borderinverseStyle };
   } else if (gradientBrand) {
     decorativeState = 'bsds-card-gradient';
     cardStyles = { ...borderLightStyle };
-  } else if (dropShadow && variant?.includes('ghost')) {
+  } else if (dropShadow && variant?.includes('inverse')) {
     decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderGhostStyle };
+    cardStyles = { ...borderinverseStyle };
   } else if (dropShadow) {
     decorativeState = 'bsds-card-shadow';
     cardStyles = { ...borderLightStyle };
@@ -150,7 +150,7 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
     if (image) {
       setClonedImage(
         cloneElement(image as ReactElement, {
-          isGhost: variant === 'ghost' || variant === 'border-ghost'
+          isinverse: variant === 'inverse' || variant === 'border-inverse'
         })
       );
     }
@@ -160,7 +160,7 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
     if (tag) {
       setClonedTag(
         cloneElement(tag as ReactElement, {
-          isGhost: variant === 'ghost' || variant === 'border-ghost'
+          isinverse: variant === 'inverse' || variant === 'border-inverse'
         })
       );
     }

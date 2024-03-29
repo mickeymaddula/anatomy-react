@@ -6,7 +6,7 @@ import { TagVariant } from './Tag.types';
 export interface TagProps {
   children: ReactNode;
   variant?: TagVariant;
-  isGhost?: boolean;
+  isinverse?: boolean;
   texts?: {
     featuredTag?: string;
   };
@@ -38,13 +38,13 @@ const Tag = (props: TagProps): JSX.Element => {
         break;
     }
 
-    if (props.isGhost) {
-      // TODO: replace isGhost with theming
-      variantClass ? (variantClass += '-ghost') : (variantClass += 'ghost');
+    if (props.isinverse) {
+      // TODO: replace isinverse with theming
+      variantClass ? (variantClass += '-inverse') : (variantClass += 'inverse');
     }
 
     setClasses(variantClass);
-  }, [props.isGhost, props.variant]);
+  }, [props.isinverse, props.variant]);
 
   useEffect(() => {
     if (props.variant !== 'featured') {

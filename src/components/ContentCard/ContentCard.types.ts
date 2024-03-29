@@ -1,2 +1,2 @@
-export const CARD_VARIANTS = ['ghost', 'border-light', 'border-ghost'] as const;
+export const CARD_VARIANTS = ['inverse', 'border-light', 'border-inverse'] as const;
 export type CardVariant = (typeof CARD_VARIANTS)[number];

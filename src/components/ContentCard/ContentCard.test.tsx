@@ -162,7 +162,7 @@ describe('Card', () => {
     expect(screen.getByTestId('bsdsCard')).toHaveClass('bsds-card');
   });
 
-  it("Adds class 'bsds-card-ghost' when 'ghost' variant is declared", () => {
+  it("Adds class 'bsds-card-inverse' when 'inverse' variant is declared", () => {
     render(
       <Card
         texts={{
@@ -170,11 +170,11 @@ describe('Card', () => {
           cardDescription: 'Card description'
         }}
         headingLevel="h2"
-        variant="ghost"
+        variant="inverse"
       />
     );
 
-    expect(screen.getByTestId('bsdsCard')).toHaveClass('bsds-card-ghost');
+    expect(screen.getByTestId('bsdsCard')).toHaveClass('bsds-card-inverse');
   });
 
   it("Adds class 'bsds-card-border-light' when 'border-light' variant is declared", () => {
@@ -192,7 +192,7 @@ describe('Card', () => {
     expect(screen.getByTestId('bsdsCard')).toHaveClass('bsds-card-border-light');
   });
 
-  it("Adds class 'bsds-card-border-ghost' when 'border-ghost' variant is declared", () => {
+  it("Adds class 'bsds-card-border-inverse' when 'border-inverse' variant is declared", () => {
     render(
       <Card
         texts={{
@@ -200,10 +200,10 @@ describe('Card', () => {
           cardDescription: 'Card description'
         }}
         headingLevel="h2"
-        variant="border-ghost"
+        variant="border-inverse"
       />
     );
 
-    expect(screen.getByTestId('bsdsCard')).toHaveClass('bsds-card-border-ghost');
+    expect(screen.getByTestId('bsdsCard')).toHaveClass('bsds-card-border-inverse');
   });
 });

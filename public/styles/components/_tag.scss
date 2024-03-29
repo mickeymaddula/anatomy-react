@@ -25,7 +25,7 @@
   @include bsds-defaults-type;
   @include tag-default;
 
-  &-ghost {
+  &-inverse {
     @include tag-default;
     color: var(--text-color-inverse);
   }
@@ -36,7 +36,7 @@
     border-image-slice: 1;
   }
 
-  &-accent-ghost {
+  &-accent-inverse {
     @include tag-accent;
     border-color: var(--accent-secondary-60);
     color: var(--text-color-inverse);
@@ -48,7 +48,7 @@
     color: var(--tag-assertive-text);
   }
 
-  &-assertive-ghost {
+  &-assertive-inverse {
     @include tag-assertive;
     background: var(--neutral-100);
     color: var(--text-color-primary);
@@ -60,7 +60,7 @@
     color: var(--tag-featured-text);
   }
 
-  &-featured-ghost {
+  &-featured-inverse {
     @include tag-assertive;
     background: var(--accent-primary-80);
     color: var(--text-color-primary);
@@ -75,7 +75,7 @@
     letter-spacing: unset;
   }
 
-  &-subtle-ghost {
+  &-subtle-inverse {
     @extend .bsds-tag-subtle;
     background: var(--neutral-40);
     color: var(--text-color-inverse);
