@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Accordion from './Accordion';
 import AccordionPanel from './AccordionPanel';
@@ -6,6 +7,7 @@ import AccordionPanel from './AccordionPanel';
 const meta = {
   title: 'Components/Accordion',
   component: Accordion,
+  decorators: componentDecorators,
   argTypes: {
     children: {
       control: false
