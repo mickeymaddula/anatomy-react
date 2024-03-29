@@ -1,11 +1,11 @@
 .bsds-accordion {
   @include bsds-defaults;
   width: 100%;
-  border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+  border-bottom: var(--border-width-xxs) solid var(--accordion-default-border);
 
   &.is-contained {
-    border-right: var(--border-width-xxs) solid var(--border-color-subtle);
-    border-left: var(--border-width-xxs) solid var(--border-color-subtle);
+    border-right: var(--border-width-xxs) solid var(--accordion-default-border);
+    border-left: var(--border-width-xxs) solid var(--accordion-default-border);
   }
 
   .bsds-accordion-heading {
@@ -19,13 +19,13 @@
     align-items: center;
     width: 100%;
     margin: 0;
-    border-top: var(--border-width-xxs) solid var(--border-color-subtle);
+    border-top: var(--border-width-xxs) solid var(--accordion-default-border);
     border-right: 0;
     border-bottom: 0;
     border-left: 0;
     padding: var(--space-2x);
     background: transparent;
-    color: var(--text-color-primary);
+    color: var(--accordion-default-text);
     @include font-family-base-regular;
     font-size: var(--fs-body);
     text-align: left;
@@ -44,22 +44,22 @@
 
     &:not([disabled]) {
       &:hover {
-        border-color: var(--border-color-subtle);
+        border-color: var(--accordion-default-border);
         background: transparent;
-        color: var(--text-color-action);
+        color: var(--accordion-hover-text);
         text-decoration: underline;
 
         svg {
-          color: var(--action-primary-40);
+          color: var(--accordion-hover-icon);
         }
       }
 
       &:active {
         background: transparent;
-        color: var(--text-color-action);
+        color: var(--accordion-active-text);
 
         svg {
-          color: var(--action-primary-40);
+          color: var(--accordion-active-icon);
         }
       }
 
@@ -136,8 +136,8 @@
     &-red {
       .bsds-accordion-trigger {
         &::before {
-          border-left-color: var(--border-color-error);
-          background-color: var(--feedback-error-95);
+          border-left-color: var(--accordion-error-border);
+          background-color: var(--accordion-error-background);
           background-image: url('../../assets/images/icon-stoplight-red.svg');
         }
       }
@@ -146,8 +146,8 @@
     &-yellow {
       .bsds-accordion-trigger {
         &::before {
-          border-left-color: var(--border-color-warning);
-          background-color: var(--feedback-warning-95);
+          border-left-color: var(--accordion-warning-border);
+          background-color: var(--accordion-warning-background);
           background-image: url('../../assets/images/icon-stoplight-yellow.svg');
         }
       }
@@ -156,8 +156,8 @@
     &-green {
       .bsds-accordion-trigger {
         &::before {
-          border-left-color: var(--border-color-success);
-          background-color: var(--feedback-success-95);
+          border-left-color: var(--accordion-success-border);
+          background-color: var(--accordion-success-background);
           background-image: url('../../assets/images/icon-stoplight-green.svg');
         }
       }

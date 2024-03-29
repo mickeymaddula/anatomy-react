@@ -27,3 +27,19 @@ export const Playground: Story = {
     </Accordion>
   )
 };
+
+export const Stoplight: Story = {
+  render: (args) => (
+    <Accordion {...args}>
+      <AccordionPanel heading="Accordion 1" stoplightColor="red">
+        Accordion panel 1
+      </AccordionPanel>
+      <AccordionPanel heading="Accordion 2" stoplightColor="yellow">
+        Accordion panel 2
+      </AccordionPanel>
+      <AccordionPanel heading="Accordion 3" stoplightColor="green">
+        Accordion panel 3
+      </AccordionPanel>
+    </Accordion>
+  )
+};
