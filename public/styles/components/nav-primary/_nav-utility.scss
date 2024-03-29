@@ -1,7 +1,7 @@
 // Utility Nav
 .bsds-nav-utility {
   display: none;
-  border-bottom: $border-width-xxs solid $border-color-subtle;
+  border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
 
   .bsds-nav-utility-container {
     display: contents;
@@ -16,10 +16,10 @@
       .bsds-nav-link {
         border: 0;
         padding: space(md) space(lg);
-        color: $text-color-subtle;
+        color: var(--text-color-subtle);
 
         &:hover {
-          color: $text-color-primary;
+          color: var(--text-color-primary);
         }
       }
 
@@ -27,24 +27,24 @@
         .bsds-dropdown-trigger {
           display: inline-flex;
           padding: space(md) space(lg);
-          padding-right: calc(space(md) + $icon-size-sm + space(lg));
+          padding-right: calc(space(md) + var(--icon-size-sm) + space(lg));
 
           &::after {
             right: space(lg);
-            width: $icon-size-sm;
-            height: $icon-size-sm;
-            background: $text-color-subtle;
+            width: var(--icon-size-sm);
+            height: var(--icon-size-sm);
+            background: var(--text-color-subtle);
           }
 
           &[aria-expanded='true'],
           &:hover,
           &:active {
             background: transparent;
-            color: $text-color-primary;
+            color: var(--text-color-primary);
             text-decoration: underline;
 
             &::after {
-              background: $text-color-primary;
+              background: var(--text-color-primary);
             }
           }
         }
@@ -67,7 +67,7 @@
 
     .bsds-nav {
       .bsds-nav-link {
-        @include font-size($fs-body-subtle);
+        font-size: var(--fs-body-subtle);
       }
     }
   }

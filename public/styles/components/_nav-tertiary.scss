@@ -7,14 +7,14 @@
   .bsds-nav-tertiary-title,
   .bsds-nav,
   .bsds-nav-link {
-    @include font-size($fs-small);
+    font-size: var(--fs-small);
   }
 
   .bsds-nav-tertiary-title {
     margin: 0;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
+    border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
     padding-bottom: space(lg);
-    color: $text-color-subtle;
+    color: var(--text-color-subtle);
     @include font-family-base-regular;
     line-height: 1.5; // NOTE: overriding h2's default line height
   }

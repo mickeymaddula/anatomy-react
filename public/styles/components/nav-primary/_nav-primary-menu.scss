@@ -2,10 +2,10 @@
   .bsds-nav-menu {
     position: absolute;
     left: 0;
-    z-index: $nav-menu-z-index;
+    z-index: var(--nav-menu-z-index);
     width: 100%;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
-    @include font-size($fs-body);
+    border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
+    font-size: var(--fs-body);
 
     &:not(.is-expanded) {
       display: none;
@@ -25,19 +25,19 @@
         &.is-active,
         &:hover,
         &:active {
-          background: $neutral-95;
+          background: var(--neutral-95);
         }
 
         .bsds-nav-link-text {
           position: relative;
-          padding-right: calc($icon-size-sm + space(md)); // Padding + icon width + space between icon and text;
+          padding-right: calc(var(--icon-size-sm) + space(md)); // Padding + icon width + space between icon and text;
 
           &::after {
             position: absolute;
-            top: calc(50% - ($icon-size-sm / 2));
+            top: calc(50% - (var(--icon-size-sm) / 2));
             right: 0;
-            width: $icon-size-sm;
-            height: $icon-size-sm;
+            width: var(--icon-size-sm);
+            height: var(--icon-size-sm);
             background-image: url('../../../assets/images/icon-chevron-right.svg');
             background-position: center;
             background-repeat: no-repeat;
@@ -55,15 +55,15 @@
         .bsds-nav-link-description {
           width: 100%;
           margin-top: space(md);
-          color: $text-color-subtle;
+          color: var(--text-color-subtle);
+          font-size: var(--fs-body-subtle);
           text-align: left;
-          @include font-size($fs-body-subtle);
           @include font-family-base-regular;
         }
 
         &[aria-expanded='true'] {
           .bsds-nav-link-description {
-            color: $text-color-primary;
+            color: var(--text-color-primary);
           }
         }
       }
@@ -72,7 +72,7 @@
     .bsds-nav-link {
       flex-wrap: wrap;
       border: 0;
-      padding: $nav-link-padding;
+      padding: var(--nav-link-padding);
       @include link-navigation;
     }
 
@@ -90,12 +90,12 @@
 
   .bsds-button-text {
     position: relative;
-    z-index: $nav-back-z-index;
+    z-index: var(--nav-back-z-index);
     justify-content: flex-start;
     width: 100%;
-    box-shadow: $box-shadow-secondary;
+    box-shadow: var(--box-shadow-secondary);
     padding: space(lg) space(2x);
-    @include font-size($fs-body);
+    font-size: var(--fs-body);
 
     &:focus {
       @include focus-default-inset;
@@ -106,10 +106,10 @@
     position: relative;
     width: var(--app-width);
     margin: auto;
-    padding: $menu-padding;
+    padding: var(--menu-padding);
 
     > :not(:last-child) {
-      border-right: $border-width-xxs solid $border-color-subtle;
+      border-right: var(--border-width-xxs) var(--border-color-subtle) subtle;
     }
   }
 
@@ -128,7 +128,7 @@
     }
 
     .bsds-nav-menu-panel-header {
-      border-bottom: $border-width-xxs solid $border-color-subtle;
+      border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
       padding: space(lg) space(3x) space(4x);
 
       .bsds-nav-menu-panel-title {
@@ -169,7 +169,7 @@
     @include link-default;
     display: block;
     border-bottom: 0;
-    padding: $nav-link-padding;
+    padding: var(--nav-link-padding);
   }
 
   .bsds-nav {
@@ -177,31 +177,31 @@
       flex-direction: column;
       align-content: flex-start;
       align-items: stretch;
-      border-top: $border-width-xxs solid $border-color-subtle;
-      padding: $menu-padding;
+      border-top: var(--border-width-xxs) var(--border-color-subtle) subtle;
+      padding: var(--menu-padding);
 
       .bsds-nav-link {
         border: 0;
-        @include font-size($fs-body-subtle);
+        font-size: var(--fs-body-subtle);
       }
 
       .bsds-dropdown {
         .bsds-dropdown-trigger {
           display: inline-flex;
-          padding-right: calc(space(md) + $icon-size-sm + space(lg));
+          padding-right: calc(space(md) + var(--icon-size-sm) + space(lg));
 
           &[aria-expanded='true'],
           &:hover,
           &:active {
             background: transparent;
-            color: $text-color-primary;
+            color: var(--text-color-primary);
           }
 
           &::after {
             right: space(lg);
-            width: $icon-size-sm;
-            height: $icon-size-sm;
-            background: $text-color-primary;
+            width: var(--icon-size-sm);
+            height: var(--icon-size-sm);
+            background: var(--text-color-primary);
           }
         }
       }
@@ -220,12 +220,12 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: $nav-search-z-index;
+    z-index: var(--nav-search-z-index);
     display: none;
     width: 100%;
     margin: auto;
-    border-top: $border-width-xxs solid $border-color-subtle;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
+    border-top: var(--border-width-xxs) var(--border-color-subtle) subtle;
+    border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
 
     &.is-expanded {
       display: block;
@@ -247,7 +247,7 @@
       height: 100%;
 
       .bsds-nav-menu-panel-header {
-        border-right: $border-width-xxs solid $border-color-subtle;
+        border-right: var(--border-width-xxs) var(--border-color-subtle) subtle;
         border-bottom: 0;
         padding: space(4x) space(4x) space(3x);
       }
@@ -260,15 +260,15 @@
         border-bottom: 0;
 
         &:first-child {
-          border-left: $border-width-xxs solid $border-color-subtle;
+          border-left: var(--border-width-xxs) var(--border-color-subtle) subtle;
         }
 
         &:not(:first-child) {
-          border-right: $border-width-xxs solid $border-color-subtle;
+          border-right: var(--border-width-xxs) var(--border-color-subtle) subtle;
         }
 
         &.bsds-nav-list-history {
-          z-index: $nav-list-z-index;
+          z-index: var(--nav-list-z-index);
 
           > .bsds-nav {
             padding: space(4x) 0 space(3x);
@@ -296,7 +296,7 @@
         .bsds-nav-menu-panel {
           .bsds-nav-menu-panel {
             .bsds-nav-link {
-              @include font-size($fs-body-subtle);
+              font-size: var(--fs-body-subtle);
             }
           }
         }
@@ -311,7 +311,7 @@
 
     .bsds-nav-menu {
       height: 60vh;
-      border-top: $border-width-xxs solid $border-color-subtle;
+      border-top: var(--border-width-xxs) var(--border-color-subtle) subtle;
 
       .bsds-nav {
         height: 100%;
@@ -327,22 +327,22 @@
       &:not(.intermediate) {
         .bsds-nav-menu-panels {
           .bsds-nav-menu-panel {
-            width: calc(var(--app-width) / $num-panels);
+            width: calc(var(--app-width) / var(--num-panels));
 
             .bsds-nav-menu-panel {
-              left: calc(var(--app-width) / $num-panels);
+              left: calc(var(--app-width) / var(--num-panels));
             }
 
             &.has-header {
               left: 0;
-              width: calc((var(--app-width) / $num-panels) * 2);
+              width: calc((var(--app-width) / var(--num-panels)) * 2);
 
               .bsds-nav-menu-panel {
-                left: calc((var(--app-width) / $num-panels) * 2);
-                width: calc(var(--app-width) / $num-panels);
+                left: calc((var(--app-width) / var(--num-panels)) * 2);
+                width: calc(var(--app-width) / var(--num-panels));
 
                 .bsds-nav-menu-panel {
-                  left: calc((var(--app-width) / $num-panels));
+                  left: calc((var(--app-width) / var(--num-panels)));
                 }
               }
             }
@@ -369,7 +369,7 @@
     }
 
     .bsds-nav-link-see-all {
-      @include font-size($fs-body-subtle);
+      font-size: var(--fs-body-subtle);
     }
 
     .bsds-nav-block {

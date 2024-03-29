@@ -1,10 +1,10 @@
 @mixin tag-default {
   display: block;
-  @include font-family-base-heavy;
-  @include font-size($fs-small);
   color: var(--tag-default-text);
+  font-size: var(--fs-small);
   text-transform: uppercase;
-  letter-spacing: $letter-spacing-increase;
+  letter-spacing: var(--letter-spacing-increase);
+  @include font-family-base-heavy;
 }
 
 @mixin tag-assertive {
@@ -32,7 +32,7 @@
 
   &-accent {
     @include tag-accent;
-    border-image-source: $gradient-accent-vertical;
+    border-image-source: var(--gradient-accent-vertical);
     border-image-slice: 1;
   }
 

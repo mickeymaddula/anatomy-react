@@ -1,4 +1,6 @@
-$icon-size: 1em;
+:root {
+  --icon-size: 1em;
+}
 
 .bsds-dropdown {
   @include bsds-defaults-type;
@@ -6,10 +8,10 @@ $icon-size: 1em;
   display: inline-block;
 
   .bsds-dropdown-trigger {
-    padding-right: calc(space(lg) + $icon-size + space(3x)); // gap + icon width + padding
+    padding-right: calc(space(lg) + var(--icon-size) + space(3x)); // gap + icon width + padding
 
     &.has-icon {
-      padding-right: calc(space(md) + $icon-size + space(lg)); // gap + icon width + padding
+      padding-right: calc(space(md) + var(--icon-size) + space(lg)); // gap + icon width + padding
       padding-left: space(lg);
 
       &::after {
@@ -20,8 +22,8 @@ $icon-size: 1em;
     &::after {
       position: absolute;
       right: space(3x);
-      width: $icon-size;
-      height: $icon-size;
+      width: var(--icon-size);
+      height: var(--icon-size);
       content: '';
       /* stylelint-disable-next-line property-no-vendor-prefix */
       -webkit-mask: url('../../assets/images/icon-chevron-down.svg') no-repeat 50% 50%;
@@ -31,7 +33,7 @@ $icon-size: 1em;
 
     &.bsds-button {
       &::after {
-        background: $action-primary-40;
+        background: var(--action-primary-40);
       }
 
       &[aria-expanded='true'] {
@@ -42,13 +44,13 @@ $icon-size: 1em;
       &:active,
       &[aria-expanded='true'] {
         &::after {
-          background: $neutral-100;
+          background: var(--neutral-100);
         }
       }
 
       &-assertive {
         &::after {
-          background: $neutral-100;
+          background: var(--neutral-100);
         }
 
         &[aria-expanded='true'] {
@@ -58,7 +60,7 @@ $icon-size: 1em;
 
       &-subtle {
         &::after {
-          background: $action-primary-40;
+          background: var(--action-primary-40);
         }
 
         &[aria-expanded='true'] {
@@ -69,14 +71,14 @@ $icon-size: 1em;
         &:active,
         &[aria-expanded='true'] {
           &::after {
-            background: $neutral-100;
+            background: var(--neutral-100);
           }
         }
       }
 
       &-ghost {
         &::after {
-          background: $neutral-100;
+          background: var(--neutral-100);
         }
 
         &[aria-expanded='true'] {
@@ -97,9 +99,9 @@ $icon-size: 1em;
     z-index: 1000;
     min-width: 10rem; // NOTE: This is a one off size.
     margin: 0;
-    box-shadow: $box-shadow-secondary;
+    box-shadow: var(--box-shadow-secondary);
     padding: 0;
-    background: $neutral-100;
+    background: var(--neutral-100);
     list-style: none;
 
     &.right {
@@ -132,10 +134,10 @@ $icon-size: 1em;
       width: 100%;
       border: 0;
       padding: space(lg) space(2x);
-      color: $text-color-primary;
+      color: var(--text-color-primary);
+      font-size: var(--fs-body);
       text-align: inherit;
       text-decoration: none;
-      @include font-size($fs-body);
 
       &:focus {
         @include focus-default-inset;
@@ -146,19 +148,19 @@ $icon-size: 1em;
           right: space(xs);
           bottom: space(xs);
           left: space(xs);
-          border: $border-width-xs solid $border-color-inverse;
+          border: var(--border-width-xs) solid var(--border-color-inverse);
           content: '';
         }
       }
     }
 
     .bsds-dropdown-item-highlighted {
-      border-top: $border-width-xxs solid $border-color-subtle;
+      border-top: var(--border-width-xxs) solid var(--border-color-subtle);
       padding: space(lg) 0;
 
       .bsds-button,
       .bsds-link {
-        color: $text-color-action;
+        color: var(--text-color-action);
         @include font-family-base-heavy;
       }
     }
@@ -166,15 +168,15 @@ $icon-size: 1em;
     .bsds-button {
       &:hover,
       &:active {
-        color: $text-color-ghost;
+        color: var(--text-color-ghost);
       }
 
       &:hover {
-        background: $action-primary-40;
+        background: var(--action-primary-40);
       }
 
       &:active {
-        background: $action-primary-20;
+        background: var(--action-primary-20);
       }
     }
 

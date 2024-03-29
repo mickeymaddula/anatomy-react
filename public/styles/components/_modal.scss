@@ -5,13 +5,13 @@
     100vw
   ); // NOTE: This is a one off size. We can keep an eye out as we build more modal/panel type components to see if this is a dimension we want to flip to a variable.
   max-width: 90vw;
-  box-shadow: $box-shadow-primary;
+  box-shadow: var(--box-shadow-primary);
   border: 0;
   padding: space(4x);
-  background: $neutral-100;
+  background: var(--neutral-100);
 
   &::backdrop {
-    background: rgba($neutral-00, 0.6);
+    background: rgba(var(--neutral-00), 0.6);
   }
 
   .bsds-modal-header {

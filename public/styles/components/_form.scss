@@ -1,16 +1,16 @@
 %field-control {
   position: relative;
   width: 100%;
-  margin-top: $field-control-margin-top;
-  border: $border-width-xxs solid $border-color-assertive;
+  margin-top: var(--field-control-margin-top);
+  border: var(--border-width-xxs) var(--border-color-assertive) ertive;
   padding: space(lg) space(2x);
-  background: $neutral-100;
+  background: var(--neutral-100);
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 
   &::placeholder {
-    color: $text-color-subtle;
+    color: var(--text-color-subtle);
   }
 
   &:focus {
@@ -18,8 +18,8 @@
   }
 
   &:disabled {
-    border-color: $border-color-subtle;
-    background: $neutral-95;
+    border-color: var(--border-color-subtle);
+    background: var(--neutral-95);
 
     &:hover {
       cursor: not-allowed;
@@ -59,8 +59,8 @@
 
 .bsds-legend {
   @include font-family-base-heavy;
-  @include font-size($fs-body);
   padding-inline: 0;
+  font-size: var(--fs-body);
 }
 
 .bsds-field {
@@ -86,7 +86,7 @@
     display: flex;
     align-items: center;
     margin: space(md) 0 0 0;
-    color: $feedback-error-40;
+    color: var(--feedback-error-40);
 
     &::before {
       display: inline-block;
@@ -104,8 +104,8 @@
 
   .bsds-field-help-text {
     margin: space(sm) 0 0 0;
-    color: $text-color-subtle;
-    @include font-size($fs-body-subtle);
+    color: var(--text-color-subtle);
+    font-size: var(--fs-body-subtle);
   }
 
   .bsds-field-required-text {

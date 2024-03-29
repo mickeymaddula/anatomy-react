@@ -1,5 +1,7 @@
-$outer-circle-diameter: var(--ffs-body-assertive);
-$inner-circle-diameter: space(md);
+:root {
+  --outer-circle-diameter: var(--ffs-body-assertive);
+  --inner-circle-diameter: space(md);
+}
 
 .bsds-fieldset {
   .bsds-input-radio-label {
@@ -19,13 +21,13 @@ $inner-circle-diameter: space(md);
 
     &::before {
       position: absolute;
-      top: calc((1.5em - $outer-circle-diameter) / 2);
+      top: calc((1.5em - var(--outer-circle-diameter)) / 2);
       left: 0;
-      width: $outer-circle-diameter;
-      height: $outer-circle-diameter;
-      border-radius: $border-radius-circle;
-      border: $border-width-xxs solid $border-color-assertive;
-      background: $neutral-100;
+      width: var(--outer-circle-diameter);
+      height: var(--outer-circle-diameter);
+      border-radius: var(--border-radius-circle);
+      border: var(--border-width-xxs) solid var(--border-color-assertive);
+      background: var(--neutral-100);
       content: '';
     }
   }
@@ -33,8 +35,8 @@ $inner-circle-diameter: space(md);
   [aria-invalid='true'] & {
     + .bsds-input-radio-label {
       &::before {
-        border: $border-width-xs solid $border-color-error;
-        background: $neutral-100;
+        border: var(--border-width-xs) solid var(--border-color-error);
+        background: var(--neutral-100);
       }
     }
 
@@ -43,11 +45,11 @@ $inner-circle-diameter: space(md);
       + .bsds-input-radio-label {
         &::before {
           border: transparent;
-          background: $feedback-error-40;
+          background: var(--feedback-error-40);
         }
 
         &::after {
-          background: $neutral-100;
+          background: var(--neutral-100);
         }
       }
     }
@@ -69,19 +71,19 @@ $inner-circle-diameter: space(md);
     + .bsds-input-radio-label {
       &::before {
         border: transparent;
-        background: $neutral-00;
+        background: var(--neutral-00);
       }
 
       &::after {
         position: absolute;
-        top: calc((1.5em - $outer-circle-diameter) / 2);
+        top: calc((1.5em - var(--outer-circle-diameter)) / 2);
         left: 0;
-        width: $outer-circle-diameter;
-        height: $outer-circle-diameter;
-        border-radius: $border-radius-circle;
-        background: $neutral-100;
+        width: var(--outer-circle-diameter);
+        height: var(--outer-circle-diameter);
+        border-radius: var(--border-radius-circle);
+        background: var(--neutral-100);
         content: '';
-        transform: scale(calc($inner-circle-diameter / $outer-circle-diameter));
+        transform: scale(calc(var(--inner-circle-diameter) / var(--outer-circle-diameter)));
       }
     }
   }
@@ -103,8 +105,8 @@ $inner-circle-diameter: space(md);
 
       &::before {
         opacity: 1;
-        border: $border-width-xxs solid $border-color-subtle;
-        background: $neutral-95;
+        border: var(--border-width-xxs) solid var(--border-color-subtle);
+        background: var(--neutral-95);
       }
     }
 
@@ -112,7 +114,7 @@ $inner-circle-diameter: space(md);
     &[aria-checked='true'] {
       + .bsds-input-radio-label {
         &::after {
-          background: $neutral-60;
+          background: var(--neutral-60);
         }
       }
     }

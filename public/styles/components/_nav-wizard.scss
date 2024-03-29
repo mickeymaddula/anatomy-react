@@ -1,9 +1,9 @@
 .bsds-nav-wizard {
   @include bsds-defaults-type;
   position: relative;
-  box-shadow: $box-shadow-tertiary;
+  box-shadow: var(--box-shadow-tertiary);
   padding: space(4x);
-  background: $neutral-100;
+  background: var(--neutral-100);
 
   .bsds-nav-wizard-header {
     display: grid;
@@ -23,7 +23,7 @@
   .bsds-nav-breadcrumb {
     grid-area: breadcrumb;
     margin-top: space(4x);
-    @include font-size($fs-body-subtle);
+    font-size: var(--fs-body-subtle);
   }
 
   .bsds-nav-title {
@@ -46,7 +46,7 @@
 
   .bsds-nav-wizard-menu {
     margin-top: space(4x);
-    border-top: $border-width-xs solid $border-color-subtle;
+    border-top: var(--border-width-xs) var(--border-color-subtle) subtle;
     padding-top: space(4x);
 
     .bsds-nav-item,
@@ -62,14 +62,14 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    border: $border-width-xxs solid $border-color-subtle;
+    border: var(--border-width-xxs) var(--border-color-subtle) subtle;
     padding: space(3x);
     text-align: left;
     @include link-navigation;
 
     &:hover,
     &:active {
-      border: $border-width-xxs solid $border-color-action;
+      border: var(--border-width-xxs) var(--border-color-action) action;
       background: initial;
     }
 
@@ -93,7 +93,7 @@
         justify-content: center;
         align-items: center;
         align-self: stretch;
-        color: $action-primary-40;
+        color: var(--action-primary-40);
       }
 
       &:hover,
@@ -105,8 +105,8 @@
         }
 
         > .bsds-nav-link-addon {
-          background: $action-primary-40;
-          color: $neutral-100;
+          background: var(--action-primary-40);
+          color: var(--neutral-100);
         }
       }
     }
@@ -115,11 +115,11 @@
   .bsds-nav-link-back {
     justify-content: flex-start;
     padding-left: 0;
-    @include font-size($fs-small);
-    fill: $action-primary-40; // TODO: ADS-341 revisit fill vs stroke here or in mixin
+    font-size: var(--fs-small);
+    fill: var(--action-primary-40); // TODO: ADS-341 revisit fill vs stroke here or in mixin
 
     &:active {
-      fill: $neutral-00;
+      fill: var(--neutral-00);
     }
   }
 

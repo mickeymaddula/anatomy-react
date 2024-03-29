@@ -18,7 +18,7 @@ $base: '.bsds-ribbon';
   @include bsds-defaults;
   display: flex;
   justify-content: center;
-  background-color: $neutral-95;
+  background-color: var(--neutral-95);
 
   @include padding-x(3x);
   @include padding-y(lg);
@@ -28,7 +28,7 @@ $base: '.bsds-ribbon';
   }
 
   &-informational {
-    background-color: $action-primary-97;
+    background-color: var(--action-primary-97);
   }
 
   &-content {
@@ -36,7 +36,7 @@ $base: '.bsds-ribbon';
   }
 
   &-shadow {
-    box-shadow: $box-shadow-tertiary;
+    box-shadow: var(--box-shadow-tertiary);
   }
 
   &.is-constrained {

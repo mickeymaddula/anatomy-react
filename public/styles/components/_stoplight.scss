@@ -50,6 +50,6 @@
   }
 
   &-ghost {
-    color: $text-color-ghost;
+    color: var(--text-color-ghost);
   }
 }

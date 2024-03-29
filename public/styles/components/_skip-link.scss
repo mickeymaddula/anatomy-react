@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   padding: space(md);
-  background: $neutral-95;
+  background: var(--neutral-95);
 
   &:focus {
     position: relative;

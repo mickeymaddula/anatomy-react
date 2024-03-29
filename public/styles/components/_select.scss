@@ -4,7 +4,7 @@
   grid-template-areas: 'select';
   align-items: center;
   margin-top: space(md);
-  background: $neutral-100;
+  background: var(--neutral-100);
 
   select {
     @extend %field-control;
@@ -29,11 +29,11 @@
 
       &:hover,
       &:focus {
-        border-color: $border-color-action;
+        border-color: var(--border-color-action);
       }
 
       &:disabled {
-        background: $neutral-95;
+        background: var(--neutral-95);
 
         &:hover {
           cursor: not-allowed;
@@ -41,17 +41,17 @@
       }
 
       &[aria-invalid='true'] {
-        border-color: $border-color-error;
+        border-color: var(--border-color-error);
       }
     }
   }
 
   &::after {
     position: absolute;
-    top: calc(50% - ($icon-size-sm / 3));
+    top: calc(50% - (var(--icon-size-sm) / 3));
     right: space(2x);
-    width: $icon-size-sm;
-    height: $icon-size-sm;
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
     background-image: url('../../assets/images/icon-chevron-down.svg');
     content: '';
   }

@@ -1,4 +1,6 @@
-$bsds-breadcrumb-divider: url('../../assets/images/icon-slash.svg');
+:root {
+  --bsds-breadcrumb-divider: url('../../assets/images/icon-slash.svg');
+}
 
 .bsds-breadcrumbs {
   @include bsds-defaults-type;
@@ -24,7 +26,7 @@ $bsds-breadcrumb-divider: url('../../assets/images/icon-slash.svg');
           width: 1ch;
           height: 1em;
           margin-right: var(--space-md);
-          background-image: $bsds-breadcrumb-divider;
+          background-image: var(--bsds-breadcrumb-divider);
           background-position: center;
           background-repeat: no-repeat;
           content: '';

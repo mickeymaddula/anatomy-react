@@ -25,7 +25,7 @@
       &:hover,
       &:active {
         background: transparent;
-        color: $action-primary-40;
+        color: var(--action-primary-40);
         text-decoration-line: underline;
         text-decoration-thickness: space(xs);
       }
@@ -38,16 +38,16 @@
 
   &-active-filter {
     @include font-family-base-regular;
-    border-color: $border-color-subtle;
-    color: $text-color-primary;
+    border-color: var(--border-color-subtle);
+    color: var(--text-color-primary);
     text-align: left;
 
     &:not([disabled]) {
       &:hover,
       &:active {
-        border-color: $border-color-assertive;
-        background: $neutral-100;
-        color: $text-color-primary;
+        border-color: var(--border-color-assertive);
+        background: var(--neutral-100);
+        color: var(--text-color-primary);
       }
     }
   }

@@ -7,7 +7,7 @@
 .bsds-nav-primary,
 .bsds-nav-menu,
 .bsds-search-panel {
-  background: $neutral-100;
+  background: var(--neutral-100);
 }
 
 .bsds-nav-utility,
@@ -22,7 +22,7 @@
 
   .bsds-nav-link {
     display: block;
-    @include font-size($fs-body);
+    font-size: var(--fs-body);
     @include link-navigation;
 
     &:focus {
@@ -33,12 +33,12 @@
 
 .bsds-nav-header {
   @include bsds-defaults-type;
-  border-top-width: $border-width-xs;
+  border-top-width: var(--border-width-xs);
   border-top-style: solid;
   border-right: 0;
   border-bottom: 0;
   border-left: 0;
-  border-image-source: $gradient-brand;
+  border-image-source: var(--gradient-brand);
   border-image-slice: 1;
 
   &:not(.is-constrained) {

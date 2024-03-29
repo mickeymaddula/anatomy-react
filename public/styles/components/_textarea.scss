@@ -6,12 +6,12 @@
   &:hover,
   &:active {
     &:not(:read-only) {
-      border-color: $border-color-action;
+      border-color: var(--border-color-action);
     }
   }
 
   &:read-only {
-    background: $neutral-95;
+    background: var(--neutral-95);
 
     &:hover {
       cursor: not-allowed;
@@ -25,7 +25,7 @@
   &:not(:disabled),
   &:not(:read-only) {
     &[aria-invalid='true'] {
-      border-color: $border-color-error;
+      border-color: var(--border-color-error);
     }
   }
 

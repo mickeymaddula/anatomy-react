@@ -34,9 +34,9 @@
 }
 
 .bsds-image-caption {
-  @include font-size($fs-small);
   margin-top: space(md);
-  color: $text-color-primary;
+  color: var(--text-color-primary);
+  font-size: var(--fs-small);
 
   &-center {
     @extend .bsds-image-caption;
@@ -44,13 +44,13 @@
 
     &-ghost {
       @extend .bsds-image-caption-center;
-      color: $text-color-ghost;
+      color: var(--text-color-ghost);
     }
   }
 
   &-ghost {
     @extend .bsds-image-caption;
-    color: $text-color-ghost;
+    color: var(--text-color-ghost);
   }
 }
 
@@ -63,7 +63,7 @@
     right: space(6x);
     bottom: 0;
     left: 0;
-    background: $gradient-accent;
+    background: var(--gradient-accent);
     content: '';
   }
 
@@ -79,8 +79,8 @@
     left: space(2x);
     margin: 0;
     padding: space(md) space(lg);
-    background: rgba($neutral-00, 0.6);
-    color: $text-color-ghost;
+    background: rgba(var(--neutral-00), 0.6);
+    color: var(--text-color-ghost);
 
     &-center {
       @extend .bsds-image-caption;
@@ -88,15 +88,15 @@
 
       &-ghost {
         @extend .bsds-image-caption-center;
-        background: rgba($neutral-100, 0.6);
-        color: $text-color-primary;
+        background: rgba(var(--neutral-100), 0.6);
+        color: var(--text-color-primary);
       }
     }
 
     &-ghost {
       @extend .bsds-image-caption;
-      background: rgba($neutral-100, 0.6);
-      color: $text-color-primary;
+      background: rgba(var(--neutral-100), 0.6);
+      color: var(--text-color-primary);
     }
   }
 }

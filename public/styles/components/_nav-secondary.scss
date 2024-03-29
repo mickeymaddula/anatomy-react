@@ -30,16 +30,16 @@
     display: block;
     width: 100%;
     border: 0;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
+    border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
     padding-right: space(4x);
     padding-left: space(4x);
-    color: $text-color-primary;
+    color: var(--text-color-primary);
     text-align: left;
 
     &:hover,
     &:active {
-      border-color: $border-color-subtle;
-      background: $neutral-100;
+      border-color: var(--border-color-subtle);
+      background: var(--neutral-100);
       color: initial;
     }
 
@@ -48,7 +48,7 @@
     }
 
     &::after {
-      @include icon-background($icon-size-sm);
+      @include icon-background(var(--icon-size-sm));
       top: 0;
       padding: space(2x) space(4x);
       background-image: url('../../assets/images/icon-chevron-down.svg');
@@ -65,9 +65,9 @@
     position: absolute;
     display: none;
     width: 100%;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
+    border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
     padding: space(lg) space(2x);
-    background: $neutral-100;
+    background: var(--neutral-100);
 
     &.is-expanded {
       display: block;
@@ -83,7 +83,7 @@
     display: flex;
     justify-content: flex-start;
     padding: space(lg) space(2x);
-    @include font-size($fs-small);
+    font-size: var(--fs-small);
   }
 
   .bsds-nav-link {
@@ -93,14 +93,14 @@
     border-left: 0;
     padding: space(lg) space(2x);
     @include link-navigation;
-    @include font-size($fs-body-subtle);
+    font-size: var(--fs-body-subtle);
 
     &.is-active {
       &::before {
         position: absolute;
         left: 0;
         height: space(3x);
-        border-left: $border-width-sm solid $border-color-assertive;
+        border-left: var(--border-width-sm) var(--border-color-assertive) ertive;
         content: '';
       }
     }
@@ -127,7 +127,7 @@
       }
 
       &::after {
-        @include icon-background($icon-size-sm);
+        @include icon-background(var(--icon-size-sm));
         padding: space(lg);
         background-image: url('../../assets/images/icon-chevron-right.svg');
       }
