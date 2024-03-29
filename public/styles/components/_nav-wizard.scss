@@ -46,7 +46,7 @@
 
   .bsds-nav-wizard-menu {
     margin-top: var(--space-4x);
-    border-top: var(--border-width-xs) var(--border-color-subtle) subtle;
+    border-top: var(--border-width-xs) var(--border-color-subtle);
     padding-top: var(--space-4x);
 
     .bsds-nav-item,
@@ -62,14 +62,14 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    border: var(--border-width-xxs) var(--border-color-subtle) subtle;
+    border: var(--border-width-xxs) var(--border-color-subtle);
     padding: var(--space-3x);
     text-align: left;
     @include link-navigation;
 
     &:hover,
     &:active {
-      border: var(--border-width-xxs) var(--border-color-action) action;
+      border: var(--border-width-xxs) var(--border-color-action);
       background: initial;
     }
 

@@ -30,7 +30,7 @@
     display: block;
     width: 100%;
     border: 0;
-    border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
+    border-bottom: var(--border-width-xxs) var(--border-color-subtle);
     padding-right: var(--space-4x);
     padding-left: var(--space-4x);
     color: var(--text-color-primary);
@@ -65,7 +65,7 @@
     position: absolute;
     display: none;
     width: 100%;
-    border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
+    border-bottom: var(--border-width-xxs) var(--border-color-subtle);
     padding: var(--space-lg) var(--space-2x);
     background: var(--neutral-100);
 
@@ -100,7 +100,7 @@
         position: absolute;
         left: 0;
         height: var(--space-3x);
-        border-left: var(--border-width-sm) var(--border-color-assertive) ertive;
+        border-left: var(--border-width-sm) var(--border-color-assertive);
         content: '';
       }
     }

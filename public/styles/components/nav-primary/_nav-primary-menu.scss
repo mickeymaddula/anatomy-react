@@ -4,7 +4,7 @@
     left: 0;
     z-index: var(--nav-menu-z-index);
     width: 100%;
-    border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
+    border-bottom: var(--border-width-xxs) var(--border-color-subtle);
     font-size: var(--fs-body);
 
     &:not(.is-expanded) {
@@ -111,7 +111,7 @@
     padding: var(--menu-padding);
 
     > :not(:last-child) {
-      border-right: var(--border-width-xxs) var(--border-color-subtle) subtle;
+      border-right: var(--border-width-xxs) var(--border-color-subtle);
     }
   }
 
@@ -130,7 +130,7 @@
     }
 
     .bsds-nav-menu-panel-header {
-      border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
+      border-bottom: var(--border-width-xxs) var(--border-color-subtle);
       padding: var(--space-lg) var(--space-3x) var(--space-4x);
 
       .bsds-nav-menu-panel-title {
@@ -179,7 +179,7 @@
       flex-direction: column;
       align-content: flex-start;
       align-items: stretch;
-      border-top: var(--border-width-xxs) var(--border-color-subtle) subtle;
+      border-top: var(--border-width-xxs) var(--border-color-subtle);
       padding: var(--menu-padding);
 
       .bsds-nav-link {
@@ -226,8 +226,8 @@
     display: none;
     width: 100%;
     margin: auto;
-    border-top: var(--border-width-xxs) var(--border-color-subtle) subtle;
-    border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
+    border-top: var(--border-width-xxs) var(--border-color-subtle);
+    border-bottom: var(--border-width-xxs) var(--border-color-subtle);
 
     &.is-expanded {
       display: block;
@@ -249,7 +249,7 @@
       height: 100%;
 
       .bsds-nav-menu-panel-header {
-        border-right: var(--border-width-xxs) var(--border-color-subtle) subtle;
+        border-right: var(--border-width-xxs) var(--border-color-subtle);
         border-bottom: 0;
         padding: var(--space-4x) var(--space-4x) var(--space-3x);
       }
@@ -262,11 +262,11 @@
         border-bottom: 0;
 
         &:first-child {
-          border-left: var(--border-width-xxs) var(--border-color-subtle) subtle;
+          border-left: var(--border-width-xxs) var(--border-color-subtle);
         }
 
         &:not(:first-child) {
-          border-right: var(--border-width-xxs) var(--border-color-subtle) subtle;
+          border-right: var(--border-width-xxs) var(--border-color-subtle);
         }
 
         &.bsds-nav-list-history {
@@ -313,7 +313,7 @@
 
     .bsds-nav-menu {
       height: 60vh;
-      border-top: var(--border-width-xxs) var(--border-color-subtle) subtle;
+      border-top: var(--border-width-xxs) var(--border-color-subtle);
 
       .bsds-nav {
         height: 100%;
