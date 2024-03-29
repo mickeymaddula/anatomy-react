@@ -9,7 +9,7 @@
     align-self: flex-start;
     width: space(3x);
     height: space(3x);
-    margin-right: space(md);
+    margin-right: var(--space-md);
     background-repeat: no-repeat;
     background-size: 100%;
     content: '';
@@ -19,7 +19,7 @@
     &::before {
       width: space(2x);
       height: space(2x);
-      transform: translateY(space(-xxs));
+      transform: translateY(var(--space-negative-xxs));
     }
   }
 }

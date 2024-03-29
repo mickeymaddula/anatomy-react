@@ -3,7 +3,7 @@
   width: 100%;
   margin-top: var(--field-control-margin-top);
   border: var(--border-width-xxs) var(--border-color-assertive) ertive;
-  padding: space(lg) space(2x);
+  padding: var(--space-lg) space(2x);
   background: var(--neutral-100);
   font-family: inherit;
   font-size: inherit;
@@ -85,7 +85,7 @@
   .bsds-field-error {
     display: flex;
     align-items: center;
-    margin: space(md) 0 0 0;
+    margin: var(--space-md) 0 0 0;
     color: var(--feedback-error-40);
 
     &::before {
@@ -94,7 +94,7 @@
       align-self: flex-start;
       width: space(3x);
       height: space(3x);
-      margin-right: space(md);
+      margin-right: var(--space-md);
       background-image: url('../../assets/images/icon-error.svg');
       background-repeat: no-repeat;
       background-size: 100%;
@@ -103,7 +103,7 @@
   }
 
   .bsds-field-help-text {
-    margin: space(sm) 0 0 0;
+    margin: var(--space-sm) 0 0 0;
     color: var(--text-color-subtle);
     font-size: var(--fs-body-subtle);
   }
@@ -125,7 +125,7 @@
 @media (min-width: $breakpoint-lg-min) {
   .bsds-field-error {
     &::before {
-      transform: translateY(space(xs));
+      transform: translateY(var(--space-xs));
     }
   }
 }

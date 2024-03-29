@@ -73,7 +73,7 @@
     }
 
     figcaption {
-      margin: space(md) 0 0;
+      margin: var(--space-md) 0 0;
       padding-left: space(3x);
 
       &::before {
@@ -110,7 +110,7 @@
 
     li {
       &:not(:first-of-type) {
-        margin: space(md) 0 0;
+        margin: var(--space-md) 0 0;
       }
     }
   }

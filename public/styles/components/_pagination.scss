@@ -16,7 +16,7 @@
       [class*='bsds-link'] {
         display: block;
         border: 0;
-        padding: space(sm) space(lg);
+        padding: var(--space-sm) var(--space-lg);
         background: transparent;
         color: var(--text-color-primary);
         font-size: var(--fs-body);
@@ -38,7 +38,7 @@
     }
 
     .bsds-pagination-stepper-action {
-      padding: space(lg);
+      padding: var(--space-lg);
     }
   }
 }

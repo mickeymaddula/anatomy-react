@@ -39,9 +39,9 @@
       position: sticky;
       right: 0;
       display: block;
-      width: space(xxs);
+      width: var(--space-xxs);
       height: space(6x);
-      box-shadow: space(-xxs) 0 space(md) space(xs) rgba(var(--neutral-00), 0.2);
+      box-shadow: var(--space-negative-xxs) 0 var(--space-md) var(--space-xs) rgba(var(--neutral-00), 0.2);
       border-width: 0;
       content: '';
       pointer-events: none;
@@ -52,7 +52,7 @@
     position: relative;
     margin-right: space(2x);
     border: 0;
-    padding: space(lg) space(2x);
+    padding: var(--space-lg) space(2x);
     background: transparent;
     color: var(--text-color-subtle);
     @include font-family-base-regular;
@@ -61,7 +61,7 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: space(xs);
+      height: var(--space-xs);
       background: transparent;
       content: '';
     }
@@ -87,7 +87,7 @@
       @include font-family-base-heavy;
 
       &::after {
-        height: space(sm);
+        height: var(--space-sm);
         background: var(--neutral-00);
       }
     }
@@ -106,7 +106,7 @@
     .bsds-tab-overflow-control {
       border: 0;
       border-color: transparent;
-      padding: space(lg) space(2x);
+      padding: var(--space-lg) space(2x);
 
       &:focus {
         @include focus-default-inset;

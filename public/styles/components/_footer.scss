@@ -1,5 +1,5 @@
 @mixin bsds-footer-text {
-  margin-top: space(lg);
+  margin-top: var(--space-lg);
   font-size: var(--fs-small);
 }
 
@@ -52,7 +52,7 @@
   .bsds-nav-group {
     .bsds-nav {
       &:not(:first-of-type) {
-        margin-top: space(lg);
+        margin-top: var(--space-lg);
       }
     }
 
@@ -61,7 +61,7 @@
       margin-top: 0;
 
       + .bsds-nav {
-        margin-top: space(lg);
+        margin-top: var(--space-lg);
       }
     }
   }
@@ -106,7 +106,7 @@
         @include bsds-footer-text;
 
         .bsds-footer-icon {
-          width: space(lg);
+          width: var(--space-lg);
         }
       }
     }
@@ -140,7 +140,7 @@
       align-items: center;
       padding-left: 0;
       list-style: none;
-      gap: space(lg);
+      gap: var(--space-lg);
 
       .bsds-footer-social-media-item {
         display: flex;

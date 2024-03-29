@@ -60,7 +60,7 @@
     margin: 0;
     box-shadow: var(--box-shadow-secondary);
     border: var(--border-width-xxs) var(--border-color-subtle) subtle;
-    padding: space(md) 0;
+    padding: var(--space-md) 0;
     background: var(--neutral-100);
     list-style: none;
   }
@@ -72,7 +72,7 @@
 
     &.bsds-search-result-none,
     .bsds-link {
-      padding: space(lg) space(2x);
+      padding: var(--space-lg) space(2x);
     }
 
     .bsds-link {

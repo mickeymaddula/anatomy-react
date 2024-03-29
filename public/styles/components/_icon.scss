@@ -11,15 +11,15 @@
 }
 
 .bsds-icon-sm {
-  width: space(sm);
+  width: var(--space-sm);
 }
 
 .bsds-icon-md {
-  width: space(md);
+  width: var(--space-md);
 }
 
 .bsds-icon-lg {
-  width: space(lg);
+  width: var(--space-lg);
 }
 
 .bsds-icon-2x // use for buttons with text + icon

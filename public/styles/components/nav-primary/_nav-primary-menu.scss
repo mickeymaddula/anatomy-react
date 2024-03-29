@@ -30,7 +30,9 @@
 
         .bsds-nav-link-text {
           position: relative;
-          padding-right: calc(var(--icon-size-sm) + space(md)); // Padding + icon width + space between icon and text;
+          padding-right: calc(
+            var(--icon-size-sm) + var(--space-md)
+          ); // Padding + icon width + space between icon and text;
 
           &::after {
             position: absolute;
@@ -54,7 +56,7 @@
 
         .bsds-nav-link-description {
           width: 100%;
-          margin-top: space(md);
+          margin-top: var(--space-md);
           color: var(--text-color-subtle);
           font-size: var(--fs-body-subtle);
           text-align: left;
@@ -94,7 +96,7 @@
     justify-content: flex-start;
     width: 100%;
     box-shadow: var(--box-shadow-secondary);
-    padding: space(lg) space(2x);
+    padding: var(--space-lg) space(2x);
     font-size: var(--fs-body);
 
     &:focus {
@@ -129,7 +131,7 @@
 
     .bsds-nav-menu-panel-header {
       border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
-      padding: space(lg) space(3x) space(4x);
+      padding: var(--space-lg) space(3x) space(4x);
 
       .bsds-nav-menu-panel-title {
         @extend .bsds-h3;
@@ -188,7 +190,7 @@
       .bsds-dropdown {
         .bsds-dropdown-trigger {
           display: inline-flex;
-          padding-right: calc(space(md) + var(--icon-size-sm) + space(lg));
+          padding-right: calc(var(--space-md) + var(--icon-size-sm) + var(--space-lg));
 
           &[aria-expanded='true'],
           &:hover,
@@ -198,7 +200,7 @@
           }
 
           &::after {
-            right: space(lg);
+            right: var(--space-lg);
             width: var(--icon-size-sm);
             height: var(--icon-size-sm);
             background: var(--text-color-primary);

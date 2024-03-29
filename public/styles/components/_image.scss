@@ -34,7 +34,7 @@
 }
 
 .bsds-image-caption {
-  margin-top: space(md);
+  margin-top: var(--space-md);
   color: var(--text-color-primary);
   font-size: var(--fs-small);
 
@@ -78,7 +78,7 @@
     bottom: space(2x);
     left: space(2x);
     margin: 0;
-    padding: space(md) space(lg);
+    padding: var(--space-md) var(--space-lg);
     background: rgba(var(--neutral-00), 0.6);
     color: var(--text-color-ghost);
 

@@ -95,13 +95,13 @@
   + .bsds-card-title {
     &.bsds-card-title {
       // TODO: temporarily increasing specificity while refactoring, reduce later
-      margin-top: space(lg);
+      margin-top: var(--space-lg);
     }
   }
 
   // TODO: ADS-611 move this into product card or a base card
   + .bsds-product-card-ns-title {
-    margin-top: space(lg);
+    margin-top: var(--space-lg);
   }
 }
 

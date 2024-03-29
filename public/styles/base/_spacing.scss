@@ -1,29 +1,29 @@
 .bsds-icon-right {
-  margin-left: space(md);
+  margin-left: var(--space-md);
 }
 
 .bsds-icon-left {
-  margin-right: space(md);
+  margin-right: var(--space-md);
 }
 
 .bsds-mt-xxs {
-  margin-top: space(xxs);
+  margin-top: var(--space-xxs);
 }
 
 .bsds-mt-xs {
-  margin-top: space(xs);
+  margin-top: var(--space-xs);
 }
 
 .bsds-mt-sm {
-  margin-top: space(sm);
+  margin-top: var(--space-sm);
 }
 
 .bsds-mt-md {
-  margin-top: space(md);
+  margin-top: var(--space-md);
 }
 
 .bsds-mt-lg {
-  margin-top: space(lg);
+  margin-top: var(--space-lg);
 }
 
 .bsds-mt-2x {

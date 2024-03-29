@@ -12,7 +12,7 @@
 .bsds-fieldset-button-group {
   @extend .bsds-fieldset;
   flex-flow: row wrap;
-  gap: 0 space(lg);
+  gap: 0 var(--space-lg);
 
   .bsds-legend {
     @include font-family-base-regular;
@@ -21,7 +21,7 @@
       width: max-content;
 
       .bsds-input-radio-label {
-        margin-top: space(lg);
+        margin-top: var(--space-lg);
       }
     }
   }
@@ -36,7 +36,7 @@
       border-width: var(--border-width-xxs);
       border-style: solid;
       border-color: inherit;
-      padding: space(md) space(3x);
+      padding: var(--space-md) space(3x);
       background: var(--neutral-100);
       color: var(--text-color-subtle);
       font-size: var(--ffs-body-assertive);
@@ -151,6 +151,6 @@
 
   .bsds-field-help-text {
     width: 100%;
-    margin-top: space(sm);
+    margin-top: var(--space-sm);
   }
 }

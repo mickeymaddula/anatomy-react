@@ -57,7 +57,7 @@ a {
     &::after {
       width: var(--ffs-body-assertive);
       height: var(--ffs-body-assertive);
-      margin-left: space(md);
+      margin-left: var(--space-md);
       background: var(--action-primary-40);
       content: '';
       /* stylelint-disable property-no-vendor-prefix */

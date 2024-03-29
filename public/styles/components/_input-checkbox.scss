@@ -54,7 +54,7 @@
 
   + .bsds-input-checkbox-label {
     position: relative;
-    padding-left: calc(space(3x) + space(xs));
+    padding-left: calc(space(3x) + var(--space-xs));
     cursor: pointer;
 
     &::before {
@@ -94,7 +94,7 @@
         left: 0;
         width: var(--checkmark-size);
         height: var(--checkmark-size);
-        padding: calc(space(xxs) + space(xs));
+        padding: calc(var(--space-xxs) + var(--space-xs));
         background-image: url('../../assets/images/icon-check.svg');
         background-origin: content-box;
         background-repeat: no-repeat;

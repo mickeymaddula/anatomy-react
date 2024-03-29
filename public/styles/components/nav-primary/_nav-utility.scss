@@ -15,7 +15,7 @@
 
       .bsds-nav-link {
         border: 0;
-        padding: space(md) space(lg);
+        padding: var(--space-md) var(--space-lg);
         color: var(--text-color-subtle);
 
         &:hover {
@@ -26,11 +26,11 @@
       .bsds-dropdown {
         .bsds-dropdown-trigger {
           display: inline-flex;
-          padding: space(md) space(lg);
-          padding-right: calc(space(md) + var(--icon-size-sm) + space(lg));
+          padding: var(--space-md) var(--space-lg);
+          padding-right: calc(var(--space-md) + var(--icon-size-sm) + var(--space-lg));
 
           &::after {
-            right: space(lg);
+            right: var(--space-lg);
             width: var(--icon-size-sm);
             height: var(--icon-size-sm);
             background: var(--text-color-subtle);
@@ -55,7 +55,7 @@
   .bsds-nav-logo-secondary {
     width: auto;
     max-height: space(4x);
-    margin: space(md) space(3x);
+    margin: var(--space-md) space(3x);
   }
 }
 

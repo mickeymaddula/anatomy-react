@@ -8,14 +8,14 @@
   display: inline-block;
 
   .bsds-dropdown-trigger {
-    padding-right: calc(space(lg) + var(--icon-size) + space(3x)); // gap + icon width + padding
+    padding-right: calc(var(--space-lg) + var(--icon-size) + space(3x)); // gap + icon width + padding
 
     &.has-icon {
-      padding-right: calc(space(md) + var(--icon-size) + space(lg)); // gap + icon width + padding
-      padding-left: space(lg);
+      padding-right: calc(var(--space-md) + var(--icon-size) + var(--space-lg)); // gap + icon width + padding
+      padding-left: var(--space-lg);
 
       &::after {
-        right: space(lg);
+        right: var(--space-lg);
       }
     }
 
@@ -133,7 +133,7 @@
       display: block;
       width: 100%;
       border: 0;
-      padding: space(lg) space(2x);
+      padding: var(--space-lg) space(2x);
       color: var(--text-color-primary);
       font-size: var(--fs-body);
       text-align: inherit;
@@ -144,10 +144,10 @@
 
         &::before {
           position: absolute;
-          top: space(xs);
-          right: space(xs);
-          bottom: space(xs);
-          left: space(xs);
+          top: var(--space-xs);
+          right: var(--space-xs);
+          bottom: var(--space-xs);
+          left: var(--space-xs);
           border: var(--border-width-xs) solid var(--border-color-inverse);
           content: '';
         }
@@ -156,7 +156,7 @@
 
     .bsds-dropdown-item-highlighted {
       border-top: var(--border-width-xxs) solid var(--border-color-subtle);
-      padding: space(lg) 0;
+      padding: var(--space-lg) 0;
 
       .bsds-button,
       .bsds-link {

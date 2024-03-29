@@ -46,7 +46,7 @@
   border-radius: 0;
   border-width: var(--border-width-xs);
   border-style: solid;
-  padding: space(lg) space(3x) 0.6875rem; // NOTE: this is a one-off size because space(lg) - space(xxs) was rounding up
+  padding: var(--space-lg) space(3x) 0.6875rem; // NOTE: this is a one-off size because var(--space-lg) - var(--space-xxs) was rounding up
   font-size: var(--ffs-body-assertive);
   line-height: inherit;
   text-align: center;
@@ -83,7 +83,7 @@
   @include button-default;
   @include link-default;
   border-color: transparent;
-  padding: space(lg) space(3x) 0.6875rem;
+  padding: var(--space-lg) space(3x) 0.6875rem;
   background: transparent;
   text-decoration: none;
   @include button-focus;
@@ -144,12 +144,12 @@
 
 @mixin button-icon {
   border-radius: var(--border-radius-circle);
-  padding: calc(space(2x) + space(xxs));
+  padding: calc(space(2x) + var(--space-xxs));
 }
 
 @mixin button-small {
   border-width: var(--border-width-xxs);
-  padding: space(md) calc(space(lg) + space(xxs));
+  padding: var(--space-md) calc(var(--space-lg) + var(--space-xxs));
   font-size: var(--fs-body-subtle);
 }
 
@@ -203,7 +203,7 @@ button {
 
 // Link Mixins
 @mixin link-hover {
-  text-decoration-thickness: space(xs);
+  text-decoration-thickness: var(--space-xs);
   cursor: pointer;
 }
 
@@ -223,7 +223,7 @@ button {
 
   &:active {
     color: var(--text-color-primary);
-    text-decoration-thickness: space(xs);
+    text-decoration-thickness: var(--space-xs);
   }
 
   &:focus {
@@ -247,7 +247,7 @@ button {
 
   &:active {
     color: var(--text-color-action);
-    text-decoration-thickness: space(xs);
+    text-decoration-thickness: var(--space-xs);
   }
 
   &:focus {
@@ -271,7 +271,7 @@ button {
 
   &:active {
     color: var(--text-color-disabled);
-    text-decoration-thickness: space(xs);
+    text-decoration-thickness: var(--space-xs);
   }
 
   &:focus {

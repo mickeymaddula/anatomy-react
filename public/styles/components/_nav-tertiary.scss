@@ -13,7 +13,7 @@
   .bsds-nav-tertiary-title {
     margin: 0;
     border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
-    padding-bottom: space(lg);
+    padding-bottom: var(--space-lg);
     color: var(--text-color-subtle);
     @include font-family-base-regular;
     line-height: 1.5; // NOTE: overriding h2's default line height
@@ -27,7 +27,7 @@
     list-style: none;
 
     .bsds-nav-item {
-      margin-top: space(lg);
+      margin-top: var(--space-lg);
     }
   }
 

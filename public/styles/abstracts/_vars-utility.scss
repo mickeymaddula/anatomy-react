@@ -9,9 +9,9 @@
 
   // Icon utility variables
 
-  --icon-size-sm: space(lg);
+  --icon-size-sm: var(--space-lg);
 
   // Form utility variables
 
-  --field-control-margin-top: space(md);
+  --field-control-margin-top: var(--space-md);
 }

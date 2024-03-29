@@ -1,6 +1,6 @@
 :root {
   --outer-circle-diameter: var(--ffs-body-assertive);
-  --inner-circle-diameter: space(md);
+  --inner-circle-diameter: var(--space-md);
 }
 
 .bsds-fieldset {
@@ -16,7 +16,7 @@
   + .bsds-input-radio-label {
     position: relative;
     vertical-align: middle;
-    padding-left: calc(space(3x) + space(xs));
+    padding-left: calc(space(3x) + var(--space-xs));
     cursor: pointer;
 
     &::before {

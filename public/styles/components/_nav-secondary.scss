@@ -66,7 +66,7 @@
     display: none;
     width: 100%;
     border-bottom: var(--border-width-xxs) var(--border-color-subtle) subtle;
-    padding: space(lg) space(2x);
+    padding: var(--space-lg) space(2x);
     background: var(--neutral-100);
 
     &.is-expanded {
@@ -82,7 +82,7 @@
   .bsds-button-text {
     display: flex;
     justify-content: flex-start;
-    padding: space(lg) space(2x);
+    padding: var(--space-lg) space(2x);
     font-size: var(--fs-small);
   }
 
@@ -91,7 +91,7 @@
     display: flex;
     justify-content: space-between;
     border-left: 0;
-    padding: space(lg) space(2x);
+    padding: var(--space-lg) space(2x);
     @include link-navigation;
     font-size: var(--fs-body-subtle);
 
@@ -128,7 +128,7 @@
 
       &::after {
         @include icon-background(var(--icon-size-sm));
-        padding: space(lg);
+        padding: var(--space-lg);
         background-image: url('../../assets/images/icon-chevron-right.svg');
       }
     }

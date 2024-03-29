@@ -87,7 +87,7 @@
   }
 
   .bsds-accordion-panel-body {
-    padding: space(md) space(2x) space(3x);
+    padding: var(--space-md) space(2x) space(3x);
   }
 
   // Stoplight styles
@@ -103,7 +103,7 @@
         margin-right: space(2x);
         border-left-width: var(--border-width-sm);
         border-left-style: solid;
-        padding: space(3x) space(md);
+        padding: space(3x) var(--space-md);
         background-position: center;
         background-repeat: no-repeat;
         background-size: space(3x);
@@ -127,7 +127,7 @@
 
     ~ .bsds-accordion-panel {
       .bsds-accordion-panel-body {
-        padding: space(md) space(8x) space(3x);
+        padding: var(--space-md) space(8x) space(3x);
       }
     }
   }
