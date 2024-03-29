@@ -76,33 +76,15 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
     linkClasses: ''
   };
 
-  const inverseStyle = {
-    classes: 'bsds-card-inverse',
-    titleLinkClasses: 'bsds-link-inverse',
-    linkClasses: 'bsds-link-inverse'
-  };
-
-  const borderLightStyle = {
-    classes: 'bsds-card-border-light',
+  const borderStyle = {
+    classes: 'bsds-card-border',
     titleLinkClasses: 'bsds-link-subtle',
     linkClasses: ''
   };
 
-  const borderinverseStyle = {
-    classes: 'bsds-card-border-inverse',
-    titleLinkClasses: 'bsds-link-inverse',
-    linkClasses: 'bsds-link-inverse'
-  };
-
   switch (variant) {
-    case 'inverse':
-      cardStyles = { ...inverseStyle };
-      break;
-    case 'border-light':
-      cardStyles = { ...borderLightStyle };
-      break;
-    case 'border-inverse':
-      cardStyles = { ...borderinverseStyle };
+    case 'border':
+      cardStyles = { ...borderStyle };
       break;
 
     default:
@@ -111,18 +93,12 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
   }
 
   let decorativeState = '';
-  if (gradientBrand && variant?.includes('inverse')) {
+  if (gradientBrand) {
     decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderinverseStyle };
-  } else if (gradientBrand) {
-    decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderLightStyle };
-  } else if (dropShadow && variant?.includes('inverse')) {
-    decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderinverseStyle };
+    cardStyles = { ...borderStyle };
   } else if (dropShadow) {
     decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderLightStyle };
+    cardStyles = { ...borderStyle };
   }
 
   const [title, setTitle] = useState<ReactElement>();
@@ -148,23 +124,15 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
 
   useEffect(() => {
     if (image) {
-      setClonedImage(
-        cloneElement(image as ReactElement, {
-          isinverse: variant === 'inverse' || variant === 'border-inverse'
-        })
-      );
+      setClonedImage(cloneElement(image as ReactElement));
     }
-  }, [image, variant]);
+  }, [image]);
 
   useEffect(() => {
     if (tag) {
-      setClonedTag(
-        cloneElement(tag as ReactElement, {
-          isinverse: variant === 'inverse' || variant === 'border-inverse'
-        })
-      );
+      setClonedTag(cloneElement(tag as ReactElement));
     }
-  }, [tag, variant]);
+  }, [tag]);
 
   const cardContent = (
     <>

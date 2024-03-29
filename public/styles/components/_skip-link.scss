@@ -5,7 +5,8 @@
   display: flex;
   justify-content: center;
   padding: var(--space-md);
-  background: var(--neutral-95);
+  background: var(--skiplink-background);
+  color: var(--skiplink-text); // TODO: update var to skiplink-text-color
 
   &:focus {
     position: relative;

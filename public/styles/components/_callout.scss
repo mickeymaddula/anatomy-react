@@ -1,10 +1,8 @@
-// TODO: we have a var for callout-text that sets the text color to text-color-primary
-// should we add color: var(--callout-text-color) or color: var(--text-color-primary)? how do we want to handle inverse?
-
 .bsds-callout {
   position: relative;
   margin-top: 0;
   padding-bottom: var(--space-3x);
+  color: var(--callout-text);
   font-size: var(--fs-display);
   line-height: 1.5;
   @include font-family-base-heavy; // TODO: do we want to swap for css custom properties in components or in the mixin?
@@ -26,9 +24,5 @@
       left: 50%;
       transform: translateX(-50%);
     }
-  }
-
-  &.bsds-callout-inverse {
-    color: var(--text-color-inverse); // TODO: do we want to use primary and inverse or abstract these further?
   }
 }
