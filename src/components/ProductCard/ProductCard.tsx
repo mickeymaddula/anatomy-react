@@ -34,22 +34,10 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
     linkClasses: 'bsds-product-card-ns-title'
   };
 
-  const inverseStyle = {
-    classes: 'bsds-card-inverse',
-    titleLinkClasses: 'bsds-link-inverse',
-    linkClasses: 'bsds-product-card-ns-title-inverse'
-  };
-
-  const borderLightStyle = {
-    classes: 'bsds-card-border-light',
+  const borderStyle = {
+    classes: 'bsds-card-border',
     titleLinkClasses: 'bsds-link-subtle',
     linkClasses: 'bsds-product-card-ns-title'
-  };
-
-  const borderinverseStyle = {
-    classes: 'bsds-card-border-inverse',
-    titleLinkClasses: 'bsds-link-inverse',
-    linkClasses: 'bsds-product-card-ns-title-inverse'
   };
 
   const [style, setStyle] = useState(cardStyles.classes);
@@ -61,14 +49,8 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
   const imageLink = useRef<HTMLAnchorElement>(null);
 
   switch (variant) {
-    case 'inverse':
-      cardStyles = { ...inverseStyle };
-      break;
-    case 'border-light':
-      cardStyles = { ...borderLightStyle };
-      break;
-    case 'border-inverse':
-      cardStyles = { ...borderinverseStyle };
+    case 'border':
+      cardStyles = { ...borderStyle };
       break;
 
     default:
@@ -77,18 +59,12 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
   }
 
   let decorativeState = '';
-  if (gradientBrand && variant?.includes('inverse')) {
+  if (gradientBrand) {
     decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderinverseStyle };
-  } else if (gradientBrand) {
-    decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderLightStyle };
-  } else if (dropShadow && variant?.includes('inverse')) {
-    decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderinverseStyle };
+    cardStyles = { ...borderStyle };
   } else if (dropShadow) {
     decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderLightStyle };
+    cardStyles = { ...borderStyle };
   }
 
   useEffect(() => {
@@ -109,13 +85,9 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
 
   useEffect(() => {
     if (tag) {
-      setClonedTag(
-        cloneElement(tag as ReactElement, {
-          isinverse: variant === 'inverse' || variant === 'border-inverse'
-        })
-      );
+      setClonedTag(cloneElement(tag as ReactElement));
     }
-  }, [tag, variant]);
+  }, [tag]);
 
   useEffect(() => {
     if (image) {
@@ -123,7 +95,6 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
         cloneElement(image as ReactElement, {
           ratio: image.props.ratio ? image.props.ratio : '1:1',
           isDecorative: false,
-          isinverse: variant === 'inverse' || variant === 'border-inverse',
           onClick: () => imageLink.current?.click()
         })
       );
