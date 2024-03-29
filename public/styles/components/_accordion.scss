@@ -138,6 +138,8 @@
         &::before {
           border-left-color: var(--accordion-error-border);
           background-color: var(--accordion-error-background);
+
+          // TODO: Refactor icon to be able to change its color for theming
           background-image: url('../../assets/images/icon-stoplight-red.svg');
         }
       }
@@ -148,6 +150,8 @@
         &::before {
           border-left-color: var(--accordion-warning-border);
           background-color: var(--accordion-warning-background);
+
+          // TODO: Refactor icon to be able to change its color for theming
           background-image: url('../../assets/images/icon-stoplight-yellow.svg');
         }
       }
@@ -158,6 +162,8 @@
         &::before {
           border-left-color: var(--accordion-success-border);
           background-color: var(--accordion-success-background);
+
+          // TODO: Refactor icon to be able to change its color for theming
           background-image: url('../../assets/images/icon-stoplight-green.svg');
         }
       }
