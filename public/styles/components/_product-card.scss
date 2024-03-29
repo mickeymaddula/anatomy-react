@@ -23,7 +23,7 @@
     }
   }
 
-  [class*='bsds-link'] {
+  .bsds-link {
     text-decoration: none;
     @extend .bsds-link-subtle;
 
