@@ -13,11 +13,7 @@ describe('Button', () => {
     expect(screen.getByRole('button')).toHaveTextContent('Plain Button!');
   });
   it('Renders the given variant when prop is supplied', () => {
-    const { rerender } = render(<Button variant="inverse">Variant Button!</Button>);
-    expect(screen.getByRole('button')).toBeInTheDocument();
-    expect(screen.getByRole('button')).toHaveClass('bsds-button-inverse');
-
-    rerender(<Button variant="assertive">Variant Button!</Button>);
+    const { rerender } = render(<Button variant="assertive">Variant Button!</Button>);
     expect(screen.getByRole('button')).toHaveClass('bsds-button-assertive');
 
     rerender(<Button variant="subtle">Variant Button!</Button>);

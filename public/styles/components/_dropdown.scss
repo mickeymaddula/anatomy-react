@@ -75,16 +75,6 @@
           }
         }
       }
-
-      &-inverse {
-        &::after {
-          background: var(--neutral-100);
-        }
-
-        &[aria-expanded='true'] {
-          @include button-inverse-active;
-        }
-      }
     }
 
     &[aria-expanded='true'] {

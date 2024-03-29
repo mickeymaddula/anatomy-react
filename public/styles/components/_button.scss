@@ -9,10 +9,6 @@
     @include button-subtle;
   }
 
-  &-inverse {
-    @include button-inverse;
-  }
-
   &-icon {
     @include button-icon;
   }
