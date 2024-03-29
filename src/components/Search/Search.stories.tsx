@@ -1,6 +1,7 @@
 // TODO: add search results
 
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Search from './Search';
 
@@ -8,6 +9,7 @@ const meta = {
   title: 'Components/Search',
   component: Search,
   tags: ['autodocs'],
+  decorators: componentDecorators,
   parameters: {
     docs: {
       story: {

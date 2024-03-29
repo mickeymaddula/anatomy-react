@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import ProductCard from './ProductCard';
 import Tag from '../Tag/Tag';
@@ -26,6 +27,7 @@ const meta = {
       control: false
     }
   },
+  decorators: componentDecorators,
   tags: ['autodocs']
 } satisfies Meta<typeof ProductCard>;
 

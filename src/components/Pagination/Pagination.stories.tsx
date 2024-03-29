@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
+
 import Pagination from './Pagination';
 import Link from '../Link';
 import { useState } from 'react';
@@ -9,6 +11,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
   args: {
     numberOfPages: 14
   },

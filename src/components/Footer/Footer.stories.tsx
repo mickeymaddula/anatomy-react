@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 import Footer from './Footer';
 import { navItems, navItemsIntermediate, legalLinks, socialLinks } from './footerData';
 
@@ -10,6 +11,7 @@ const meta = {
       control: false
     }
   },
+  decorators: componentDecorators,
   parameters: {
     layout: 'fullscreen'
   },

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Image from './Image';
 import { IMAGE_RATIO_OPTIONS } from './Image.types';
@@ -17,6 +18,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
   argTypes: {
     ratio: {
       options: [...ratioOptions],

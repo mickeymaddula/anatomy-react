@@ -1,5 +1,6 @@
 // TODO: deal with conflicting styles/modifiers
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Button from './Button';
 
@@ -11,6 +12,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
   argTypes: {
     variant: {
       options: [undefined, ...BUTTON_VARIANTS],
