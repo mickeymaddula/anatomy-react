@@ -1,9 +1,10 @@
 import { useState, ChangeEvent } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { componentDecorators } from '../../../.storybook/decorators';
-import { errorText, helpText } from '../../stories/helpers';
+
 import InputCheckbox from './InputCheckbox';
 import Fieldset from '../Fieldset';
+import { errorText, helpText } from '../../stories/helpers';
 
 const meta = {
   title: 'Components/Checkbox',

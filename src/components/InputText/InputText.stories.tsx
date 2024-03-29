@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { componentDecorators } from '../../../.storybook/decorators';
-import { errorText, helpText, placeholderText } from '../../stories/helpers';
 
 import InputText from './InputText';
+import { errorText, helpText, placeholderText } from '../../stories/helpers';
 
 const meta = {
   title: 'Components/Text input',

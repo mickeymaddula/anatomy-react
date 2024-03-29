@@ -9,6 +9,8 @@ import { CARD_VARIANTS } from '../ContentCard';
 const meta = {
   title: 'Components/Product card',
   component: ProductCard,
+  decorators: componentDecorators,
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       options: [undefined, ...CARD_VARIANTS],
@@ -26,9 +28,7 @@ const meta = {
     image: {
       control: false
     }
-  },
-  decorators: componentDecorators,
-  tags: ['autodocs']
+  }
 } satisfies Meta<typeof ProductCard>;
 
 export default meta;

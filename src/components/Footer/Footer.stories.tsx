@@ -1,21 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { componentDecorators } from '../../../.storybook/decorators';
+
 import Footer from './Footer';
 import { navItems, navItemsIntermediate, legalLinks, socialLinks } from './footerData';
 
 const meta = {
   title: 'Components/Footer',
   component: Footer,
+  parameters: {
+    layout: 'fullscreen'
+  },
+  decorators: componentDecorators,
+  tags: ['autodocs'],
   argTypes: {
     children: {
       control: false
     }
-  },
-  decorators: componentDecorators,
-  parameters: {
-    layout: 'fullscreen'
-  },
-  tags: ['autodocs']
+  }
 } satisfies Meta<typeof Footer>;
 
 export default meta;

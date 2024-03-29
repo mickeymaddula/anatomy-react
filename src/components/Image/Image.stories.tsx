@@ -19,6 +19,7 @@ const meta = {
     layout: 'centered'
   },
   decorators: componentDecorators,
+  tags: ['autodocs'],
   argTypes: {
     ratio: {
       options: [...ratioOptions],
@@ -26,8 +27,7 @@ const meta = {
         type: { summary: ratioOptionsString }
       }
     }
-  },
-  tags: ['autodocs']
+  }
 } satisfies Meta<typeof Image>;
 
 export default meta;

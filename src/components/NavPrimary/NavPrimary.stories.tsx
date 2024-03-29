@@ -10,7 +10,6 @@ import { complexData, intermediateData, simpleData, utilityData } from './navPri
 const meta = {
   title: 'Components/Primary navigation',
   component: NavPrimary,
-  tags: ['autodocs'],
   parameters: {
     layout: 'fullscreen',
     docs: {
@@ -20,6 +19,7 @@ const meta = {
     }
   },
   decorators: componentDecorators,
+  tags: ['autodocs'],
   argTypes: {
     navItems: {
       // TODO: ADS-755 Figure out how to show this control by resolving cyclic object error when shown (occurs on navigation)

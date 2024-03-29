@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { errorText, helpText } from '../../stories/helpers';
 import { componentDecorators } from '../../../.storybook/decorators';
 
 import Select from './Select';
 import Option from '../Option';
+import { errorText, helpText } from '../../stories/helpers';
 
 const meta = {
   title: 'Components/Select',

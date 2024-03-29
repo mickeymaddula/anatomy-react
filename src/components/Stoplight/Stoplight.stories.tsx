@@ -7,10 +7,11 @@ import { STOPLIGHT_COLORS, STOPLIGHT_SIZES, STOPLIGHT_TEXT_COLORS } from './Stop
 const meta = {
   title: 'Components/Stoplight',
   component: Stoplight,
-  decorators: componentDecorators,
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
+  tags: ['autodocs'],
   argTypes: {
     lightColor: {
       options: [...STOPLIGHT_COLORS]
@@ -21,8 +22,7 @@ const meta = {
     size: {
       options: [undefined, ...STOPLIGHT_SIZES]
     }
-  },
-  tags: ['autodocs']
+  }
 } satisfies Meta<typeof Stoplight>;
 
 export default meta;
