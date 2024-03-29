@@ -29,7 +29,11 @@
 
   &-accent {
     @include tag-accent;
-    border-image-source: var(--gradient-accent-vertical);
+    border-image-source: linear-gradient(
+      180deg,
+      var(--accent-primary-60),
+      var(--action-primary-60)
+    ); // NOTE: accent gradient with different angle for tag;
     border-image-slice: 1;
   }
 
