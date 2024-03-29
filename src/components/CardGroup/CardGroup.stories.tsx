@@ -1,6 +1,6 @@
+import { useState, useEffect } from 'react';
 import type { Meta } from '@storybook/react';
 import { componentDecorators } from '../../../.storybook/decorators';
-import { useState, useEffect } from 'react';
 
 import ContentCard from '../ContentCard/ContentCard';
 import CardGroup from './CardGroup';

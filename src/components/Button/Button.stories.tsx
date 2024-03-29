@@ -13,6 +13,7 @@ const meta = {
     layout: 'centered'
   },
   decorators: componentDecorators,
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       options: [undefined, ...BUTTON_VARIANTS],
@@ -32,8 +33,7 @@ const meta = {
     },
     iconAlignment: { control: 'radio', if: { arg: 'icon' } },
     iconSize: { control: 'radio', if: { arg: 'icon' } }
-  },
-  tags: ['autodocs']
+  }
 } satisfies Meta<typeof Button>;
 
 export default meta;

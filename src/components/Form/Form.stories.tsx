@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { componentDecorators } from '../../../.storybook/decorators';
+
 import Form from './Form';
 import InputText from '../InputText';
 import { WithHelp } from '../InputText/InputText.stories';
@@ -16,16 +17,16 @@ import Textarea from '../Textarea/Textarea';
 const meta = {
   title: 'Components/Form',
   component: Form,
-  argTypes: {
-    children: {
-      control: false
-    }
-  },
   parameters: {
     layout: 'centered'
   },
   decorators: componentDecorators,
-  tags: ['autodocs']
+  tags: ['autodocs'],
+  argTypes: {
+    children: {
+      control: false
+    }
+  }
 } satisfies Meta<typeof Form>;
 
 export default meta;

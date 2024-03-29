@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Tag from './Tag';
 import { TAG_VARIANTS } from './Tag.types';
-import { componentDecorators } from '../../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Tag',

@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { errorText, helpText } from '../../stories/helpers';
 import { componentDecorators } from '../../../.storybook/decorators';
 
 import Fieldset from './Fieldset';
 import InputText from '../InputText/InputText';
 import Textarea from '../Textarea/Textarea';
+import { errorText, helpText } from '../../stories/helpers';
 
 const meta = {
   title: 'Components/Fieldset',

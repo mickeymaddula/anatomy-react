@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Callout from './Callout';
-import { componentDecorators } from '../../../.storybook/decorators';
 
 const meta = {
   title: 'Components/Callout',

@@ -8,8 +8,7 @@ import Search from './Search';
 const meta = {
   title: 'Components/Search',
   component: Search,
-  tags: ['autodocs'],
-  decorators: componentDecorators,
+
   parameters: {
     docs: {
       story: {
@@ -25,6 +24,8 @@ const meta = {
       control: false
     }
   },
+  decorators: componentDecorators,
+  tags: ['autodocs'],
   args: {
     searchResults: [
       { text: 'Result 1', href: '#result1' },
