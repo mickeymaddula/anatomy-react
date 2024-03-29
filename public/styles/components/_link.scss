@@ -41,10 +41,6 @@ a {
     @include link-subtle;
   }
 
-  &-inverse {
-    @include link-inverse;
-  }
-
   &-nav {
     @include link-navigation;
   }

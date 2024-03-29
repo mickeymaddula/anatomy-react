@@ -156,17 +156,6 @@ button {
         color: var(--text-color-action);
       }
     }
-
-    &.bsds-link-inverse {
-      &:hover,
-      &:active {
-        color: var(--text-color-disabled);
-      }
-
-      :focus {
-        @include focus-inverse;
-      }
-    }
   }
 }
 
@@ -221,30 +210,6 @@ button {
 
   &:focus {
     @include focus-default;
-  }
-}
-
-@mixin link-inverse {
-  color: var(--text-color-inverse);
-  @include font-family-base-heavy;
-  text-decoration: underline;
-
-  &:visited {
-    color: var(--neutral-80);
-  }
-
-  &:hover {
-    color: var(--text-color-disabled);
-    @include link-hover;
-  }
-
-  &:active {
-    color: var(--text-color-disabled);
-    text-decoration-thickness: var(--space-xs);
-  }
-
-  &:focus {
-    @include focus-inverse;
   }
 }
 

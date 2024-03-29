@@ -13,12 +13,12 @@ describe('Link', () => {
 
   it('Renders the given variant when prop is supplied', () => {
     const { rerender } = render(
-      <Link variant="inverse" href="docs-demo-link">
+      <Link variant="cta" href="docs-demo-link">
         Variant Link!
       </Link>
     );
     expect(screen.getByRole('link')).toBeInTheDocument();
-    expect(screen.getByRole('link')).toHaveClass('bsds-link-inverse');
+    expect(screen.getByRole('link')).toHaveClass('bsds-link-cta');
 
     rerender(
       <Link variant="subtle" href="docs-demo-link">
