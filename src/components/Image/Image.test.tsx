@@ -70,23 +70,6 @@ describe('Image', () => {
     expect(screen.getByText('Image caption text')).toHaveClass('bsds-image-caption-center');
   });
 
-  it('Renders inverse-style image caption if isinverse is true', () => {
-    render(
-      <Image
-        src="https://images.unsplash.com/photo-1583160247711-2191776b4b91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"
-        texts={{
-          caption: 'Image caption text'
-        }}
-        isDecorative
-        hasCaption
-        isinverse
-      />
-    );
-
-    expect(screen.getByText('Image caption text')).toBeInTheDocument();
-    expect(screen.getByText('Image caption text')).toHaveClass('bsds-image-caption-inverse');
-  });
-
   it("Renders default image ratio of 16:9 when ratio isn't specified", () => {
     render(
       <Image
