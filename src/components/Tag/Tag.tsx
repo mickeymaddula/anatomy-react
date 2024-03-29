@@ -6,7 +6,6 @@ import { TagVariant } from './Tag.types';
 export interface TagProps {
   children: ReactNode;
   variant?: TagVariant;
-  isinverse?: boolean;
   texts?: {
     featuredTag?: string;
   };
@@ -32,19 +31,12 @@ const Tag = (props: TagProps): JSX.Element => {
       case 'subtle':
         variantClass = 'bsds-tag-subtle';
         break;
-
       default:
         variantClass = 'bsds-tag';
         break;
     }
-
-    if (props.isinverse) {
-      // TODO: replace isinverse with theming
-      variantClass ? (variantClass += '-inverse') : (variantClass += 'inverse');
-    }
-
     setClasses(variantClass);
-  }, [props.isinverse, props.variant]);
+  }, [props.variant]);
 
   useEffect(() => {
     if (props.variant !== 'featured') {
