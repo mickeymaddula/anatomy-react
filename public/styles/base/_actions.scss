@@ -47,7 +47,7 @@
   border-width: $border-width-xs;
   border-style: solid;
   padding: space(lg) space(3x) 0.6875rem; // NOTE: this is a one-off size because space(lg) - space(xxs) was rounding up
-  font-size: $ffs-body-assertive;
+  font-size: var(--ffs-body-assertive);
   line-height: inherit;
   text-align: center;
   @include font-family-base-heavy;

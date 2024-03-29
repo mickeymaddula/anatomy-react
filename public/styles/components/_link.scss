@@ -55,8 +55,8 @@ a {
     text-decoration: none;
 
     &::after {
-      width: $ffs-body-assertive;
-      height: $ffs-body-assertive;
+      width: var(--ffs-body-assertive);
+      height: var(--ffs-body-assertive);
       margin-left: space(md);
       background: $action-primary-40;
       content: '';

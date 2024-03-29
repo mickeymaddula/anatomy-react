@@ -39,7 +39,7 @@
       padding: space(md) space(3x);
       background: $neutral-100;
       color: $text-color-subtle;
-      font-size: $ffs-body-assertive;
+      font-size: var(--ffs-body-assertive);
       line-height: inherit;
       text-align: center;
       @include font-family-base-regular;

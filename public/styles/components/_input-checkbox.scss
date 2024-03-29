@@ -1,5 +1,5 @@
-$checkbox-size: $ffs-body-assertive;
-$checkmark-size: $ffs-body-assertive;
+$checkbox-size: var(--ffs-body-assertive);
+$checkmark-size: var(--ffs-body-assertive);
 
 @mixin checkbox-invalid() {
   + .bsds-input-checkbox-label {

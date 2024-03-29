@@ -1,4 +1,4 @@
-$outer-circle-diameter: $ffs-body-assertive;
+$outer-circle-diameter: var(--ffs-body-assertive);
 $inner-circle-diameter: space(md);
 
 .bsds-fieldset {
