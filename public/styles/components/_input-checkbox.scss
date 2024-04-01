@@ -14,7 +14,7 @@
   &[aria-checked='true'] {
     + .bsds-input-checkbox-label {
       &::before {
-        background: var(--feedback-error-40);
+        background: var(--surface-error-assertive);
       }
     }
   }
@@ -64,7 +64,7 @@
       width: var(--checkbox-size);
       height: var(--checkbox-size);
       border: var(--border-width-xxs) solid var(--border-color-assertive);
-      background: var(--neutral-100);
+      background: var(--surface-default);
       content: '';
     }
   }
@@ -75,7 +75,7 @@
     + .bsds-input-checkbox-label {
       &::before {
         border: transparent;
-        background: var(--neutral-00);
+        background: var(--surface-inverse);
       }
     }
   }
@@ -85,7 +85,7 @@
     + .bsds-input-checkbox-label // checkmark
     {
       &::before {
-        background: var(--neutral-00);
+        background: var(--surface-inverse);
       }
 
       &::after {
@@ -100,7 +100,7 @@
         background-repeat: no-repeat;
         background-size: 100%;
         content: '';
-        color: var(--neutral-100);
+        color: var(--text-color-inverse);
       }
     }
   }
@@ -111,7 +111,7 @@
 
       &::before {
         border: var(--border-width-xxs) solid var(--border-color-subtle);
-        background: var(--neutral-95);
+        background: var(--surface-subtle);
       }
 
       &::after {

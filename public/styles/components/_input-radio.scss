@@ -1,7 +1,5 @@
-:root {
-  --outer-circle-diameter: var(--ffs-body-assertive);
-  --inner-circle-diameter: var(--space-md);
-}
+$outer-circle-diameter: var(--ffs-body-assertive);
+$inner-circle-diameter: var(--space-md);
 
 .bsds-fieldset {
   .bsds-input-radio-label {
@@ -21,13 +19,13 @@
 
     &::before {
       position: absolute;
-      top: calc((1.5em - var(--outer-circle-diameter)) / 2);
+      top: calc((1.5em - $outer-circle-diameter) / 2);
       left: 0;
-      width: var(--outer-circle-diameter);
-      height: var(--outer-circle-diameter);
+      width: $outer-circle-diameter;
+      height: $outer-circle-diameter;
       border-radius: var(--border-radius-circle);
       border: var(--border-width-xxs) solid var(--border-color-assertive);
-      background: var(--neutral-100);
+      background: var(--surface-default);
       content: '';
     }
   }
@@ -36,7 +34,7 @@
     + .bsds-input-radio-label {
       &::before {
         border: var(--border-width-xs) solid var(--border-color-error);
-        background: var(--neutral-100);
+        background: var(--surface-default);
       }
     }
 
@@ -45,11 +43,11 @@
       + .bsds-input-radio-label {
         &::before {
           border: transparent;
-          background: var(--feedback-error-40);
+          background: var(--surface-error-assertive);
         }
 
         &::after {
-          background: var(--neutral-100);
+          background: var(--surface-default);
         }
       }
     }
@@ -71,19 +69,18 @@
     + .bsds-input-radio-label {
       &::before {
         border: transparent;
-        background: var(--neutral-00);
+        background: var(--surface-inverse);
       }
 
       &::after {
         position: absolute;
-        top: calc((1.5em - var(--outer-circle-diameter)) / 2);
-        left: 0;
-        width: var(--outer-circle-diameter);
-        height: var(--outer-circle-diameter);
+        top: calc((1.5em - $inner-circle-diameter) / 2);
+        left: calc(($outer-circle-diameter / 2) - ($inner-circle-diameter / 2));
+        width: $inner-circle-diameter;
+        height: $inner-circle-diameter;
         border-radius: var(--border-radius-circle);
-        background: var(--neutral-100);
+        background: var(--surface-default);
         content: '';
-        transform: scale(calc(var(--inner-circle-diameter) / var(--outer-circle-diameter)));
       }
     }
   }
@@ -106,7 +103,7 @@
       &::before {
         opacity: 1;
         border: var(--border-width-xxs) solid var(--border-color-subtle);
-        background: var(--neutral-95);
+        background: var(--surface-subtle);
       }
     }
 

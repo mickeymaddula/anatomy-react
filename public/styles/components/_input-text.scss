@@ -2,7 +2,7 @@
   @extend %field-control;
 
   &:read-only {
-    background: var(--neutral-95);
+    background: var(--surface-subtle);
 
     &:hover {
       cursor: not-allowed;

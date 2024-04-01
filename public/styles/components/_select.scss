@@ -4,7 +4,7 @@
   grid-template-areas: 'select';
   align-items: center;
   margin-top: var(--space-md);
-  background: var(--neutral-100);
+  background: var(--surface-default);
 
   select {
     @extend %field-control;
@@ -33,7 +33,7 @@
       }
 
       &:disabled {
-        background: var(--neutral-95);
+        background: var(--surface-subtle);
 
         &:hover {
           cursor: not-allowed;
