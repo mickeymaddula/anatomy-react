@@ -111,7 +111,7 @@ $inner-circle-diameter: var(--space-md);
     &[aria-checked='true'] {
       + .bsds-input-radio-label {
         &::after {
-          background: var(--neutral-60);
+          background: var(--icon-color-disabled);
         }
       }
     }

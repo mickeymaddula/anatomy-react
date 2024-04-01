@@ -1,7 +1,5 @@
-:root {
-  --checkbox-size: var(--ffs-body-assertive);
-  --checkmark-size: var(--ffs-body-assertive);
-}
+$checkbox-size: var(--ffs-body-assertive);
+$checkmark-size: var(--ffs-body-assertive);
 
 @mixin checkbox-invalid() {
   + .bsds-input-checkbox-label {
@@ -59,10 +57,10 @@
 
     &::before {
       position: absolute;
-      top: calc((1.5em - var(--checkbox-size)) / 2);
+      top: calc((1.5em - $checkbox-size) / 2);
       left: 0;
-      width: var(--checkbox-size);
-      height: var(--checkbox-size);
+      width: $checkbox-size;
+      height: $checkbox-size;
       border: var(--border-width-xxs) solid var(--border-color-assertive);
       background: var(--surface-default);
       content: '';
@@ -90,10 +88,10 @@
 
       &::after {
         position: absolute;
-        top: calc((1.5em - var(--checkmark-size)) / 2);
+        top: calc((1.5em - $checkmark-size) / 2);
         left: 0;
-        width: var(--checkmark-size);
-        height: var(--checkmark-size);
+        width: $checkmark-size;
+        height: $checkmark-size;
         padding: calc(var(--space-xxs) + var(--space-xs));
         background-image: url('../../assets/images/icon-check.svg');
         background-origin: content-box;
