@@ -11,7 +11,7 @@
     box-sizing: border-box;
     border: var(--border-width-xxs) solid var(--border-color-subtle);
     padding: var(--space-3x);
-    background: var(--cardcontent-background);
+    background: var(--surface-default);
 
     &.bsds-card-with-image {
       padding: 0;
