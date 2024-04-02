@@ -2,7 +2,7 @@
   .bsds-nav-menu {
     position: absolute;
     left: 0;
-    z-index: var(--nav-menu-z-index);
+    z-index: $nav-menu-z-index;
     width: 100%;
     border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
     font-size: var(--fs-body);
@@ -74,7 +74,7 @@
     .bsds-nav-link {
       flex-wrap: wrap;
       border: 0;
-      padding: var(--nav-link-padding);
+      padding: $nav-link-padding;
       @include link-navigation;
     }
 
@@ -92,7 +92,7 @@
 
   .bsds-button-text {
     position: relative;
-    z-index: var(--nav-back-z-index);
+    z-index: $nav-back-z-index;
     justify-content: flex-start;
     width: 100%;
     box-shadow: var(--box-shadow-secondary);
@@ -108,7 +108,7 @@
     position: relative;
     width: var(--app-width);
     margin: auto;
-    padding: var(--menu-padding);
+    padding: $menu-padding;
 
     > :not(:last-child) {
       border-right: var(--border-width-xxs) solid var(--border-color-subtle);
@@ -171,7 +171,7 @@
     @include link-default;
     display: block;
     border-bottom: 0;
-    padding: var(--nav-link-padding);
+    padding: $nav-link-padding;
   }
 
   .bsds-nav {
@@ -180,7 +180,7 @@
       align-content: flex-start;
       align-items: stretch;
       border-top: var(--border-width-xxs) solid var(--border-color-subtle);
-      padding: var(--menu-padding);
+      padding: $menu-padding;
 
       .bsds-nav-link {
         border: 0;
@@ -222,7 +222,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: var(--nav-search-z-index);
+    z-index: $nav-search-z-index;
     display: none;
     width: 100%;
     margin: auto;
@@ -270,7 +270,7 @@
         }
 
         &.bsds-nav-list-history {
-          z-index: var(--nav-list-z-index);
+          z-index: $nav-list-z-index;
 
           > .bsds-nav {
             padding: var(--space-4x) 0 var(--space-3x);
@@ -329,22 +329,22 @@
       &:not(.intermediate) {
         .bsds-nav-menu-panels {
           .bsds-nav-menu-panel {
-            width: calc(var(--app-width) / var(--num-panels));
+            width: calc(var(--app-width) / $num-panels);
 
             .bsds-nav-menu-panel {
-              left: calc(var(--app-width) / var(--num-panels));
+              left: calc(var(--app-width) / $num-panels);
             }
 
             &.has-header {
               left: 0;
-              width: calc((var(--app-width) / var(--num-panels)) * 2);
+              width: calc((var(--app-width) / $num-panels) * 2);
 
               .bsds-nav-menu-panel {
-                left: calc((var(--app-width) / var(--num-panels)) * 2);
-                width: calc(var(--app-width) / var(--num-panels));
+                left: calc((var(--app-width) / $num-panels) * 2);
+                width: calc(var(--app-width) / $num-panels);
 
                 .bsds-nav-menu-panel {
-                  left: calc((var(--app-width) / var(--num-panels)));
+                  left: calc((var(--app-width) / $num-panels));
                 }
               }
             }

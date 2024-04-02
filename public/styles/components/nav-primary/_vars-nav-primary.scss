@@ -1,15 +1,13 @@
-:root {
-  --num-panels: 4;
-  --nav-bar-z-index: 103;
-  --nav-back-z-index: 102;
-  --nav-menu-z-index: 101;
-  --nav-list-z-index: 100;
-  --nav-search-z-index: 101;
+$num-panels: 4;
+$nav-bar-z-index: 103;
+$nav-back-z-index: 102;
+$nav-menu-z-index: 101;
+$nav-list-z-index: 100;
+$nav-search-z-index: 101;
 
-  // This is one of sizes to get the icons to match the font sizes
-  --icon-size: 1em;
+// This is one of sizes to get the icons to match the font sizes
+$icon-size: 1em;
 
-  // Used in nav-menu nav-links
-  --nav-link-padding: var(--space-2x) var(--space-3x);
-  --menu-padding: var(--space-md) 0;
-}
+// Used in nav-menu nav-links
+$nav-link-padding: var(--space-2x) var(--space-3x);
+$menu-padding: var(--space-md) 0;

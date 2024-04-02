@@ -4,7 +4,7 @@
 
   .bsds-nav-bar {
     position: relative;
-    z-index: var(--nav-bar-z-index);
+    z-index: $nav-bar-z-index;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -72,15 +72,15 @@
             border: 0;
             padding-right: var(--space-2x);
             padding-left: calc(
-              var(--space-2x) + var(--icon-size) + var(--space-md)
+              var(--space-2x) + $icon-size + var(--space-md)
             ); // Padding + icon width + space between icon and text
 
             &::after {
               position: absolute;
-              top: calc(50% - (var(--icon-size) / 2));
+              top: calc(50% - ($icon-size / 2));
               left: var(--space-2x);
-              width: var(--icon-size);
-              height: var(--icon-size);
+              width: $icon-size;
+              height: $icon-size;
               background-position: center;
               background-repeat: no-repeat;
               background-size: cover;
@@ -121,15 +121,15 @@
           > button {
             &.bsds-nav-link {
               padding-right: calc(
-                var(--space-2x) + var(--icon-size) + var(--space-md)
+                var(--space-2x) + $icon-size + var(--space-md)
               ); // Padding + icon width + space between icon and text
 
               &::after {
                 position: absolute;
-                top: calc(50% - (var(--icon-size) / 2));
+                top: calc(50% - ($icon-size / 2));
                 right: var(--space-2x);
-                width: var(--icon-size);
-                height: var(--icon-size);
+                width: $icon-size;
+                height: $icon-size;
                 background-image: url('../../../assets/images/icon-chevron-down.svg');
                 background-position: bottom;
                 background-repeat: no-repeat;
@@ -188,13 +188,13 @@
           &.bsds-nav-item-search {
             .bsds-nav-link {
               box-sizing: content-box;
-              width: var(--icon-size);
-              height: var(--icon-size);
+              width: $icon-size;
+              height: $icon-size;
               padding: var(--space-2x);
               background-image: url('../../../assets/images/icon-search.svg');
               background-position: center;
               background-repeat: no-repeat;
-              background-size: var(--icon-size);
+              background-size: $icon-size;
 
               &::after,
               &::before {
