@@ -33,7 +33,7 @@
 
     &.bsds-button {
       &::after {
-        background: var(--action-primary-40);
+        background: var(--action-default);
       }
 
       &[aria-expanded='true'] {
@@ -44,13 +44,13 @@
       &:active,
       &[aria-expanded='true'] {
         &::after {
-          background: var(--neutral-100);
+          background: var(--surface-default);
         }
       }
 
       &-assertive {
         &::after {
-          background: var(--neutral-100);
+          background: var(--surface-default);
         }
 
         &[aria-expanded='true'] {
@@ -60,7 +60,7 @@
 
       &-subtle {
         &::after {
-          background: var(--action-primary-40);
+          background: var(--action-default);
         }
 
         &[aria-expanded='true'] {
@@ -71,7 +71,7 @@
         &:active,
         &[aria-expanded='true'] {
           &::after {
-            background: var(--neutral-100);
+            background: var(--surface-default);
           }
         }
       }
@@ -91,7 +91,7 @@
     margin: 0;
     box-shadow: var(--box-shadow-secondary);
     padding: 0;
-    background: var(--neutral-100);
+    background: var(--surface-default);
     list-style: none;
 
     &.right {
@@ -162,11 +162,11 @@
       }
 
       &:hover {
-        background: var(--action-primary-40);
+        background: var(--action-default);
       }
 
       &:active {
-        background: var(--action-primary-20);
+        background: var(--action-hover);
       }
     }
 

@@ -4,7 +4,8 @@
   margin-top: var(--field-control-margin-top);
   border: var(--border-width-xxs) solid var(--border-color-assertive);
   padding: var(--space-lg) var(--space-2x);
-  background: var(--neutral-100);
+  background: var(--surface-default);
+  color: var(--text-color-primary);
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -19,7 +20,7 @@
 
   &:disabled {
     border-color: var(--border-color-subtle);
-    background: var(--neutral-95);
+    background: var(--surface-subtle);
 
     &:hover {
       cursor: not-allowed;
@@ -86,7 +87,7 @@
     display: flex;
     align-items: center;
     margin: var(--space-md) 0 0 0;
-    color: var(--feedback-error-40);
+    color: var(--text-color-error);
 
     &::before {
       display: inline-block;

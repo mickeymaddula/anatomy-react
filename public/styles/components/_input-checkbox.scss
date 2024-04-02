@@ -1,7 +1,5 @@
-:root {
-  --checkbox-size: var(--ffs-body-assertive);
-  --checkmark-size: var(--ffs-body-assertive);
-}
+$checkbox-size: var(--ffs-body-assertive);
+$checkmark-size: var(--ffs-body-assertive);
 
 @mixin checkbox-invalid() {
   + .bsds-input-checkbox-label {
@@ -14,7 +12,7 @@
   &[aria-checked='true'] {
     + .bsds-input-checkbox-label {
       &::before {
-        background: var(--feedback-error-40);
+        background: var(--surface-error-assertive);
       }
     }
   }
@@ -59,12 +57,12 @@
 
     &::before {
       position: absolute;
-      top: calc((1.5em - var(--checkbox-size)) / 2);
+      top: calc((1.5em - $checkbox-size) / 2);
       left: 0;
-      width: var(--checkbox-size);
-      height: var(--checkbox-size);
+      width: $checkbox-size;
+      height: $checkbox-size;
       border: var(--border-width-xxs) solid var(--border-color-assertive);
-      background: var(--neutral-100);
+      background: var(--surface-default);
       content: '';
     }
   }
@@ -75,7 +73,7 @@
     + .bsds-input-checkbox-label {
       &::before {
         border: transparent;
-        background: var(--neutral-00);
+        background: var(--surface-inverse);
       }
     }
   }
@@ -85,22 +83,22 @@
     + .bsds-input-checkbox-label // checkmark
     {
       &::before {
-        background: var(--neutral-00);
+        background: var(--surface-inverse);
       }
 
       &::after {
         position: absolute;
-        top: calc((1.5em - var(--checkmark-size)) / 2);
+        top: calc((1.5em - $checkmark-size) / 2);
         left: 0;
-        width: var(--checkmark-size);
-        height: var(--checkmark-size);
+        width: $checkmark-size;
+        height: $checkmark-size;
         padding: calc(var(--space-xxs) + var(--space-xs));
         background-image: url('../../assets/images/icon-check.svg');
         background-origin: content-box;
         background-repeat: no-repeat;
         background-size: 100%;
         content: '';
-        color: var(--neutral-100);
+        color: var(--text-color-inverse);
       }
     }
   }
@@ -111,7 +109,7 @@
 
       &::before {
         border: var(--border-width-xxs) solid var(--border-color-subtle);
-        background: var(--neutral-95);
+        background: var(--surface-subtle);
       }
 
       &::after {

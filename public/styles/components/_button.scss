@@ -21,7 +21,7 @@
       &:hover,
       &:active {
         background: transparent;
-        color: var(--action-primary-40);
+        color: var(--text-color-action);
         text-decoration-line: underline;
         text-decoration-thickness: var(--space-xs);
       }
@@ -35,6 +35,7 @@
   &-active-filter {
     @include font-family-base-regular;
     border-color: var(--border-color-subtle);
+    background: var(--transparency-zero);
     color: var(--text-color-primary);
     text-align: left;
 
@@ -42,7 +43,7 @@
       &:hover,
       &:active {
         border-color: var(--border-color-assertive);
-        background: var(--neutral-100);
+        background: var(--transparency-zero);
         color: var(--text-color-primary);
       }
     }

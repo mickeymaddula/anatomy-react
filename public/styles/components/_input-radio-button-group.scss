@@ -37,7 +37,7 @@
       border-style: solid;
       border-color: inherit;
       padding: var(--space-md) var(--space-3x);
-      background: var(--neutral-100);
+      background: var(--surface-default);
       color: var(--text-color-subtle);
       font-size: var(--ffs-body-assertive);
       line-height: inherit;
@@ -60,7 +60,7 @@
       &:active {
         + .bsds-input-radio-label {
           border-color: transparent;
-          background: var(--action-primary-20);
+          background: var(--surface-assertive);
           color: var(--text-color-inverse);
           text-decoration: none;
           cursor: pointer;
@@ -93,7 +93,7 @@
       + .bsds-input-radio-label {
         border-style: solid;
         border-color: var(--border-color-subtle);
-        background: var(--neutral-95);
+        background: var(--surface-subtle);
         color: var(--text-color-subtle);
         cursor: not-allowed;
 
