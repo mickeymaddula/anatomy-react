@@ -39,7 +39,7 @@
     &:hover,
     &:active {
       border-color: var(--border-color-subtle);
-      background: var(--neutral-100);
+      background: var(--surface-default);
       color: initial;
     }
 
@@ -67,7 +67,7 @@
     width: 100%;
     border-bottom: var(--border-width-xxs) var(--border-color-subtle);
     padding: var(--space-lg) var(--space-2x);
-    background: var(--neutral-100);
+    background: var(--surface-default);
 
     &.is-expanded {
       display: block;
