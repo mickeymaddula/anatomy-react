@@ -14,10 +14,10 @@ a {
 
   &.bsds-button,
   &.bsds-button-subtle {
-    color: var(--action-primary-40);
+    color: var(--button-default-text);
 
     &:visited {
-      color: var(--action-primary-40);
+      color: var(--button-default-text);
     }
 
     &:hover {
@@ -26,10 +26,12 @@ a {
   }
 
   &.bsds-button-assertive {
-    color: var(--neutral-100);
+    // @TODO: Not seeing a button-color-assertive or similar token to map to here.
+    // Going with --text-color-inverse for the time being.
+    color: var(--text-color-inverse);
 
     &:visited {
-      color: var(--neutral-100);
+      color: var(--text-color-inverse);
     }
   }
 }
@@ -53,7 +55,8 @@ a {
       width: var(--ffs-body-assertive);
       height: var(--ffs-body-assertive);
       margin-left: var(--space-md);
-      background: var(--action-primary-40);
+      // @TODO: No direct mapping. Chose --action-default
+      background: var(--action-default);
       content: '';
       /* stylelint-disable property-no-vendor-prefix */
       -webkit-mask: url('../../assets/images/icon-arrow-right.svg') no-repeat 50% 50%;
@@ -61,14 +64,14 @@ a {
     }
 
     &:visited {
-      color: var(--action-primary-40);
+      color: var(--button-default-text);
     }
 
     &:not([disabled]) {
       &:hover,
       &:active {
         &::after {
-          background: var(--neutral-100);
+          background: var(--surface-default);
         }
       }
     }
