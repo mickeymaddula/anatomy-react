@@ -1,4 +1,4 @@
-// TODO: --tag-featured-background should map to --accent-primary-80 in dark mode
+// @TODO: --tag-featured-background should map to --accent-primary-80 in dark mode
 
 @mixin tag-default {
   display: block;
@@ -29,10 +29,11 @@
 
   &-accent {
     @include tag-accent;
+    // @TODO: No specific variable for this value.
     border-image-source: linear-gradient(
       180deg,
-      var(--accent-primary-60),
-      var(--action-primary-60)
+      var(--accent-callout),
+      var(--accent-callout)
     ); // NOTE: accent gradient with different angle for tag;
     border-image-slice: 1;
   }
