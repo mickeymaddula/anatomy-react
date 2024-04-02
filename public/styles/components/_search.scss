@@ -35,7 +35,7 @@
     border: 0;
     padding: var(--space-2x);
     background: transparent;
-    color: var(--neutral-00);
+    color: var(--text-color-primary);
 
     &:focus {
       @include focus-default-inset;
@@ -45,10 +45,10 @@
       &:hover,
       &:active {
         background: transparent;
-        color: var(--action-primary-40);
+        color: var(--text-color-action);
 
         &:not(:active) {
-          fill: var(--action-primary-40);
+          fill: var(--text-color-action);
         }
       }
     }
@@ -61,7 +61,7 @@
     box-shadow: var(--box-shadow-secondary);
     border: var(--border-width-xxs) solid var(--border-color-subtle);
     padding: var(--space-md) 0;
-    background: var(--neutral-100);
+    background: var(--surface-default);
     list-style: none;
   }
 
@@ -84,6 +84,7 @@
     }
   }
 
+  // @TODO: var(--breakpoint-sm-min) does not map to $breakpoint-sm-min
   @media (min-width: $breakpoint-sm-min) {
     .bsds-search-control {
       flex-direction: row;
