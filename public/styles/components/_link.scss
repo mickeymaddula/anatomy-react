@@ -26,7 +26,7 @@ a {
   }
 
   &.bsds-button-assertive {
-    // @TODO: Not seeing a button-color-assertive or similar token to map to here.
+    // TODO: Not seeing a button-color-assertive or similar token to map to here.
     // Going with --text-color-inverse for the time being.
     color: var(--text-color-inverse);
 
@@ -55,7 +55,8 @@ a {
       width: var(--ffs-body-assertive);
       height: var(--ffs-body-assertive);
       margin-left: var(--space-md);
-      // @TODO: No direct mapping. Chose --action-default
+
+      // TODO: No direct mapping. Chose --action-default
       background: var(--action-default);
       content: '';
       /* stylelint-disable property-no-vendor-prefix */
