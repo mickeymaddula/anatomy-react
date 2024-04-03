@@ -168,7 +168,7 @@
   }
 }
 
-@media (min-width: var(--breakpoint-md-min)) {
+@media (min-width: $breakpoint-md-min) {
   .bsds-footer {
     .bsds-nav-footer {
       display: flex;
@@ -243,7 +243,7 @@
   }
 }
 
-@media (min-width: var(--breakpoint-lg-min)) {
+@media (min-width: $breakpoint-lg-min) {
   .bsds-footer {
     .bsds-footer-base {
       .bsds-footer-base-container {
