@@ -5,7 +5,7 @@
 
 .bsds-footer {
   @include bsds-defaults-type;
-  background-color: var(--neutral-95);
+  background-color: var(--surface-subtle);
 
   .bsds-nav-footer {
     font-size: var(--fs-body-subtle);
@@ -155,11 +155,12 @@
 
         .bsds-link-subtle {
           &:visited {
-            color: var(--neutral-00);
+            // TODO: Maybe there should be an icon-color-primary?
+            color: var(--text-color-primary);
           }
 
           &:hover {
-            color: var(--action-primary-40);
+            color: var(--icon-color-action);
           }
         }
       }
