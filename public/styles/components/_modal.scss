@@ -8,10 +8,11 @@
   box-shadow: var(--box-shadow-primary);
   border: 0;
   padding: var(--space-4x);
-  background: var(--neutral-100);
+  background: var(--modal-default-background);
 
+  // TODO: There's a default background, but there isn't an inverse background.
   &::backdrop {
-    background: rgba(var(--neutral-00), 0.6);
+    background: rgba(var(--surface-inverse), 0.6);
   }
 
   .bsds-modal-header {
