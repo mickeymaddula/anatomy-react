@@ -29,7 +29,7 @@ export const globalTypes = {
     name: 'theme',
     // Text that will be shown on icon hover
     description: 'Component themes',
-    defaultValue: 'Corporate light',
+    defaultValue: 'corporate-light',
     toolbar: {
       title: 'Theme',
       icon: 'circlehollow',
