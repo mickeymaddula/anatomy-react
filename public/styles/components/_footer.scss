@@ -80,7 +80,7 @@
   }
 
   .bsds-footer-base {
-    border-top: var(--border-width-xxs) var(--border-color-subtle);
+    border-top: var(--border-width-xxs) solid var(--border-color-subtle);
     padding-bottom: var(--space-6x);
 
     .bsds-footer-base-container {
@@ -113,7 +113,7 @@
 
     .bsds-nav-footer-legal {
       width: 100%;
-      border-bottom: var(--border-width-xxs) var(--border-color-subtle);
+      border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
       padding: var(--space-3x) 0;
 
       .bsds-nav {
