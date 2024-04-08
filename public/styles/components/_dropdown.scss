@@ -33,7 +33,7 @@
 
     &.bsds-button {
       &::after {
-        background: var(--action-default);
+        background: var(--icon-color-action);
       }
 
       &[aria-expanded='true'] {

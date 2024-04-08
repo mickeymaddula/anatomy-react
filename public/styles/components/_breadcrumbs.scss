@@ -26,10 +26,12 @@
           width: 1ch;
           height: 1em;
           margin-right: var(--space-md);
-          background-image: var(--bsds-breadcrumb-divider);
-          background-position: center;
-          background-repeat: no-repeat;
+          background: var(--text-color-primary);
           content: '';
+          /* stylelint-disable-next-line property-no-vendor-prefix */
+          -webkit-mask: url('../../assets/images/icon-slash.svg') no-repeat 50% 50%;
+          mask: url('../../assets/images/icon-slash.svg') no-repeat 50% 50%;
+          mask-size: cover;
         }
       }
 
