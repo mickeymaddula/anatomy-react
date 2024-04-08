@@ -12,7 +12,7 @@
 
   // TODO: There's a default background, but there isn't an inverse background.
   &::backdrop {
-    background: rgba(var(--surface-inverse), 0.6);
+    background: color-mix(in srgb, var(--surface-inverse) 60%, transparent);
   }
 
   .bsds-modal-header {

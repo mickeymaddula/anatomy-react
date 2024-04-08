@@ -43,7 +43,8 @@
       display: block;
       width: var(--space-xxs);
       height: var(--space-6x);
-      box-shadow: var(--space-negative-xxs) 0 var(--space-md) var(--space-xs) rgba(var(--surface-inverse), 0.2);
+      box-shadow: var(--space-negative-xxs) 0 var(--space-md) var(--space-xs)
+        color-mix(in srgb, var(--surface-inverse) 20%, transparent);
       border-width: 0;
       content: '';
       pointer-events: none;
