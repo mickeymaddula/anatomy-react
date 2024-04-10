@@ -110,6 +110,21 @@
         content: '';
       }
 
+      // TODO: (1) Remove this code when icon library is live (second part below).
+      &::after {
+        position: absolute;
+        left: 0;
+        align-self: stretch;
+        width: var(--space-6x);
+        margin-top: 5px;
+        margin-right: var(--space-2x);
+        padding: var(--space-3x) var(--space-md);
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: var(--space-3x);
+        content: '';
+      }
+
       .bsds-accordion-trigger-text {
         flex: 1;
         padding: var(--space-2x) 0;
@@ -133,14 +148,19 @@
   }
 
   .bsds-accordion-stoplight {
+    // TODO: Should we rename these classes from red/yellow/green to error/warning/success?
     &-red {
       .bsds-accordion-trigger {
         &::before {
           border-left-color: var(--accordion-error-border);
           background-color: var(--accordion-error-background);
+        }
 
-          // TODO: Refactor icon to be able to change its color for theming
-          background-image: url('../../assets/images/icon-stoplight-red.svg');
+        &::after {
+          background-color: var(--icon-color-error);
+
+          // TODO: (1) Second part for removal.
+          mask-image: url('../../assets/images/icon-stoplight-red.svg');
         }
       }
     }
