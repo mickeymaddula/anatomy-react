@@ -116,7 +116,7 @@
         left: 0;
         align-self: stretch;
         width: var(--space-6x);
-        margin-top: 5px;
+        margin-top: 0.313rem; // based on a 16px root value
         margin-right: var(--space-2x);
         padding: var(--space-3x) var(--space-md);
         mask-position: center;
