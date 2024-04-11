@@ -40,10 +40,8 @@
             right: 0;
             width: var(--icon-size-sm);
             height: var(--icon-size-sm);
-            background-image: url('../../../assets/images/icon-chevron-right.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            mask-image: url('../../../assets/images/icon-chevron-right.svg');
+            background-color: var(--text-color-primary);
             content: '';
           }
         }

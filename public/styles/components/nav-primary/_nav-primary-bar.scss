@@ -94,8 +94,8 @@
             /* stylelint-disable scss/selector-nest-combinators */
             &::after,
             &[aria-expanded='true']::after {
-              /* stylelint-enable scss/selector-nest-combinators */
-              background-image: url('../../../assets/images/icon-search.svg');
+              mask-image: url('../../../assets/images/icon-search.svg');
+              background-color: var(--text-color-primary);
               content: '';
             }
           }
@@ -104,12 +104,14 @@
         &.bsds-nav-item-toggle {
           .bsds-nav-link {
             &::after {
-              background-image: url('../../../assets/images/icon-menu.svg');
+              mask-image: url('../../../assets/images/icon-menu.svg');
+              background-color: var(--text-color-primary);
             }
 
             &[aria-expanded='true'] {
               &::after {
-                background-image: url('../../../assets/images/icon-close.svg');
+                mask-image: url('../../../assets/images/icon-close.svg');
+                background-color: var(--text-color-primary);
               }
             }
           }
@@ -130,9 +132,8 @@
                 right: var(--space-2x);
                 width: $icon-size;
                 height: $icon-size;
-                background-image: url('../../../assets/images/icon-chevron-down.svg');
-                background-position: bottom;
-                background-repeat: no-repeat;
+                mask-image: url('../../../assets/images/icon-chevron-down.svg');
+                background-color: var(--text-color-primary);
                 content: '';
               }
 
@@ -191,10 +192,11 @@
               width: $icon-size;
               height: $icon-size;
               padding: var(--space-2x);
-              background-image: url('../../../assets/images/icon-search.svg');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: $icon-size;
+              mask-image: url('../../../assets/images/icon-search.svg');
+              background-color: var(--text-color-primary);
+              mask-position: center;
+              mask-repeat: no-repeat;
+              mask-size: $icon-size;
 
               &::after,
               &::before {
