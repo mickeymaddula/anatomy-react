@@ -10,8 +10,6 @@
     width: var(--space-3x);
     height: var(--space-3x);
     margin-right: var(--space-md);
-    background-repeat: no-repeat;
-    background-size: 100%;
     content: '';
   }
 
@@ -27,23 +25,22 @@
 .bsds-stoplight {
   &-red {
     &::before {
-      // TODO: dark mode should map to url('../../assets/images/icon-stoplight-red-inverse.svg');
-      // TODO: Refactor icon to be able to change its color for theming
-      background-image: url('../../assets/images/icon-stoplight-red.svg');
+      mask-image: url('../../assets/images/icon-stoplight-red.svg');
+      background-color: var(--icon-color-error);
     }
   }
 
   &-yellow {
     &::before {
-      // TODO: Refactor icon to be able to change its color for theming
-      background-image: url('../../assets/images/icon-stoplight-yellow.svg');
+      mask-image: url('../../assets/images/icon-stoplight-yellow.svg');
+      background-color: var(--icon-color-warning);
     }
   }
 
   &-green {
     &::before {
-      // TODO: Refactor icon to be able to change its color for theming
-      background-image: url('../../assets/images/icon-stoplight-green.svg');
+      mask-image: url('../../assets/images/icon-stoplight-green.svg');
+      background-color: var(--icon-color-success);
     }
   }
 }
