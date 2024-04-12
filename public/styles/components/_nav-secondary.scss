@@ -5,9 +5,9 @@
   // These are one offs for sizing/aligning icons
   width: 1em;
   height: 1em;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: $icon-size;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: $icon-size;
   content: '';
 
   @if $alignment == left {
@@ -51,7 +51,8 @@
       @include icon-background(var(--icon-size-sm));
       top: 0;
       padding: var(--space-2x) var(--space-4x);
-      background-image: url('../../assets/images/icon-chevron-down.svg');
+      mask-image: url('../../assets/images/icon-chevron-down.svg');
+      background-color: var(--icon-color-primary);
     }
 
     &[aria-expanded='true'] {
@@ -129,7 +130,8 @@
       &::after {
         @include icon-background(var(--icon-size-sm));
         padding: var(--space-lg);
-        background-image: url('../../assets/images/icon-chevron-right.svg');
+        mask-image: url('../../assets/images/icon-chevron-right.svg');
+        background-color: var(--icon-color-primary);
       }
     }
   }
