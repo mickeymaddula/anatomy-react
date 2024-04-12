@@ -23,6 +23,7 @@
 }
 
 .bsds-stoplight {
+  // TODO: Rename to -error
   &-red {
     &::before {
       mask-image: url('../../assets/images/icon-stoplight-red.svg');
@@ -30,6 +31,7 @@
     }
   }
 
+  // TODO: Rename to -warning
   &-yellow {
     &::before {
       mask-image: url('../../assets/images/icon-stoplight-yellow.svg');
@@ -37,6 +39,7 @@
     }
   }
 
+  // TODO: Rename to -success
   &-green {
     &::before {
       mask-image: url('../../assets/images/icon-stoplight-green.svg');
