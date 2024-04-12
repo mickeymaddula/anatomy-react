@@ -96,9 +96,8 @@
       width: var(--space-3x);
       height: var(--space-3x);
       margin-right: var(--space-md);
-      background-image: url('../../assets/images/icon-error.svg');
-      background-repeat: no-repeat;
-      background-size: 100%;
+      mask-image: url('../../assets/images/icon-error.svg');
+      background-color: var(--icon-color-error);
       content: '';
     }
   }
