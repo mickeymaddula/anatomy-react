@@ -52,7 +52,8 @@
     right: var(--space-2x);
     width: var(--icon-size-sm);
     height: var(--icon-size-sm);
-    background-image: url('../../assets/images/icon-chevron-down.svg');
+    mask-image: url('../../assets/images/icon-chevron-down.svg');
+    background-color: var(--text-color-primary);
     content: '';
   }
 }
