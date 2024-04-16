@@ -14,10 +14,10 @@ a {
 
   &.bsds-button,
   &.bsds-button-subtle {
-    color: var(--button-default-text);
+    color: var(--text-color-action);
 
     &:visited {
-      color: var(--button-default-text);
+      color: var(--text-color-action);
     }
 
     &:hover {
@@ -65,7 +65,7 @@ a {
     }
 
     &:visited {
-      color: var(--button-default-text);
+      color: var(--text-color-action);
     }
 
     &:not([disabled]) {

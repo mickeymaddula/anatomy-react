@@ -1,11 +1,11 @@
 .bsds-accordion {
   @include bsds-defaults;
   width: 100%;
-  border-bottom: var(--border-width-xxs) solid var(--accordion-default-border);
+  border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
 
   &.is-contained {
-    border-right: var(--border-width-xxs) solid var(--accordion-default-border);
-    border-left: var(--border-width-xxs) solid var(--accordion-default-border);
+    border-right: var(--border-width-xxs) solid var(--border-color-subtle);
+    border-left: var(--border-width-xxs) solid var(--border-color-subtle);
   }
 
   .bsds-accordion-heading {
@@ -19,13 +19,13 @@
     align-items: center;
     width: 100%;
     margin: 0;
-    border-top: var(--border-width-xxs) solid var(--accordion-default-border);
+    border-top: var(--border-width-xxs) solid var(--border-color-subtle);
     border-right: 0;
     border-bottom: 0;
     border-left: 0;
     padding: var(--space-2x);
     background: transparent;
-    color: var(--accordion-default-text);
+    color: var(--text-color-primary);
     @include font-family-base-regular;
     font-size: var(--fs-body);
     text-align: left;
@@ -44,22 +44,22 @@
 
     &:not([disabled]) {
       &:hover {
-        border-color: var(--accordion-default-border);
+        border-color: var(--border-color-subtle);
         background: transparent;
-        color: var(--accordion-hover-text);
+        color: var(--text-color-action);
         text-decoration: underline;
 
         svg {
-          color: var(--accordion-hover-icon);
+          color: var(--icon-color-action);
         }
       }
 
       &:active {
         background: transparent;
-        color: var(--accordion-active-text);
+        color: var(--text-color-action);
 
         svg {
-          color: var(--accordion-active-icon);
+          color: var(--icon-color-action);
         }
       }
 
@@ -152,8 +152,8 @@
     &-red {
       .bsds-accordion-trigger {
         &::before {
-          border-left-color: var(--accordion-error-border);
-          background-color: var(--accordion-error-background);
+          border-left-color: var(--border-color-error);
+          background-color: var(--surface-error-subtle);
         }
 
         &::after {
@@ -168,8 +168,8 @@
     &-yellow {
       .bsds-accordion-trigger {
         &::before {
-          border-left-color: var(--accordion-warning-border);
-          background-color: var(--accordion-warning-background);
+          border-left-color: var(--border-color-warning);
+          background-color: var(--surface-warning-subtle);
         }
 
         &::after {
@@ -184,8 +184,8 @@
     &-green {
       .bsds-accordion-trigger {
         &::before {
-          border-left-color: var(--accordion-success-border);
-          background-color: var(--accordion-success-background);
+          border-left-color: var(--border-color-success);
+          background-color: var(--surface-success-subtle);
         }
 
         &::after {

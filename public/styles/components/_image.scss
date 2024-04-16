@@ -69,7 +69,7 @@
     left: var(--space-2x);
     margin: 0;
     padding: var(--space-md) var(--space-lg);
-    background: color-mix(in srgb, var(--neutral-00) 60%, transparent);
+    background: var(--transparency-overlay-primary);
     color: var(--text-color-inverse);
 
     &-center {

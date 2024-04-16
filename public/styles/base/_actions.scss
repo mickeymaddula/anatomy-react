@@ -71,9 +71,9 @@
 
 @mixin button-default {
   @include button-base;
-  border-color: var(--button-default-border);
-  background: var(--button-default-background);
-  color: var(--button-default-text);
+  border-color: var(--border-color-action);
+  background: var(--surface-default);
+  color: var(--text-color-action);
   @include font-family-base-heavy;
   @include button-focus;
   @include button-disabled;
@@ -105,7 +105,7 @@
 @mixin button-assertive {
   @include button-base;
   border-color: transparent;
-  background: var(--button-assertive-background);
+  background: var(--action-default);
   color: var(--text-color-inverse);
   @include button-focus;
   @include button-disabled;

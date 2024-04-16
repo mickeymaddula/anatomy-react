@@ -5,8 +5,8 @@
   display: flex;
   justify-content: center;
   padding: var(--space-md);
-  background: var(--skiplink-background);
-  color: var(--skiplink-text); // TODO: update var to skiplink-text-color
+  background: var(--surface-subtle);
+  color: var(--text-color-primary);
 
   &:focus {
     position: relative;

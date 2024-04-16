@@ -2,7 +2,7 @@
 
 @mixin tag-default {
   display: block;
-  color: var(--tag-default-text);
+  color: var(--text-color-primary);
   font-size: var(--fs-small);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-increase);
@@ -39,21 +39,21 @@
 
   &-assertive {
     @include tag-assertive;
-    background: var(--tag-assertive-background);
-    color: var(--tag-assertive-text);
+    background: var(--surface-assertive);
+    color: var(--text-color-inverse);
   }
 
   &-featured {
     @include tag-assertive;
-    background: var(--tag-featured-background);
-    color: var(--tag-featured-text);
+    background: var(--accent-featured-tag);
+    color: var(--text-color-inverse);
   }
 
   &-subtle {
     @include tag-assertive;
     @include font-family-base-regular;
     padding: var(--space-sm) var(--space-md);
-    background: var(--tag-subtle-background);
+    background: var(--surface-subtle);
     text-transform: none;
     letter-spacing: unset;
   }
