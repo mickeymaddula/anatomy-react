@@ -15,7 +15,7 @@
 @mixin button-active {
   &:not([disabled]) {
     border-color: transparent;
-    background: var(--action-hover);
+    background: var(--action-active);
     color: var(--text-color-inverse);
   }
 }
