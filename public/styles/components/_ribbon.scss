@@ -4,10 +4,10 @@
   justify-content: center;
   padding: var(--space-lg) var(--space-3x);
   background-color: var(--surface-subtle);
-  color: var(--ribbon-text); // TODO: consider updating to ribbon-text-color
 
   &-informational {
     background-color: var(--surface-informational);
+    color: var(--ribbon-text); // TODO: consider updating to ribbon-text-color
   }
 
   &-content {
