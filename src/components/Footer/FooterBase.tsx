@@ -1,11 +1,12 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import Link from '../Link';
 import { RequireOnlyOne, NavItem } from '../../types';
-import logoTagline from '../../stories/assets/logo-bsc-tagline.svg';
-import iconNewWindow from '../../stories/assets/icon-new-window.svg';
 import IconFacebook from '../Icon/icons/IconFacebook';
 import IconTwitter from '../Icon/icons/IconTwitter';
 import IconLinkedin from '../Icon/icons/IconLinkedin';
 import IconYoutube from '../Icon/icons/IconYoutube';
+import LogoTagline from '../../stories/assets/logo-bsc-tagline.svg?react';
 
 interface LegalLinksBase extends NavItem {
   children?: LegalLinkItem[];
@@ -69,14 +70,10 @@ const FooterBase = ({
         </nav>
       )}
       <div className="bsds-footer-base-container">
-        <img className="bsds-footer-logo" src={logoTagline} alt="Boston Scientific" />
+        {<LogoTagline className="bsds-footer-logo" />}
         {!!corporateLink && (
           <Link className="bsds-footer-link-corp" href="https://www.bostonscientific.com/">
             {texts?.corporateLinkText ?? 'Boston Scientific home site'}
-            {
-              // eslint-disable-next-line jsx-a11y/alt-text
-              <img src={iconNewWindow} className="bsds-icon-right bsds-footer-icon" aria-hidden />
-            }
           </Link>
         )}
         {!!texts?.tagline && <p className="bsds-footer-tagline">{texts?.tagline}</p>}
