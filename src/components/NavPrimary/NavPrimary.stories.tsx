@@ -1,10 +1,12 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import type { Meta, StoryObj } from '@storybook/react';
 import { componentDecorators } from '../../../.storybook/decorators';
 
 import NavPrimary from './NavPrimary';
-import logoTagline from '../../stories/assets/logo-bsc-tagline.svg';
-import logoBsc from '../../stories/assets/logo-bsc.svg';
-import logoDemo from '../../stories/assets/logo-demo.svg';
+import LogoTagline from '../../stories/assets/logo-bsc-tagline.svg?react';
+import LogoBsc from '../../stories/assets/logo-bsc.svg?react';
+import LogoDemo from '../../stories/assets/logo-demo.svg?react';
 import { complexData, intermediateData, simpleData, utilityData } from './navPrimaryData';
 
 const meta = {
@@ -37,7 +39,7 @@ const meta = {
   },
   args: {
     logo: {
-      src: logoTagline,
+      src: <LogoTagline />,
       alt: 'Boston Scientific',
       href: '.'
     },
@@ -78,11 +80,11 @@ export const Cobranded: Story = {
   args: {
     navItems: simpleData,
     logo: {
-      src: logoDemo,
+      src: <LogoDemo />,
       alt: 'Demo logo'
     },
     logoSecondary: {
-      src: logoBsc,
+      src: <LogoBsc />,
       alt: 'Boston Scientific'
     }
   }
