@@ -84,7 +84,6 @@
     }
   }
 
-  // TODO: var(--breakpoint-sm-min) does not map to $breakpoint-sm-min
   @media (min-width: $breakpoint-sm-min) {
     .bsds-search-control {
       flex-direction: row;

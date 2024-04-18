@@ -10,7 +10,6 @@
   padding: var(--space-4x);
   background: var(--surface-default);
 
-  // TODO: There's a default background, but there isn't an inverse background.
   &::backdrop {
     background: var(--transparency-overlay-primary);
   }
