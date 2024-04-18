@@ -1,8 +1,11 @@
+/// <reference types="vite-plugin-svgr/client" />
+
 import type { Meta, StoryObj } from '@storybook/react';
 import { componentDecorators } from '../../../.storybook/decorators';
 
 import Footer from './Footer';
 import { navItems, navItemsIntermediate, legalLinks, socialLinks } from './footerData';
+import LogoTagline from '../../stories/assets/logo-bsc-tagline.svg?react';
 
 const meta = {
   title: 'Components/Footer',
@@ -24,13 +27,19 @@ type Story = StoryObj<typeof Footer>;
 
 export const Playground: Story = {
   args: {
-    navItems: navItems
+    navItems: navItems,
+    logo: {
+      src: <LogoTagline />
+    }
   }
 };
 
 export const Simple: Story = {
   args: {
     legalLinkItems: legalLinks,
+    logo: {
+      src: <LogoTagline />
+    },
     corporateLink: true,
     texts: {
       tagline:

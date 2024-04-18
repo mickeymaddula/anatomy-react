@@ -14,6 +14,7 @@ const Footer = ({
   legalLinkItems,
   corporateLink,
   texts,
+  logo,
   customizeCookiesLink,
   complianceCode,
   socialMedia,
@@ -27,6 +28,7 @@ const Footer = ({
         legalLinkItems={legalLinkItems}
         corporateLink={corporateLink}
         texts={texts}
+        logo={logo}
         customizeCookiesLink={customizeCookiesLink}
         complianceCode={complianceCode}
         socialMedia={socialMedia}

@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { navItems, legalLinks, socialLinks } from './footerData';
 import Footer from './Footer';
+import logoTagline from '../../stories/assets/logo-bsc-tagline.svg';
 
 describe('Footer with all optional', () => {
   it('Renders all optional props with nav items', () => {
@@ -8,6 +9,7 @@ describe('Footer with all optional', () => {
       <Footer
         navItems={navItems}
         legalLinkItems={legalLinks}
+        logo={{ src: logoTagline, alt: 'Boston Scientific' }}
         texts={{
           tagline:
             'Boston Scientific is dedicated to transforming lives through innovative medical solutions that improve the health of patients around the world.'
@@ -34,7 +36,7 @@ describe('Footer with all optional', () => {
 
 describe('Intermediate Footer', () => {
   it('Renders nav items when passed navItems', () => {
-    render(<Footer navItems={navItems} />);
+    render(<Footer logo={{ src: logoTagline, alt: 'Boston Scientific' }} navItems={navItems} />);
     expect(screen.getAllByText(/Page group [0-9]/)).toHaveLength(7);
     expect(screen.getAllByText(/Page [0-9]/)).toHaveLength(20);
   });
