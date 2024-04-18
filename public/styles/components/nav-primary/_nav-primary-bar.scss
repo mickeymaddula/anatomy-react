@@ -192,13 +192,16 @@
               width: $icon-size;
               height: $icon-size;
               padding: var(--space-2x);
-              mask-image: url('../../../assets/images/icon-search.svg');
-              background-color: var(--text-color-primary);
-              mask-position: center;
-              mask-repeat: no-repeat;
-              mask-size: $icon-size;
 
-              &::after,
+              &::after {
+                background-color: var(--text-color-primary);
+                content: '';
+                mask-image: url('../../../assets/images/icon-search.svg');
+                mask-position: center;
+                mask-repeat: no-repeat;
+                mask-size: $icon-size;
+              }
+
               &::before {
                 display: none;
               }
@@ -206,8 +209,7 @@
               &:hover,
               &:focus,
               &[aria-expanded='true'] {
-                // TODO: No equivalent token
-                background-color: var(--action-primary-95);
+                background-color: var(--surface-informational);
               }
             }
 
