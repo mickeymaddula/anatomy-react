@@ -5,7 +5,7 @@
   color: var(--text-color-primary);
   font-size: var(--fs-display);
   line-height: 1.5;
-  @include font-family-base-heavy; // TODO: do we want to swap for css custom properties in components or in the mixin?
+  @include font-family-base-heavy;
 
   &::after {
     position: absolute;
@@ -13,7 +13,7 @@
     left: 0;
     width: var(--space-15x);
     height: var(--space-md);
-    background: var(--callout-bar); // TODO: update var to callout-bar-color
+    background: var(--callout-bar-color);
     content: '';
   }
 

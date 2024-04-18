@@ -35,16 +35,13 @@
       display: none; // Hide scrollbar in Safari and Chrome
     }
 
-    // TODO: Do we intend to have box-shadow tokens?
-    // Chose surface-inverse in the interim
     &::after {
       position: sticky;
       right: 0;
       display: block;
       width: var(--space-xxs);
       height: var(--space-6x);
-      box-shadow: var(--space-negative-xxs) 0 var(--space-md) var(--space-xs)
-        color-mix(in srgb, var(--surface-inverse) 20%, transparent); // TODO: review for potential transparency or tabs variable
+      box-shadow: var(--space-negative-xxs) 0 var(--space-md) var(--space-xs) var(--box-shadow-primary);
       border-width: 0;
       content: '';
       pointer-events: none;

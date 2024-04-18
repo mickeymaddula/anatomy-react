@@ -26,8 +26,6 @@ a {
   }
 
   &.bsds-button-assertive {
-    // TODO: Not seeing a button-color-assertive or similar token to map to here.
-    // Going with --text-color-inverse for the time being.
     color: var(--text-color-inverse);
 
     &:visited {
@@ -55,9 +53,7 @@ a {
       width: var(--ffs-body-assertive);
       height: var(--ffs-body-assertive);
       margin-left: var(--space-md);
-
-      // TODO: No direct mapping. Chose --action-default
-      background: var(--action-default);
+      background: var(--icon-color-action);
       content: '';
       /* stylelint-disable property-no-vendor-prefix */
       -webkit-mask: url('../../assets/images/icon-arrow-right.svg') no-repeat 50% 50%;
