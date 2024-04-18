@@ -210,6 +210,10 @@
               &:focus,
               &[aria-expanded='true'] {
                 background-color: var(--surface-informational);
+
+                &::after {
+                  background-color: var(--text-color-informational);
+                }
               }
             }
 
