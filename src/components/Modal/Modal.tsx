@@ -199,7 +199,7 @@ const Modal = forwardRef(
     useEffect(() => {
       if (typeof logo === 'string') {
         setModalLogo(<img src={logo} alt={logoAlt} className="bsds-modal-logo" />);
-      } else {
+      } else if (typeof logo === 'object') {
         setModalLogo(<div className="bsds-modal-logo">{logo}</div>);
       }
     }, [logo, logoAlt]);
