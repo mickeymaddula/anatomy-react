@@ -110,6 +110,7 @@
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.5.2",
     "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-svgr": "^4.2.0",
     "vite-plugin-turbosnap": "^1.0.3"
   }
 }
