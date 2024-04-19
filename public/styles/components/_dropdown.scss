@@ -23,7 +23,7 @@
 
     &::after {
       position: absolute;
-      right: var(--space-2x); // Making the button relative meant adjusting the positioning of the chevron
+      right: var(--space-2x); 
       width: var(--icon-size);
       height: var(--icon-size);
       content: '';
