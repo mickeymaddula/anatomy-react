@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-id */
 .sb-show-main {
   img {
     width: 100%;
@@ -6,4 +7,14 @@
 
 body {
   @include bsds-defaults;
+}
+
+#logoTagline {
+  .bsc-logo {
+    fill: var(--bsc-logo);
+  }
+
+  .bsc-logo-tagline {
+    fill: var(--bsc-logo-tagline);
+  }
 }
