@@ -8,6 +8,8 @@
   display: inline-block;
 
   .bsds-dropdown-trigger {
+    position: relative;
+    z-index: 1001;
     padding-right: calc(var(--space-lg) + var(--icon-size) + var(--space-3x)); // gap + icon width + padding
 
     &.has-icon {
@@ -21,7 +23,7 @@
 
     &::after {
       position: absolute;
-      right: var(--space-3x);
+      right: var(--space-2x); 
       width: var(--icon-size);
       height: var(--icon-size);
       content: '';
