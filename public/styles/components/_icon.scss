@@ -3,7 +3,7 @@
 
 .bsds-icon-base // use for icon-only buttons
 {
-  width: space(2x);
+  width: var(--space-2x);
 
   @media (min-width: $breakpoint-lg-min) {
     width: 1.125rem; // NOTE: this is a one-off size
@@ -11,30 +11,30 @@
 }
 
 .bsds-icon-sm {
-  width: space(sm);
+  width: var(--space-sm);
 }
 
 .bsds-icon-md {
-  width: space(md);
+  width: var(--space-md);
 }
 
 .bsds-icon-lg {
-  width: space(lg);
+  width: var(--space-lg);
 }
 
 .bsds-icon-2x // use for buttons with text + icon
 {
-  width: space(2x);
+  width: var(--space-2x);
 }
 
 .bsds-icon-3x {
-  width: space(3x);
+  width: var(--space-3x);
 }
 
 .bsds-icon-4x {
-  width: space(4x);
+  width: var(--space-4x);
 }
 
 .bsds-icon-8x {
-  width: $size-icon-decorative;
+  width: var(--size-icon-decorative);
 }

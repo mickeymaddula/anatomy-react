@@ -48,9 +48,6 @@ const Button = forwardRef(
       case 'assertive':
         classes = 'bsds-button-assertive';
         break;
-      case 'ghost':
-        classes = 'bsds-button-ghost';
-        break;
       case 'subtle':
         classes = 'bsds-button-subtle';
         break;

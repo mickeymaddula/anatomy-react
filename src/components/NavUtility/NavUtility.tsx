@@ -1,3 +1,4 @@
+import { ReactElement, useEffect, useState } from 'react';
 import DropdownMenu from '../DropdownMenu';
 import Link from '../Link';
 import { NavItemUtility } from '../NavPrimary';
@@ -6,18 +7,26 @@ export interface NavUtilityProps {
   utilityItems: NavItemUtility[];
   ariaLabel?: string;
   logoSecondary?: {
-    src: string;
+    src: string | ReactElement<SVGElement>;
     alt: string;
   };
 }
 
 const NavUtility = ({ utilityItems, ariaLabel = 'Utility', logoSecondary }: NavUtilityProps): JSX.Element => {
+  const [secondaryLogo, setSecondaryLogo] = useState<ReactElement>();
+
+  useEffect(() => {
+    if (typeof logoSecondary?.src === 'string') {
+      setSecondaryLogo(<img className="bsds-nav-logo-secondary" src={logoSecondary.src} alt={logoSecondary.alt} />);
+    } else {
+      setSecondaryLogo(<div className="bsds-nav-logo-secondary">{logoSecondary?.src}</div>);
+    }
+  }, [logoSecondary?.src, logoSecondary?.alt]);
+
   return (
     <nav className="bsds-nav-utility" aria-label={ariaLabel}>
       <div className="bsds-nav-utility-container">
-        {!!logoSecondary?.src && (
-          <img className="bsds-nav-logo-secondary" src={logoSecondary.src} alt={logoSecondary.alt} />
-        )}
+        {secondaryLogo}
         <ul className="bsds-nav">
           {utilityItems.map((utilityItem) => (
             <li key={'utilityItem' + utilityItem.text} className="bsds-nav-item">

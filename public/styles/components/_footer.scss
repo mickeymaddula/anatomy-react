@@ -1,14 +1,15 @@
 @mixin bsds-footer-text {
-  @include font-size($fs-small);
-  margin-top: space(lg);
+  @include font-family-base-regular;
+  margin-top: var(--space-lg);
+  font-size: var(--fs-small);
 }
 
 .bsds-footer {
   @include bsds-defaults-type;
-  background-color: $neutral-95;
+  background-color: var(--surface-subtle);
 
   .bsds-nav-footer {
-    @include font-size($fs-body-subtle);
+    font-size: var(--fs-body-subtle);
 
     .bsds-accordion {
       :last-child {
@@ -27,15 +28,15 @@
 
   .bsds-nav-footer-column {
     > .bsds-nav {
-      padding-right: space(3x);
-      padding-left: space(3x);
+      padding-right: var(--space-3x);
+      padding-left: var(--space-3x);
     }
 
     &:first-of-type {
       > .bsds-nav {
         &:first-of-type {
           margin-top: 0;
-          padding-top: space(6x);
+          padding-top: var(--space-6x);
         }
       }
     }
@@ -43,7 +44,7 @@
     &:last-of-type {
       > .bsds-nav {
         &:last-of-type {
-          padding-bottom: space(4x);
+          padding-bottom: var(--space-4x);
         }
       }
     }
@@ -52,7 +53,7 @@
   .bsds-nav-group {
     .bsds-nav {
       &:not(:first-of-type) {
-        margin-top: space(lg);
+        margin-top: var(--space-lg);
       }
     }
 
@@ -61,13 +62,13 @@
       margin-top: 0;
 
       + .bsds-nav {
-        margin-top: space(lg);
+        margin-top: var(--space-lg);
       }
     }
   }
 
   .bsds-nav {
-    margin: space(6x) 0 0 0;
+    margin: var(--space-6x) 0 0 0;
     padding: 0;
   }
 
@@ -80,21 +81,21 @@
   }
 
   .bsds-footer-base {
-    border-top: $border-width-xxs solid $border-color-subtle;
-    padding-bottom: space(6x);
+    border-top: var(--border-width-xxs) solid var(--border-color-subtle);
+    padding-bottom: var(--space-6x);
 
     .bsds-footer-base-container {
-      @include font-size($fs-body-subtle);
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      padding: 0 space(3x);
+      padding: 0 var(--space-3x);
+      font-size: var(--fs-body-subtle);
 
       .bsds-footer-logo {
         width: auto;
-        max-height: space(8x);
-        margin-top: space(3x);
+        max-height: var(--space-8x);
+        margin-top: var(--space-3x);
       }
 
       .bsds-footer-text-small {
@@ -102,19 +103,42 @@
       }
 
       .bsds-footer-link-corp {
-        @include link-navigation;
+        @include button-default;
         @include bsds-footer-text;
+        border: 0;
+        padding: 0;
+        background: transparent;
+        color: var(--text-color-primary);
+        text-decoration: none;
 
-        .bsds-footer-icon {
-          width: space(lg);
+        &::after {
+          width: var(--space-lg);
+          height: var(--space-lg);
+          padding-left: var(--space-3x);
+          background: var(--icon-color-primary);
+          content: '';
+          /* stylelint-disable-next-line property-no-vendor-prefix */
+          -webkit-mask: url('../../../src/stories/assets/icon-new-window.svg') no-repeat 50% 50%;
+          mask: url('../../../src/stories/assets/icon-new-window.svg') no-repeat 50% 50%;
+          mask-size: auto;
+        }
+
+        &:not([disabled]) {
+          &:hover,
+          &:focus,
+          &:active {
+            background: transparent;
+            color: var(--text-color-primary);
+            text-decoration: underline;
+          }
         }
       }
     }
 
     .bsds-nav-footer-legal {
       width: 100%;
-      border-bottom: $border-width-xxs solid $border-color-subtle;
-      padding: space(3x) 0;
+      border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+      padding: var(--space-3x) 0;
 
       .bsds-nav {
         display: flex;
@@ -122,13 +146,13 @@
         justify-content: flex-start;
         align-items: flex-start;
         margin: 0;
-        padding-left: space(3x);
+        padding-left: var(--space-3x);
         list-style: none;
 
         .bsds-nav-item {
           .bsds-nav-link {
             @include link-navigation;
-            @include font-size($fs-small);
+            font-size: var(--fs-small);
           }
         }
       }
@@ -140,7 +164,7 @@
       align-items: center;
       padding-left: 0;
       list-style: none;
-      gap: space(lg);
+      gap: var(--space-lg);
 
       .bsds-footer-social-media-item {
         display: flex;
@@ -150,16 +174,17 @@
 
         .bsds-footer-social-media-icon {
           width: 100%;
-          height: space(2x);
+          height: var(--space-2x);
         }
 
         .bsds-link-subtle {
           &:visited {
-            color: $neutral-00;
+            // TODO: Maybe there should be an icon-color-primary?
+            color: var(--text-color-primary);
           }
 
           &:hover {
-            color: $action-primary-40;
+            color: var(--icon-color-action);
           }
         }
       }
@@ -171,8 +196,8 @@
   .bsds-footer {
     .bsds-nav-footer {
       display: flex;
-      border-bottom: $border-width-xxs solid $border-color-subtle;
-      padding: space(4x) space(3x);
+      border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+      padding: var(--space-4x) var(--space-3x);
 
       > .bsds-nav-footer-column {
         flex: 1;
@@ -210,7 +235,7 @@
 
     .bsds-nav-group {
       &:not(:first-of-type) {
-        margin-top: space(6x);
+        margin-top: var(--space-6x);
       }
     }
 
@@ -230,7 +255,7 @@
           flex-direction: row;
           justify-content: center;
           align-items: center;
-          gap: space(3x);
+          gap: var(--space-3x);
           padding: 0;
 
           .bsds-nav-item {

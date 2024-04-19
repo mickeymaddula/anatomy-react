@@ -1,4 +1,4 @@
-import { ForwardedRef, RefObject, forwardRef, useState } from 'react';
+import { ForwardedRef, RefObject, ReactElement, forwardRef, useState, useEffect } from 'react';
 import Button from '../Button';
 import DropdownMenu from '../DropdownMenu';
 import Link from '../Link';
@@ -9,7 +9,7 @@ interface NavPrimaryMenuProps {
   navItems: NavNodePrimary[];
   utilityItems?: NavItemUtility[];
   logoSecondary?: {
-    src: string;
+    src: string | ReactElement<SVGElement>;
     alt: string;
   };
   activeNode: NavNodePrimary | null;
@@ -26,6 +26,17 @@ interface NavPrimaryMenuProps {
 
 const NavPrimaryMenu = forwardRef((props: NavPrimaryMenuProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
   const [activeDepth, setActiveDepth] = useState(0);
+  const [secondaryLogo, setSecondaryLogo] = useState<ReactElement>();
+
+  useEffect(() => {
+    if (typeof props.logoSecondary?.src === 'string') {
+      setSecondaryLogo(
+        <img className="bsds-nav-logo-secondary" src={props.logoSecondary.src} alt={props.logoSecondary.alt} />
+      );
+    } else {
+      setSecondaryLogo(<div className="bsds-nav-logo-secondary">{props.logoSecondary?.src}</div>);
+    }
+  }, [props.logoSecondary?.src, props.logoSecondary?.alt]);
 
   return (
     <div
@@ -58,9 +69,7 @@ const NavPrimaryMenu = forwardRef((props: NavPrimaryMenuProps, ref: ForwardedRef
       </div>
       {props.history.length === 0 && !!props.utilityItems && (
         <ul className="bsds-nav bsds-nav-block">
-          {!!props.logoSecondary && (
-            <img className="bsds-nav-logo-secondary" src={props.logoSecondary.src} alt={props.logoSecondary.alt} />
-          )}
+          {!!props.logoSecondary && secondaryLogo}
           {props.utilityItems.map((item) => (
             <li key={'utilityItem' + item.text} className="bsds-nav-item">
               {item.children ? (

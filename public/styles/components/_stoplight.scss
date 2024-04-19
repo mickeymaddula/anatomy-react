@@ -7,49 +7,43 @@
     display: inline-block;
     flex-shrink: 0;
     align-self: flex-start;
-    width: space(3x);
-    height: space(3x);
-    margin-right: space(md);
-    background-repeat: no-repeat;
-    background-size: 100%;
+    width: var(--space-3x);
+    height: var(--space-3x);
+    margin-right: var(--space-md);
     content: '';
   }
 
   &.bsds-body-subtle {
     &::before {
-      width: space(2x);
-      height: space(2x);
-      transform: translateY(space(-xxs));
+      width: var(--space-2x);
+      height: var(--space-2x);
+      transform: translateY(var(--space-negative-xxs));
     }
   }
 }
 
 .bsds-stoplight {
+  // TODO: Rename to -error
   &-red {
     &::before {
-      background-image: url('../../assets/images/icon-stoplight-red.svg');
-    }
-
-    &.bsds-stoplight-ghost {
-      &::before {
-        background-image: url('../../assets/images/icon-stoplight-red-ghost.svg');
-      }
+      mask-image: url('../../assets/images/icon-stoplight-red.svg');
+      background-color: var(--icon-color-error);
     }
   }
 
+  // TODO: Rename to -warning
   &-yellow {
     &::before {
-      background-image: url('../../assets/images/icon-stoplight-yellow.svg');
+      mask-image: url('../../assets/images/icon-stoplight-yellow.svg');
+      background-color: var(--icon-color-warning);
     }
   }
 
+  // TODO: Rename to -success
   &-green {
     &::before {
-      background-image: url('../../assets/images/icon-stoplight-green.svg');
+      mask-image: url('../../assets/images/icon-stoplight-green.svg');
+      background-color: var(--icon-color-success);
     }
-  }
-
-  &-ghost {
-    color: $text-color-ghost;
   }
 }

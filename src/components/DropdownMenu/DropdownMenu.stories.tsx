@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import DropdownMenu from './DropdownMenu';
 import Button from '../Button';
@@ -9,6 +10,7 @@ const meta = {
   title: 'Components/Dropdown menu',
   component: DropdownMenu,
   tags: ['autodocs'],
+  decorators: componentDecorators,
   argTypes: {
     highlightedAction: {
       control: false

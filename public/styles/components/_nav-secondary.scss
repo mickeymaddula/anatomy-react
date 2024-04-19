@@ -5,9 +5,9 @@
   // These are one offs for sizing/aligning icons
   width: 1em;
   height: 1em;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: $icon-size;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: $icon-size;
   content: '';
 
   @if $alignment == left {
@@ -30,16 +30,16 @@
     display: block;
     width: 100%;
     border: 0;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
-    padding-right: space(4x);
-    padding-left: space(4x);
-    color: $text-color-primary;
+    border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+    padding-right: var(--space-4x);
+    padding-left: var(--space-4x);
+    color: var(--text-color-primary);
     text-align: left;
 
     &:hover,
     &:active {
-      border-color: $border-color-subtle;
-      background: $neutral-100;
+      border-color: var(--border-color-subtle);
+      background: var(--surface-default);
       color: initial;
     }
 
@@ -48,10 +48,11 @@
     }
 
     &::after {
-      @include icon-background($icon-size-sm);
+      @include icon-background(var(--icon-size-sm));
       top: 0;
-      padding: space(2x) space(4x);
-      background-image: url('../../assets/images/icon-chevron-down.svg');
+      padding: var(--space-2x) var(--space-4x);
+      mask-image: url('../../assets/images/icon-chevron-down.svg');
+      background-color: var(--icon-color-primary);
     }
 
     &[aria-expanded='true'] {
@@ -65,9 +66,9 @@
     position: absolute;
     display: none;
     width: 100%;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
-    padding: space(lg) space(2x);
-    background: $neutral-100;
+    border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+    padding: var(--space-lg) var(--space-2x);
+    background: var(--surface-default);
 
     &.is-expanded {
       display: block;
@@ -82,8 +83,8 @@
   .bsds-button-text {
     display: flex;
     justify-content: flex-start;
-    padding: space(lg) space(2x);
-    @include font-size($fs-small);
+    padding: var(--space-lg) var(--space-2x);
+    font-size: var(--fs-small);
   }
 
   .bsds-nav-link {
@@ -91,16 +92,16 @@
     display: flex;
     justify-content: space-between;
     border-left: 0;
-    padding: space(lg) space(2x);
+    padding: var(--space-lg) var(--space-2x);
     @include link-navigation;
-    @include font-size($fs-body-subtle);
+    font-size: var(--fs-body-subtle);
 
     &.is-active {
       &::before {
         position: absolute;
         left: 0;
-        height: space(3x);
-        border-left: $border-width-sm solid $border-color-assertive;
+        height: var(--space-3x);
+        border-left: var(--border-width-sm) solid var(--border-color-assertive);
         content: '';
       }
     }
@@ -127,9 +128,10 @@
       }
 
       &::after {
-        @include icon-background($icon-size-sm);
-        padding: space(lg);
-        background-image: url('../../assets/images/icon-chevron-right.svg');
+        @include icon-background(var(--icon-size-sm));
+        padding: var(--space-lg);
+        mask-image: url('../../assets/images/icon-chevron-right.svg');
+        background-color: var(--icon-color-primary);
       }
     }
   }

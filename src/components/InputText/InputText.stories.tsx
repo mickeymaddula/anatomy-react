@@ -1,11 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { errorText, helpText, placeholderText } from '../../stories/helpers';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import InputText from './InputText';
+import { errorText, helpText, placeholderText } from '../../stories/helpers';
 
 const meta = {
   title: 'Components/Text input',
   component: InputText,
+  decorators: componentDecorators,
   tags: ['autodocs'],
   args: {
     label: 'Text input'

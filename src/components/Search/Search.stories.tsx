@@ -1,13 +1,14 @@
 // TODO: add search results
 
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Search from './Search';
 
 const meta = {
   title: 'Components/Search',
   component: Search,
-  tags: ['autodocs'],
+
   parameters: {
     docs: {
       story: {
@@ -23,6 +24,8 @@ const meta = {
       control: false
     }
   },
+  decorators: componentDecorators,
+  tags: ['autodocs'],
   args: {
     searchResults: [
       { text: 'Result 1', href: '#result1' },

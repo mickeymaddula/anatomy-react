@@ -4,50 +4,50 @@
 .bsds-h4,
 .bsds-h5,
 .bsds-h6 {
-  color: $text-color-primary;
+  color: var(--text-color-primary);
   @include font-family-base-heavy;
 }
 
 .bsds-h1 {
-  @include font-size($fs-h1);
+  font-size: var(--fs-h1);
   line-height: 1.4;
 }
 
 .bsds-h2 {
-  @include font-size($fs-h2);
+  font-size: var(--fs-h2);
   line-height: 1.4;
 }
 
 .bsds-h3 {
-  @include font-size($fs-h3);
+  font-size: var(--fs-h3);
   line-height: 1.4;
 }
 
 .bsds-h4 {
-  @include font-size($fs-h4);
+  font-size: var(--fs-h4);
   line-height: 1.4;
 }
 
 .bsds-h5 {
-  @include font-size($fs-h5);
+  font-size: var(--fs-h5);
   line-height: 1.5;
 }
 
 .bsds-h6 {
-  @include font-size($fs-h6);
+  font-size: var(--fs-h6);
   line-height: 1.5;
 }
 
 .bsds-body-assertive {
-  @include font-size($fs-body-assertive);
+  font-size: var(--fs-body-assertive);
 }
 
 .bsds-body-subtle {
-  @include font-size($fs-body-subtle);
+  font-size: var(--fs-body-subtle);
 }
 
 .bsds-font-size-sm {
-  @include font-size($fs-small);
+  font-size: var(--fs-small);
 }
 
 .bsds-font-weight-bold,

@@ -12,7 +12,7 @@
 .bsds-fieldset-button-group {
   @extend .bsds-fieldset;
   flex-flow: row wrap;
-  gap: 0 space(lg);
+  gap: 0 var(--space-lg);
 
   .bsds-legend {
     @include font-family-base-regular;
@@ -21,7 +21,7 @@
       width: max-content;
 
       .bsds-input-radio-label {
-        margin-top: space(lg);
+        margin-top: var(--space-lg);
       }
     }
   }
@@ -31,15 +31,15 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      min-width: space(12x);
-      border-radius: space(3x);
-      border-width: $border-width-xxs;
+      min-width: var(--space-12x);
+      border-radius: var(--space-3x);
+      border-width: var(--border-width-xxs);
       border-style: solid;
       border-color: inherit;
-      padding: space(md) space(3x);
-      background: $neutral-100;
-      color: $text-color-subtle;
-      font-size: $ffs-body-assertive;
+      padding: var(--space-md) var(--space-3x);
+      background: var(--surface-default);
+      color: var(--text-color-subtle);
+      font-size: var(--ffs-body-assertive);
       line-height: inherit;
       text-align: center;
       @include font-family-base-regular;
@@ -60,8 +60,8 @@
       &:active {
         + .bsds-input-radio-label {
           border-color: transparent;
-          background: $action-primary-20;
-          color: $text-color-ghost;
+          background: var(--surface-assertive);
+          color: var(--text-color-inverse);
           text-decoration: none;
           cursor: pointer;
         }
@@ -71,7 +71,7 @@
       &:focus:checked {
         + .bsds-input-radio-label {
           @include focus-default;
-          box-shadow: inset 0 0 0 $border-width-xxs $border-color-action;
+          box-shadow: inset 0 0 0 var(--border-width-xxs) var(--border-color-action);
         }
         @include hover-reset;
       }
@@ -80,11 +80,11 @@
     &:checked,
     &[aria-checked='true'] {
       + .bsds-input-radio-label {
-        box-shadow: inset 0 0 0 $border-width-xxs $border-color-action;
+        box-shadow: inset 0 0 0 var(--border-width-xxs) var(--border-color-action);
         outline: none;
         border-style: solid;
-        border-color: $border-color-action;
-        color: $text-color-primary;
+        border-color: var(--border-color-action);
+        color: var(--text-color-primary);
       }
       @include hover-reset;
     }
@@ -92,9 +92,9 @@
     &:disabled {
       + .bsds-input-radio-label {
         border-style: solid;
-        border-color: $border-color-subtle;
-        background: $neutral-95;
-        color: $text-color-subtle;
+        border-color: var(--border-color-subtle);
+        background: var(--surface-subtle);
+        color: var(--text-color-subtle);
         cursor: not-allowed;
 
         &-unavailable {
@@ -105,8 +105,8 @@
       &:checked,
       &[aria-checked='true'] {
         + .bsds-input-radio-label {
-          box-shadow: inset 0 0 0 $border-width-xxs $border-color-subtle;
-          border-color: $border-color-subtle;
+          box-shadow: inset 0 0 0 var(--border-width-xxs) var(--border-color-subtle);
+          border-color: var(--border-color-subtle);
         }
       }
     }
@@ -118,15 +118,15 @@
         .bsds-input-radio {
           &:not(:disabled) {
             + .bsds-input-radio-label {
-              border-color: $border-color-error;
+              border-color: var(--border-color-error);
             }
             @include hover-reset;
 
             &:focus,
             &:focus:checked {
               + .bsds-input-radio-label {
-                @include focus-invalid;
-                box-shadow: inset 0 0 0 $border-width-xxs $border-color-error;
+                @include focus-error;
+                box-shadow: inset 0 0 0 var(--border-width-xxs) var(--border-color-error);
               }
               @include hover-reset;
             }
@@ -134,8 +134,8 @@
             &:checked,
             &[aria-checked='true'] {
               + .bsds-input-radio-label {
-                box-shadow: inset 0 0 0 $border-width-xxs $border-color-error;
-                border-color: $border-color-error;
+                box-shadow: inset 0 0 0 var(--border-width-xxs) var(--border-color-error);
+                border-color: var(--border-color-error);
               }
               @include hover-reset;
             }
@@ -151,6 +151,6 @@
 
   .bsds-field-help-text {
     width: 100%;
-    margin-top: space(sm);
+    margin-top: var(--space-sm);
   }
 }

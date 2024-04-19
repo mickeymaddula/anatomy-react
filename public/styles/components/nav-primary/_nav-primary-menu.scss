@@ -4,8 +4,8 @@
     left: 0;
     z-index: $nav-menu-z-index;
     width: 100%;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
-    @include font-size($fs-body);
+    border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+    font-size: var(--fs-body);
 
     &:not(.is-expanded) {
       display: none;
@@ -25,23 +25,23 @@
         &.is-active,
         &:hover,
         &:active {
-          background: $neutral-95;
+          background: var(--surface-subtle);
         }
 
         .bsds-nav-link-text {
           position: relative;
-          padding-right: calc($icon-size-sm + space(md)); // Padding + icon width + space between icon and text;
+          padding-right: calc(
+            var(--icon-size-sm) + var(--space-md)
+          ); // Padding + icon width + space between icon and text;
 
           &::after {
             position: absolute;
-            top: calc(50% - ($icon-size-sm / 2));
+            top: calc(50% - (var(--icon-size-sm) / 2));
             right: 0;
-            width: $icon-size-sm;
-            height: $icon-size-sm;
-            background-image: url('../../../assets/images/icon-chevron-right.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            width: var(--icon-size-sm);
+            height: var(--icon-size-sm);
+            mask-image: url('../../../assets/images/icon-chevron-right.svg');
+            background-color: var(--text-color-primary);
             content: '';
           }
         }
@@ -54,16 +54,16 @@
 
         .bsds-nav-link-description {
           width: 100%;
-          margin-top: space(md);
-          color: $text-color-subtle;
+          margin-top: var(--space-md);
+          color: var(--text-color-subtle);
+          font-size: var(--fs-body-subtle);
           text-align: left;
-          @include font-size($fs-body-subtle);
           @include font-family-base-regular;
         }
 
         &[aria-expanded='true'] {
           .bsds-nav-link-description {
-            color: $text-color-primary;
+            color: var(--text-color-primary);
           }
         }
       }
@@ -93,9 +93,9 @@
     z-index: $nav-back-z-index;
     justify-content: flex-start;
     width: 100%;
-    box-shadow: $box-shadow-secondary;
-    padding: space(lg) space(2x);
-    @include font-size($fs-body);
+    box-shadow: var(--box-shadow-secondary);
+    padding: var(--space-lg) var(--space-2x);
+    font-size: var(--fs-body);
 
     &:focus {
       @include focus-default-inset;
@@ -109,7 +109,7 @@
     padding: $menu-padding;
 
     > :not(:last-child) {
-      border-right: $border-width-xxs solid $border-color-subtle;
+      border-right: var(--border-width-xxs) solid var(--border-color-subtle);
     }
   }
 
@@ -128,8 +128,8 @@
     }
 
     .bsds-nav-menu-panel-header {
-      border-bottom: $border-width-xxs solid $border-color-subtle;
-      padding: space(lg) space(3x) space(4x);
+      border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+      padding: var(--space-lg) var(--space-3x) var(--space-4x);
 
       .bsds-nav-menu-panel-title {
         @extend .bsds-h3;
@@ -162,7 +162,7 @@
 
   .bsds-nav-menu-panel-header-link {
     display: inline-block;
-    margin-top: space(3x);
+    margin-top: var(--space-3x);
   }
 
   .bsds-nav-link-see-all {
@@ -177,31 +177,31 @@
       flex-direction: column;
       align-content: flex-start;
       align-items: stretch;
-      border-top: $border-width-xxs solid $border-color-subtle;
+      border-top: var(--border-width-xxs) solid var(--border-color-subtle);
       padding: $menu-padding;
 
       .bsds-nav-link {
         border: 0;
-        @include font-size($fs-body-subtle);
+        font-size: var(--fs-body-subtle);
       }
 
       .bsds-dropdown {
         .bsds-dropdown-trigger {
           display: inline-flex;
-          padding-right: calc(space(md) + $icon-size-sm + space(lg));
+          padding-right: calc(var(--space-md) + var(--icon-size-sm) + var(--space-lg));
 
           &[aria-expanded='true'],
           &:hover,
           &:active {
             background: transparent;
-            color: $text-color-primary;
+            color: var(--text-color-primary);
           }
 
           &::after {
-            right: space(lg);
-            width: $icon-size-sm;
-            height: $icon-size-sm;
-            background: $text-color-primary;
+            right: var(--space-lg);
+            width: var(--icon-size-sm);
+            height: var(--icon-size-sm);
+            background: var(--text-color-primary);
           }
         }
       }
@@ -209,9 +209,9 @@
       .bsds-nav-logo-secondary {
         box-sizing: content-box;
         width: auto;
-        max-height: space(4x);
+        max-height: var(--space-4x);
         margin-right: auto;
-        padding: space(2x) space(3x);
+        padding: var(--space-2x) var(--space-3x);
       }
     }
   }
@@ -224,15 +224,15 @@
     display: none;
     width: 100%;
     margin: auto;
-    border-top: $border-width-xxs solid $border-color-subtle;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
+    border-top: var(--border-width-xxs) solid var(--border-color-subtle);
+    border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
 
     &.is-expanded {
       display: block;
     }
 
     .bsds-form-search {
-      padding: space(2x) space(3x);
+      padding: var(--space-2x) var(--space-3x);
     }
   }
 }
@@ -247,9 +247,9 @@
       height: 100%;
 
       .bsds-nav-menu-panel-header {
-        border-right: $border-width-xxs solid $border-color-subtle;
+        border-right: var(--border-width-xxs) solid var(--border-color-subtle);
         border-bottom: 0;
-        padding: space(4x) space(4x) space(3x);
+        padding: var(--space-4x) var(--space-4x) var(--space-3x);
       }
 
       .bsds-nav-menu-panel {
@@ -260,18 +260,18 @@
         border-bottom: 0;
 
         &:first-child {
-          border-left: $border-width-xxs solid $border-color-subtle;
+          border-left: var(--border-width-xxs) solid var(--border-color-subtle);
         }
 
         &:not(:first-child) {
-          border-right: $border-width-xxs solid $border-color-subtle;
+          border-right: var(--border-width-xxs) solid var(--border-color-subtle);
         }
 
         &.bsds-nav-list-history {
           z-index: $nav-list-z-index;
 
           > .bsds-nav {
-            padding: space(4x) 0 space(3x);
+            padding: var(--space-4x) 0 var(--space-3x);
 
             /* stylelint-disable scss/selector-nest-combinators */
             > .bsds-nav-item:not(.bsds-nav-item-parent),
@@ -296,7 +296,7 @@
         .bsds-nav-menu-panel {
           .bsds-nav-menu-panel {
             .bsds-nav-link {
-              @include font-size($fs-body-subtle);
+              font-size: var(--fs-body-subtle);
             }
           }
         }
@@ -311,12 +311,12 @@
 
     .bsds-nav-menu {
       height: 60vh;
-      border-top: $border-width-xxs solid $border-color-subtle;
+      border-top: var(--border-width-xxs) solid var(--border-color-subtle);
 
       .bsds-nav {
         height: 100%;
         overflow-y: auto;
-        padding: space(4x) 0 space(3x);
+        padding: var(--space-4x) 0 var(--space-3x);
       }
 
       .bsds-nav-link {
@@ -369,7 +369,7 @@
     }
 
     .bsds-nav-link-see-all {
-      @include font-size($fs-body-subtle);
+      font-size: var(--fs-body-subtle);
     }
 
     .bsds-nav-block {

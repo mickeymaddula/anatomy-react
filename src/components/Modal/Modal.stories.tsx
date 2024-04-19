@@ -1,11 +1,13 @@
 // TODO: Figure out why enter to open modal doesn't work in Docs but does in Playground
+/// <reference types="vite-plugin-svgr/client" />
 
-import type { Meta, StoryObj } from '@storybook/react';
 import { createRef } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Modal, { ModalRef } from './Modal';
 import Button from '../Button';
-import logo from '../../stories/assets/logo-bsc-tagline.svg';
+import LogoTagline from '../../stories/assets/logo-bsc-tagline.svg?react';
 
 const meta = {
   title: 'Components/Modal',
@@ -13,6 +15,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
   tags: ['autodocs'],
   argTypes: {
     children: {
@@ -101,7 +104,7 @@ export const WithLogo: Story = {
   args: {
     positiveAction,
     negativeAction: <Button onClick={() => withLogoRef.current?.close()}>Cancel</Button>,
-    logo: logo,
+    logo: <LogoTagline />,
     logoAlt: 'Boston Scientific logo'
   },
   render: (args) => (

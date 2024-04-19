@@ -39,9 +39,9 @@
       position: sticky;
       right: 0;
       display: block;
-      width: space(xxs);
-      height: space(6x);
-      box-shadow: space(-xxs) 0 space(md) space(xs) rgba($neutral-00, 0.2);
+      width: var(--space-xxs);
+      height: var(--space-6x);
+      box-shadow: var(--space-negative-xxs) 0 var(--space-md) var(--space-xs) var(--box-shadow-primary-color);
       border-width: 0;
       content: '';
       pointer-events: none;
@@ -50,18 +50,18 @@
 
   .bsds-tab {
     position: relative;
-    margin-right: space(2x);
+    margin-right: var(--space-2x);
     border: 0;
-    padding: space(lg) space(2x);
+    padding: var(--space-lg) var(--space-2x);
     background: transparent;
-    color: $text-color-subtle;
+    color: var(--text-color-subtle);
     @include font-family-base-regular;
 
     &::after {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: space(xs);
+      height: var(--space-xs);
       background: transparent;
       content: '';
     }
@@ -70,10 +70,10 @@
       &:hover,
       &:active {
         background: transparent;
-        color: $text-color-action;
+        color: var(--text-color-action);
 
         &::after {
-          background: $action-primary-40;
+          background: var(--action-default);
         }
       }
 
@@ -83,18 +83,18 @@
     }
 
     &[aria-selected='true'] {
-      color: $text-color-primary;
+      color: var(--text-color-primary);
       @include font-family-base-heavy;
 
       &::after {
-        height: space(sm);
-        background: $neutral-00;
+        height: var(--space-sm);
+        background: var(--surface-inverse);
       }
     }
 
     &[disabled] {
       background: transparent;
-      color: $text-color-disabled;
+      color: var(--text-color-disabled);
       @include font-family-base-regular;
       cursor: not-allowed;
     }
@@ -106,22 +106,22 @@
     .bsds-tab-overflow-control {
       border: 0;
       border-color: transparent;
-      padding: space(lg) space(2x);
+      padding: var(--space-lg) var(--space-2x);
 
       &:focus {
         @include focus-default-inset;
       }
 
       &:disabled {
-        background: $neutral-100;
-        color: $neutral-80;
+        background: var(--surface-default);
+        color: var(--neutral-80); // TODO: Do we need an abstract token for this
       }
     }
   }
 
   .bsds-tab-panels {
-    border-top: $border-width-xxs solid $border-color-subtle;
-    padding-top: space(3x);
+    border-top: var(--border-width-xxs) solid var(--border-color-subtle);
+    padding-top: var(--space-3x);
   }
 
   .bsds-tab-panel {

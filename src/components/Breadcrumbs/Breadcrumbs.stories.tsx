@@ -3,6 +3,7 @@
 // decide if we can/want to share dummy data across components
 
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Breadcrumbs from './Breadcrumbs';
 
@@ -12,6 +13,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
   tags: ['autodocs']
 } satisfies Meta<typeof Breadcrumbs>;
 

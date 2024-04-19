@@ -6,20 +6,22 @@ $icon-size: 1em;
   display: inline-block;
 
   .bsds-dropdown-trigger {
-    padding-right: calc(space(lg) + $icon-size + space(3x)); // gap + icon width + padding
+    position: relative;
+    z-index: 1001;
+    padding-right: calc(var(--space-md) + $icon-size + var(--space-3x)); // gap + icon width + padding
 
     &.has-icon {
-      padding-right: calc(space(md) + $icon-size + space(lg)); // gap + icon width + padding
-      padding-left: space(lg);
+      padding-right: calc(var(--space-md) + $icon-size + var(--space-lg)); // gap + icon width + padding
+      padding-left: var(--space-lg);
 
       &::after {
-        right: space(lg);
+        right: var(--space-lg);
       }
     }
 
     &::after {
       position: absolute;
-      right: space(3x);
+      right: calc(var(--space-2x) + var(--space-xs));
       width: $icon-size;
       height: $icon-size;
       content: '';
@@ -31,7 +33,7 @@ $icon-size: 1em;
 
     &.bsds-button {
       &::after {
-        background: $action-primary-40;
+        background: var(--icon-color-action);
       }
 
       &[aria-expanded='true'] {
@@ -42,13 +44,13 @@ $icon-size: 1em;
       &:active,
       &[aria-expanded='true'] {
         &::after {
-          background: $neutral-100;
+          background: var(--text-color-button-inverse);
         }
       }
 
       &-assertive {
         &::after {
-          background: $neutral-100;
+          background: var(--text-color-button-inverse);
         }
 
         &[aria-expanded='true'] {
@@ -56,9 +58,15 @@ $icon-size: 1em;
         }
       }
 
+      &-text {
+        &::after {
+          background: var(--icon-color-action);
+        }
+      }
+
       &-subtle {
         &::after {
-          background: $action-primary-40;
+          background: var(--action-default);
         }
 
         &[aria-expanded='true'] {
@@ -69,18 +77,8 @@ $icon-size: 1em;
         &:active,
         &[aria-expanded='true'] {
           &::after {
-            background: $neutral-100;
+            background: var(--text-color-button-inverse);
           }
-        }
-      }
-
-      &-ghost {
-        &::after {
-          background: $neutral-100;
-        }
-
-        &[aria-expanded='true'] {
-          @include button-ghost-active;
         }
       }
     }
@@ -97,9 +95,9 @@ $icon-size: 1em;
     z-index: 1000;
     min-width: 10rem; // NOTE: This is a one off size.
     margin: 0;
-    box-shadow: $box-shadow-secondary;
+    box-shadow: var(--box-shadow-secondary);
     padding: 0;
-    background: $neutral-100;
+    background: var(--surface-default);
     list-style: none;
 
     &.right {
@@ -131,34 +129,34 @@ $icon-size: 1em;
       display: block;
       width: 100%;
       border: 0;
-      padding: space(lg) space(2x);
-      color: $text-color-primary;
+      padding: var(--space-lg) var(--space-2x);
+      color: var(--text-color-primary);
+      font-size: var(--fs-body);
       text-align: inherit;
       text-decoration: none;
-      @include font-size($fs-body);
 
       &:focus {
         @include focus-default-inset;
 
         &::before {
           position: absolute;
-          top: space(xs);
-          right: space(xs);
-          bottom: space(xs);
-          left: space(xs);
-          border: $border-width-xs solid $border-color-ghost;
+          top: var(--space-xs);
+          right: var(--space-xs);
+          bottom: var(--space-xs);
+          left: var(--space-xs);
+          border: var(--border-width-xs) solid var(--surface-default);
           content: '';
         }
       }
     }
 
     .bsds-dropdown-item-highlighted {
-      border-top: $border-width-xxs solid $border-color-subtle;
-      padding: space(lg) 0;
+      border-top: var(--border-width-xxs) solid var(--border-color-subtle);
+      padding: var(--space-lg) 0;
 
       .bsds-button,
       .bsds-link {
-        color: $text-color-action;
+        color: var(--text-color-action);
         @include font-family-base-heavy;
       }
     }
@@ -166,15 +164,15 @@ $icon-size: 1em;
     .bsds-button {
       &:hover,
       &:active {
-        color: $text-color-ghost;
+        color: var(--text-color-inverse);
       }
 
       &:hover {
-        background: $action-primary-40;
+        background: var(--action-default);
       }
 
       &:active {
-        background: $action-primary-20;
+        background: var(--action-active);
       }
     }
 

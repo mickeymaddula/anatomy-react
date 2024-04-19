@@ -34,22 +34,10 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
     linkClasses: 'bsds-product-card-ns-title'
   };
 
-  const ghostStyle = {
-    classes: 'bsds-card-ghost',
-    titleLinkClasses: 'bsds-link-ghost',
-    linkClasses: 'bsds-product-card-ns-title-ghost'
-  };
-
-  const borderLightStyle = {
-    classes: 'bsds-card-border-light',
+  const borderStyle = {
+    classes: 'bsds-card-border',
     titleLinkClasses: 'bsds-link-subtle',
     linkClasses: 'bsds-product-card-ns-title'
-  };
-
-  const borderGhostStyle = {
-    classes: 'bsds-card-border-ghost',
-    titleLinkClasses: 'bsds-link-ghost',
-    linkClasses: 'bsds-product-card-ns-title-ghost'
   };
 
   const [style, setStyle] = useState(cardStyles.classes);
@@ -61,14 +49,8 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
   const imageLink = useRef<HTMLAnchorElement>(null);
 
   switch (variant) {
-    case 'ghost':
-      cardStyles = { ...ghostStyle };
-      break;
-    case 'border-light':
-      cardStyles = { ...borderLightStyle };
-      break;
-    case 'border-ghost':
-      cardStyles = { ...borderGhostStyle };
+    case 'border':
+      cardStyles = { ...borderStyle };
       break;
 
     default:
@@ -77,18 +59,12 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
   }
 
   let decorativeState = '';
-  if (gradientBrand && variant?.includes('ghost')) {
+  if (gradientBrand) {
     decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderGhostStyle };
-  } else if (gradientBrand) {
-    decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderLightStyle };
-  } else if (dropShadow && variant?.includes('ghost')) {
-    decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderGhostStyle };
+    cardStyles = { ...borderStyle };
   } else if (dropShadow) {
     decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderLightStyle };
+    cardStyles = { ...borderStyle };
   }
 
   useEffect(() => {
@@ -109,13 +85,9 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
 
   useEffect(() => {
     if (tag) {
-      setClonedTag(
-        cloneElement(tag as ReactElement, {
-          isGhost: variant === 'ghost' || variant === 'border-ghost'
-        })
-      );
+      setClonedTag(cloneElement(tag as ReactElement));
     }
-  }, [tag, variant]);
+  }, [tag]);
 
   useEffect(() => {
     if (image) {
@@ -123,7 +95,6 @@ const ProductCard = (props: ProductCardProps): JSX.Element => {
         cloneElement(image as ReactElement, {
           ratio: image.props.ratio ? image.props.ratio : '1:1',
           isDecorative: false,
-          isGhost: variant === 'ghost' || variant === 'border-ghost',
           onClick: () => imageLink.current?.click()
         })
       );

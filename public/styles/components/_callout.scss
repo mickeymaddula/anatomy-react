@@ -1,18 +1,19 @@
 .bsds-callout {
   position: relative;
   margin-top: 0;
-  padding-bottom: space(3x);
-  @include font-family-base-heavy;
-  @include font-size($fs-display);
+  padding-bottom: var(--space-3x);
+  color: var(--text-color-primary);
+  font-size: var(--fs-display);
   line-height: 1.5;
+  @include font-family-base-heavy;
 
   &::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: space(15x);
-    height: space(md);
-    background: $accent-primary-60;
+    width: var(--space-15x);
+    height: var(--space-md);
+    background: var(--callout-bar-color);
     content: '';
   }
 
@@ -23,9 +24,5 @@
       left: 50%;
       transform: translateX(-50%);
     }
-  }
-
-  &.bsds-callout-ghost {
-    color: $text-color-ghost;
   }
 }

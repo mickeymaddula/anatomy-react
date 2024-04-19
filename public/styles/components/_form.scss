@@ -1,16 +1,17 @@
 %field-control {
   position: relative;
   width: 100%;
-  margin-top: $field-control-margin-top;
-  border: $border-width-xxs solid $border-color-assertive;
-  padding: space(lg) space(2x);
-  background: $neutral-100;
+  margin-top: var(--field-control-margin-top);
+  border: var(--border-width-xxs) solid var(--border-color-assertive);
+  padding: var(--space-lg) var(--space-2x);
+  background: var(--surface-default);
+  color: var(--text-color-primary);
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 
   &::placeholder {
-    color: $text-color-subtle;
+    color: var(--text-color-subtle);
   }
 
   &:focus {
@@ -18,8 +19,8 @@
   }
 
   &:disabled {
-    border-color: $border-color-subtle;
-    background: $neutral-95;
+    border-color: var(--border-color-subtle);
+    background: var(--surface-subtle);
 
     &:hover {
       cursor: not-allowed;
@@ -29,7 +30,7 @@
   &:not(:disabled) {
     &[aria-invalid='true'] {
       &:focus {
-        @include focus-invalid;
+        @include focus-error;
       }
     }
   }
@@ -52,15 +53,15 @@
 
   &:first-child {
     .bsds-form-control {
-      margin-top: space(2x);
+      margin-top: var(--space-2x);
     }
   }
 }
 
 .bsds-legend {
   @include font-family-base-heavy;
-  @include font-size($fs-body);
   padding-inline: 0;
+  font-size: var(--fs-body);
 }
 
 .bsds-field {
@@ -85,27 +86,26 @@
   .bsds-field-error {
     display: flex;
     align-items: center;
-    margin: space(md) 0 0 0;
-    color: $feedback-error-40;
+    margin: var(--space-md) 0 0 0;
+    color: var(--text-color-error);
 
     &::before {
       display: inline-block;
       flex-shrink: 0;
       align-self: flex-start;
-      width: space(3x);
-      height: space(3x);
-      margin-right: space(md);
-      background-image: url('../../assets/images/icon-error.svg');
-      background-repeat: no-repeat;
-      background-size: 100%;
+      width: var(--space-3x);
+      height: var(--space-3x);
+      margin-right: var(--space-md);
+      mask-image: url('../../assets/images/icon-error.svg');
+      background-color: var(--icon-color-error);
       content: '';
     }
   }
 
   .bsds-field-help-text {
-    margin: space(sm) 0 0 0;
-    color: $text-color-subtle;
-    @include font-size($fs-body-subtle);
+    margin: var(--space-sm) 0 0 0;
+    color: var(--text-color-subtle);
+    font-size: var(--fs-body-subtle);
   }
 
   .bsds-field-required-text {
@@ -115,17 +115,17 @@
 
 // TODO: ADS-334 Should we have spacing here? If not, can we get rid of class bsds-margin-top-remove?
 .bsds-form-control {
-  margin-top: space(3x);
+  margin-top: var(--space-3x);
 
   .bsds-fieldset {
-    margin-top: space(4x);
+    margin-top: var(--space-4x);
   }
 }
 
 @media (min-width: $breakpoint-lg-min) {
   .bsds-field-error {
     &::before {
-      transform: translateY(space(xs));
+      transform: translateY(var(--space-xs));
     }
   }
 }

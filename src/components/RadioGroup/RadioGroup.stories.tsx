@@ -1,13 +1,15 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { errorText, helpText } from '../../stories/helpers';
 import { useState, ChangeEvent } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import RadioGroup from './RadioGroup';
 import InputRadio from '../InputRadio';
+import { errorText, helpText } from '../../stories/helpers';
 
 const meta = {
   title: 'Components/Radio group',
   component: RadioGroup,
+  decorators: componentDecorators,
   argTypes: {
     children: {
       control: false

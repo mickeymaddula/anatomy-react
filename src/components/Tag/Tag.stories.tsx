@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Tag from './Tag';
 import { TAG_VARIANTS } from './Tag.types';
@@ -9,6 +10,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
   tags: ['autodocs'],
   argTypes: {
     texts: {

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
-  grid-gap: space(4x);
+  grid-gap: var(--space-4x);
 
   &-two-up,
   &-three-up,
