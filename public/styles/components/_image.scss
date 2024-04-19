@@ -53,7 +53,7 @@
     right: var(--space-6x);
     bottom: 0;
     left: 0;
-    background: var(--gradient-accent);
+    background: var(--gradient-decorative);
     content: '';
   }
 
@@ -70,7 +70,7 @@
     margin: 0;
     padding: var(--space-md) var(--space-lg);
     background: var(--transparency-overlay-primary);
-    color: var(--text-color-inverse);
+    color: var(--text-color-informational-inverse);
 
     &-center {
       @extend .bsds-image-caption;

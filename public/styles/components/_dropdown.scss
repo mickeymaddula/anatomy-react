@@ -44,17 +44,23 @@
       &:active,
       &[aria-expanded='true'] {
         &::after {
-          background: var(--surface-default);
+          background: var(--text-color-button-inverse);
         }
       }
 
       &-assertive {
         &::after {
-          background: var(--surface-default);
+          background: var(--text-color-button-inverse);
         }
 
         &[aria-expanded='true'] {
           @include button-active;
+        }
+      }
+
+      &-text {
+        &::after {
+          background: var(--icon-color-action);
         }
       }
 
@@ -71,7 +77,7 @@
         &:active,
         &[aria-expanded='true'] {
           &::after {
-            background: var(--surface-default);
+            background: var(--text-color-button-inverse);
           }
         }
       }
