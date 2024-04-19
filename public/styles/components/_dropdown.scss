@@ -1,6 +1,4 @@
-:root {
-  --icon-size: 1em;
-}
+$icon-size: 1em;
 
 .bsds-dropdown {
   @include bsds-defaults-type;
@@ -10,10 +8,10 @@
   .bsds-dropdown-trigger {
     position: relative;
     z-index: 1001;
-    padding-right: calc(var(--space-lg) + var(--icon-size) + var(--space-3x)); // gap + icon width + padding
+    padding-right: calc(var(--space-md) + $icon-size + var(--space-3x)); // gap + icon width + padding
 
     &.has-icon {
-      padding-right: calc(var(--space-md) + var(--icon-size) + var(--space-lg)); // gap + icon width + padding
+      padding-right: calc(var(--space-md) + $icon-size + var(--space-lg)); // gap + icon width + padding
       padding-left: var(--space-lg);
 
       &::after {
@@ -23,9 +21,9 @@
 
     &::after {
       position: absolute;
-      right: var(--space-2x); 
-      width: var(--icon-size);
-      height: var(--icon-size);
+      right: calc(var(--space-2x) + var(--space-xs));
+      width: $icon-size;
+      height: $icon-size;
       content: '';
       /* stylelint-disable-next-line property-no-vendor-prefix */
       -webkit-mask: url('../../assets/images/icon-chevron-down.svg') no-repeat 50% 50%;
