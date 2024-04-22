@@ -1,9 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
+
 import NavTertiary from './NavTertiary';
 
 const meta = {
   title: 'Components/Tertiary navigation',
   component: NavTertiary,
+  decorators: componentDecorators,
   tags: ['autodocs']
 } satisfies Meta<typeof NavTertiary>;
 

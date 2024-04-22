@@ -1,5 +1,6 @@
-import type { Meta } from '@storybook/react';
 import { useState, useEffect } from 'react';
+import type { Meta } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import ContentCard from '../ContentCard/ContentCard';
 import CardGroup from './CardGroup';
@@ -8,6 +9,7 @@ import { descriptionPlaceholder } from '../../helpers/stories.helpers';
 const meta = {
   title: 'Components/Card group',
   component: CardGroup,
+  decorators: componentDecorators,
   argTypes: {
     children: {
       control: false

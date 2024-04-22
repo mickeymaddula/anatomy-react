@@ -1,9 +1,9 @@
 .bsds-nav-wizard {
   @include bsds-defaults-type;
   position: relative;
-  box-shadow: $box-shadow-tertiary;
-  padding: space(4x);
-  background: $neutral-100;
+  box-shadow: var(--box-shadow-tertiary);
+  padding: var(--space-4x);
+  background: var(--surface-default);
 
   .bsds-nav-wizard-header {
     display: grid;
@@ -22,18 +22,18 @@
 
   .bsds-nav-breadcrumb {
     grid-area: breadcrumb;
-    margin-top: space(4x);
-    @include font-size($fs-body-subtle);
+    margin-top: var(--space-4x);
+    font-size: var(--fs-body-subtle);
   }
 
   .bsds-nav-title {
     grid-area: title;
-    margin-top: space(2x);
+    margin-top: var(--space-2x);
   }
 
   .bsds-nav-description {
     grid-area: description;
-    margin-top: space(3x);
+    margin-top: var(--space-3x);
   }
 
   &::after {
@@ -45,9 +45,9 @@
   }
 
   .bsds-nav-wizard-menu {
-    margin-top: space(4x);
-    border-top: $border-width-xs solid $border-color-subtle;
-    padding-top: space(4x);
+    margin-top: var(--space-4x);
+    border-top: var(--border-width-xs) solid var(--border-color-subtle);
+    padding-top: var(--space-4x);
 
     .bsds-nav-item,
     .bsds-nav-item-parent {
@@ -62,14 +62,14 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    border: $border-width-xxs solid $border-color-subtle;
-    padding: space(3x);
+    border: var(--border-width-xxs) solid var(--border-color-subtle);
+    padding: var(--space-3x);
     text-align: left;
     @include link-navigation;
 
     &:hover,
     &:active {
-      border: $border-width-xxs solid $border-color-action;
+      border: var(--border-width-xxs) solid var(--border-color-action);
       background: initial;
     }
 
@@ -85,7 +85,7 @@
 
       > .bsds-nav-link-text,
       > .bsds-nav-link-addon {
-        padding: space(3x);
+        padding: var(--space-3x);
       }
 
       > .bsds-nav-link-addon {
@@ -93,7 +93,7 @@
         justify-content: center;
         align-items: center;
         align-self: stretch;
-        color: $action-primary-40;
+        color: var(--text-color-action);
       }
 
       &:hover,
@@ -105,8 +105,8 @@
         }
 
         > .bsds-nav-link-addon {
-          background: $action-primary-40;
-          color: $neutral-100;
+          background: var(--action-default);
+          color: var(--text-color-inverse);
         }
       }
     }
@@ -115,11 +115,11 @@
   .bsds-nav-link-back {
     justify-content: flex-start;
     padding-left: 0;
-    @include font-size($fs-small);
-    fill: $action-primary-40; // TODO: ADS-341 revisit fill vs stroke here or in mixin
+    font-size: var(--fs-small);
+    fill: var(--icon-color-action); // TODO: ADS-341 revisit fill vs stroke here or in mixin
 
     &:active {
-      fill: $neutral-00;
+      fill: var(--icon-color-primary);
     }
   }
 
@@ -133,7 +133,7 @@
       display: grid;
       grid-auto-flow: row;
       grid-template-columns: 1fr;
-      gap: space(2x) space(4x);
+      gap: var(--space-2x) var(--space-4x);
     }
 
     &:not(.bsds-nav-active-list) {
@@ -149,7 +149,7 @@
 
 @media (min-width: $breakpoint-lg-min) {
   .bsds-nav-wizard {
-    padding: space(6x) space(8x);
+    padding: var(--space-6x) var(--space-8x);
 
     .bsds-nav-wizard-header {
       display: grid;

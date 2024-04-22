@@ -1,17 +1,17 @@
 .bsds-textarea {
   @extend %field-control;
-  min-height: space(12x);
+  min-height: var(--space-12x);
   max-width: 100%;
 
   &:hover,
   &:active {
     &:not(:read-only) {
-      border-color: $border-color-action;
+      border-color: var(--border-color-action);
     }
   }
 
   &:read-only {
-    background: $neutral-95;
+    background: var(--surface-subtle);
 
     &:hover {
       cursor: not-allowed;
@@ -25,7 +25,7 @@
   &:not(:disabled),
   &:not(:read-only) {
     &[aria-invalid='true'] {
-      border-color: $border-color-error;
+      border-color: var(--border-color-error);
     }
   }
 

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Ribbon from './Ribbon';
 import { RIBBON_VARIANTS } from './Ribbon.types';
@@ -6,6 +7,7 @@ import { RIBBON_VARIANTS } from './Ribbon.types';
 const meta = {
   title: 'Components/Ribbon',
   component: Ribbon,
+  decorators: componentDecorators,
   tags: ['autodocs'],
   argTypes: {
     variant: {

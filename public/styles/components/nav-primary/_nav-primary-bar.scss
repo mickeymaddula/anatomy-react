@@ -1,6 +1,6 @@
 .bsds-nav-primary {
   position: relative;
-  box-shadow: inset 0 space(-xxs) $border-color-subtle;
+  box-shadow: inset 0 var(--space-negative-xxs) solid var(--border-color-subtle);
 
   .bsds-nav-bar {
     position: relative;
@@ -10,8 +10,8 @@
     justify-content: space-between;
     align-content: center;
     align-items: stretch;
-    border-bottom: $border-width-xxs solid $border-color-subtle;
-    background: $neutral-100;
+    border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+    background: var(--surface-default);
 
     .bsds-link-logo {
       align-self: center;
@@ -25,7 +25,7 @@
       width: auto;
       max-height: 3.375rem;
       margin: auto;
-      padding: space(2x);
+      padding: var(--space-2x);
 
       &:focus {
         @include focus-default-inset;
@@ -41,7 +41,7 @@
         > .bsds-nav-link {
           position: relative;
           border: 0;
-          padding: space(3x) space(2x);
+          padding: var(--space-3x) var(--space-2x);
 
           &.is-current,
           &.is-active,
@@ -53,10 +53,10 @@
 
             &::before {
               position: absolute;
-              right: space(2x);
+              right: var(--space-2x);
               bottom: 0;
-              left: space(2x);
-              border-bottom: $border-width-sm solid $border-color-assertive;
+              left: var(--space-2x);
+              border-bottom: var(--border-width-sm) solid var(--border-color-assertive);
               content: '';
             }
           }
@@ -70,15 +70,15 @@
         &.bsds-nav-item-search {
           .bsds-nav-link {
             border: 0;
-            padding-right: space(2x);
+            padding-right: var(--space-2x);
             padding-left: calc(
-              space(2x) + $icon-size + space(md)
+              var(--space-2x) + $icon-size + var(--space-md)
             ); // Padding + icon width + space between icon and text
 
             &::after {
               position: absolute;
               top: calc(50% - ($icon-size / 2));
-              left: space(2x);
+              left: var(--space-2x);
               width: $icon-size;
               height: $icon-size;
               background-position: center;
@@ -94,8 +94,8 @@
             /* stylelint-disable scss/selector-nest-combinators */
             &::after,
             &[aria-expanded='true']::after {
-              /* stylelint-enable scss/selector-nest-combinators */
-              background-image: url('../../../assets/images/icon-search.svg');
+              mask-image: url('../../../assets/images/icon-search.svg');
+              background-color: var(--text-color-primary);
               content: '';
             }
           }
@@ -104,12 +104,14 @@
         &.bsds-nav-item-toggle {
           .bsds-nav-link {
             &::after {
-              background-image: url('../../../assets/images/icon-menu.svg');
+              mask-image: url('../../../assets/images/icon-menu.svg');
+              background-color: var(--text-color-primary);
             }
 
             &[aria-expanded='true'] {
               &::after {
-                background-image: url('../../../assets/images/icon-close.svg');
+                mask-image: url('../../../assets/images/icon-close.svg');
+                background-color: var(--text-color-primary);
               }
             }
           }
@@ -121,18 +123,17 @@
           > button {
             &.bsds-nav-link {
               padding-right: calc(
-                space(2x) + $icon-size + space(md)
+                var(--space-2x) + $icon-size + var(--space-md)
               ); // Padding + icon width + space between icon and text
 
               &::after {
                 position: absolute;
                 top: calc(50% - ($icon-size / 2));
-                right: space(2x);
+                right: var(--space-2x);
                 width: $icon-size;
                 height: $icon-size;
-                background-image: url('../../../assets/images/icon-chevron-down.svg');
-                background-position: bottom;
-                background-repeat: no-repeat;
+                mask-image: url('../../../assets/images/icon-chevron-down.svg');
+                background-color: var(--text-color-primary);
                 content: '';
               }
 
@@ -156,7 +157,7 @@
 
       .bsds-nav-link-logo {
         margin: 0;
-        padding: space(sm) space(2x);
+        padding: var(--space-sm) var(--space-2x);
       }
     }
   }
@@ -170,7 +171,7 @@
       > .bsds-nav {
         > .bsds-nav-item {
           > .bsds-nav-link {
-            @include font-size($fs-body-subtle);
+            font-size: var(--fs-body-subtle);
           }
         }
       }
@@ -190,13 +191,17 @@
               box-sizing: content-box;
               width: $icon-size;
               height: $icon-size;
-              padding: space(2x);
-              background-image: url('../../../assets/images/icon-search.svg');
-              background-position: center;
-              background-repeat: no-repeat;
-              background-size: $icon-size;
+              padding: var(--space-2x);
 
-              &::after,
+              &::after {
+                background-color: var(--text-color-primary);
+                content: '';
+                mask-image: url('../../../assets/images/icon-search.svg');
+                mask-position: center;
+                mask-repeat: no-repeat;
+                mask-size: $icon-size;
+              }
+
               &::before {
                 display: none;
               }
@@ -204,7 +209,11 @@
               &:hover,
               &:focus,
               &[aria-expanded='true'] {
-                background-color: $action-primary-95;
+                background-color: var(--surface-informational);
+
+                &::after {
+                  background-color: var(--text-color-informational);
+                }
               }
             }
 

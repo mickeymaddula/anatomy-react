@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import NavSecondary, { NavItemSecondary } from './NavSecondary';
 
@@ -13,6 +14,7 @@ const meta = {
       }
     }
   },
+  decorators: componentDecorators,
   argTypes: {
     navItems: {
       // TODO: ADS-755 Figure out how to show this control by resolving cyclic object error when shown (occurs on navigation)

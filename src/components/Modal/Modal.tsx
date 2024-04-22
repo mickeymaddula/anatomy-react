@@ -25,7 +25,7 @@ export interface ModalRef {
 export interface ModalProps {
   hasClose?: boolean;
   closeAriaLabel?: string;
-  logo?: string;
+  logo?: string | ReactElement<SVGElement>;
   logoAlt?: string;
   title: string;
   positiveAction: ReactElement<ButtonProps | LinkProps>;
@@ -55,6 +55,7 @@ const Modal = forwardRef(
 
     const [positive, setPositive] = useState<ReactElement<ButtonProps | LinkProps>>();
     const [negative, setNegative] = useState<ReactElement<ButtonProps | LinkProps>>();
+    const [modalLogo, setModalLogo] = useState<ReactElement>();
 
     const dialogRef = useRef<HTMLDialogElement>(null);
 
@@ -195,6 +196,14 @@ const Modal = forwardRef(
       };
     });
 
+    useEffect(() => {
+      if (typeof logo === 'string') {
+        setModalLogo(<img src={logo} alt={logoAlt} className="bsds-modal-logo" />);
+      } else if (typeof logo === 'object') {
+        setModalLogo(<div className="bsds-modal-logo">{logo}</div>);
+      }
+    }, [logo, logoAlt]);
+
     return (
       // Disabling as adding role="dialog" is required for some screen readers to announce properly
       // eslint-disable-next-line jsx-a11y/no-redundant-roles
@@ -209,7 +218,7 @@ const Modal = forwardRef(
         onPointerUp={clickOut}
       >
         <div className="bsds-modal-header">
-          {!!logo && <img src={logo} alt={logoAlt} className="bsds-modal-logo" />}
+          {modalLogo}
           <h2 id={dialogId + '-heading'} className="bsds-modal-title">
             {title}
           </h2>

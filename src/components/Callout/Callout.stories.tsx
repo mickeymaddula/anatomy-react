@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Callout from './Callout';
 
@@ -8,6 +9,7 @@ const meta = {
   parameters: {
     layout: 'centered'
   },
+  decorators: componentDecorators,
   tags: ['autodocs']
 } satisfies Meta<typeof Callout>;
 

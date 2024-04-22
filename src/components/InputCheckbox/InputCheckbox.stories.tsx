@@ -1,12 +1,15 @@
 import { useState, ChangeEvent } from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { errorText, helpText } from '../../stories/helpers';
+import { componentDecorators } from '../../../.storybook/decorators';
+
 import InputCheckbox from './InputCheckbox';
 import Fieldset from '../Fieldset';
+import { errorText, helpText } from '../../stories/helpers';
 
 const meta = {
   title: 'Components/Checkbox',
   component: InputCheckbox,
+  decorators: componentDecorators,
   tags: ['autodocs'],
   args: {
     label: 'Checkbox'

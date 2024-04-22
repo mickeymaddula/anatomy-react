@@ -6,7 +6,6 @@ interface BaseProps extends ImgHTMLAttributes<HTMLImageElement> {
   hasCaption?: boolean;
   isCaptionCentered?: boolean;
   hasDecorativeTreatment?: boolean;
-  isGhost?: boolean;
   texts?: {
     caption?: string;
   };
@@ -34,7 +33,6 @@ const Image = (props: ImageProps): JSX.Element => {
     hasDecorativeTreatment,
     texts,
     className,
-    isGhost,
     isCaptionCentered,
     ...imgAttrs
   } = props;
@@ -65,12 +63,8 @@ const Image = (props: ImageProps): JSX.Element => {
 
   let captionAlignment = '';
 
-  if (isCaptionCentered && !isGhost) {
+  if (isCaptionCentered) {
     captionAlignment = '-center';
-  } else if (isCaptionCentered && isGhost) {
-    captionAlignment = '-center-ghost';
-  } else if (isGhost) {
-    captionAlignment = '-ghost';
   }
 
   useEffect(() => {

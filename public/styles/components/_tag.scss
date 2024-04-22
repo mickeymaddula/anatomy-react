@@ -1,82 +1,54 @@
 @mixin tag-default {
   display: block;
-  @include font-family-base-heavy;
-  @include font-size($fs-small);
+  color: var(--text-color-primary);
+  font-size: var(--fs-small);
   text-transform: uppercase;
-  letter-spacing: $letter-spacing-increase;
+  letter-spacing: var(--letter-spacing-increase);
+  @include font-family-base-heavy;
 }
 
 @mixin tag-assertive {
   @include tag-default;
   display: inline;
-  padding: space(md) space(lg);
+  padding: var(--space-md) var(--space-lg);
   box-decoration-break: clone;
 }
 
 @mixin tag-accent {
   @include tag-default;
-  border-width: 0 0 0 $border-width-sm;
+  border-width: 0 0 0 var(--border-width-sm);
   border-style: solid;
-  padding: space(xs) 0 space(xs) space(md);
+  padding: var(--space-xs) 0 var(--space-xs) var(--space-md);
 }
 
 .bsds-tag {
   @include bsds-defaults-type;
   @include tag-default;
 
-  &-ghost {
-    @include tag-default;
-    color: $text-color-ghost;
-  }
-
   &-accent {
     @include tag-accent;
-    border-image-source: $gradient-accent-vertical;
+    border-image-source: var(--gradient-tag);
     border-image-slice: 1;
-  }
-
-  &-accent-ghost {
-    @include tag-accent;
-    border-color: $accent-secondary-60;
-    color: $text-color-ghost;
   }
 
   &-assertive {
     @include tag-assertive;
-    background: $action-primary-20;
-    color: $text-color-ghost;
-  }
-
-  &-assertive-ghost {
-    @include tag-assertive;
-    background: $neutral-100;
-    color: $text-color-primary;
+    background: var(--surface-assertive);
+    color: var(--text-color-inverse);
   }
 
   &-featured {
     @include tag-assertive;
-    background: $accent-primary-30;
-    color: $text-color-ghost;
-  }
-
-  &-featured-ghost {
-    @include tag-assertive;
-    background: $accent-primary-80;
-    color: $text-color-primary;
+    background: var(--accent-featured-tag);
+    color: var(--text-color-inverse);
   }
 
   &-subtle {
     @include tag-assertive;
     @include font-family-base-regular;
-    padding: space(sm) space(md);
-    background: $neutral-95;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--surface-subtle);
     text-transform: none;
     letter-spacing: unset;
-  }
-
-  &-subtle-ghost {
-    @extend .bsds-tag-subtle;
-    background: $neutral-40;
-    color: $text-color-ghost;
   }
 }

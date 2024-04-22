@@ -1,10 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
+
 import Tabs from './Tabs';
 import TabPanel from './TabPanel';
 
 const meta = {
   title: 'Components/Tabs',
   component: Tabs,
+  decorators: componentDecorators,
   argTypes: {
     children: {
       control: false

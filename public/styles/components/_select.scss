@@ -3,15 +3,15 @@
   display: grid;
   grid-template-areas: 'select';
   align-items: center;
-  margin-top: space(md);
-  background: $neutral-100;
+  margin-top: var(--space-md);
+  background: var(--surface-default);
 
   select {
     @extend %field-control;
     grid-area: select;
     margin: 0;
     border-radius: 0;
-    padding: space(lg) space(4x) space(lg) space(2x);
+    padding: var(--space-lg) var(--space-4x) var(--space-lg) var(--space-2x);
     appearance: none;
     text-overflow: ellipsis;
 
@@ -29,11 +29,11 @@
 
       &:hover,
       &:focus {
-        border-color: $border-color-action;
+        border-color: var(--border-color-action);
       }
 
       &:disabled {
-        background: $neutral-95;
+        background: var(--surface-subtle);
 
         &:hover {
           cursor: not-allowed;
@@ -41,18 +41,19 @@
       }
 
       &[aria-invalid='true'] {
-        border-color: $border-color-error;
+        border-color: var(--border-color-error);
       }
     }
   }
 
   &::after {
     position: absolute;
-    top: calc(50% - ($icon-size-sm / 3));
-    right: space(2x);
-    width: $icon-size-sm;
-    height: $icon-size-sm;
-    background-image: url('../../assets/images/icon-chevron-down.svg');
+    top: calc(50% - (var(--icon-size-sm) / 3));
+    right: var(--space-2x);
+    width: var(--icon-size-sm);
+    height: var(--icon-size-sm);
+    mask-image: url('../../assets/images/icon-chevron-down.svg');
+    background-color: var(--text-color-primary);
     content: '';
   }
 }
@@ -67,7 +68,7 @@
 @media (min-width: $breakpoint-md-min) {
   .bsds-field-label {
     &.bsds-filter-select {
-      grid-gap: space(2x);
+      grid-gap: var(--space-2x);
       grid-template-columns: fit-content(10rem) max-content;
       align-items: center;
 

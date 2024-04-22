@@ -1,7 +1,7 @@
 @mixin bsds-standards {
-  color: $text-color-primary;
+  color: var(--text-color-primary);
   @include font-family-base-regular;
-  @include font-size($fs-body);
+  font-size: var(--fs-body);
   line-height: 1.5;
 
   *,

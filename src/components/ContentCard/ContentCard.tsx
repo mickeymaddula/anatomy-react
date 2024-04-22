@@ -76,33 +76,15 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
     linkClasses: ''
   };
 
-  const ghostStyle = {
-    classes: 'bsds-card-ghost',
-    titleLinkClasses: 'bsds-link-ghost',
-    linkClasses: 'bsds-link-ghost'
-  };
-
-  const borderLightStyle = {
-    classes: 'bsds-card-border-light',
+  const borderStyle = {
+    classes: 'bsds-card-border',
     titleLinkClasses: 'bsds-link-subtle',
     linkClasses: ''
   };
 
-  const borderGhostStyle = {
-    classes: 'bsds-card-border-ghost',
-    titleLinkClasses: 'bsds-link-ghost',
-    linkClasses: 'bsds-link-ghost'
-  };
-
   switch (variant) {
-    case 'ghost':
-      cardStyles = { ...ghostStyle };
-      break;
-    case 'border-light':
-      cardStyles = { ...borderLightStyle };
-      break;
-    case 'border-ghost':
-      cardStyles = { ...borderGhostStyle };
+    case 'border':
+      cardStyles = { ...borderStyle };
       break;
 
     default:
@@ -111,18 +93,12 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
   }
 
   let decorativeState = '';
-  if (gradientBrand && variant?.includes('ghost')) {
+  if (gradientBrand) {
     decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderGhostStyle };
-  } else if (gradientBrand) {
-    decorativeState = 'bsds-card-gradient';
-    cardStyles = { ...borderLightStyle };
-  } else if (dropShadow && variant?.includes('ghost')) {
-    decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderGhostStyle };
+    cardStyles = { ...borderStyle };
   } else if (dropShadow) {
     decorativeState = 'bsds-card-shadow';
-    cardStyles = { ...borderLightStyle };
+    cardStyles = { ...borderStyle };
   }
 
   const [title, setTitle] = useState<ReactElement>();
@@ -148,23 +124,15 @@ const ContentCard = (props: ContentCardProps): JSX.Element => {
 
   useEffect(() => {
     if (image) {
-      setClonedImage(
-        cloneElement(image as ReactElement, {
-          isGhost: variant === 'ghost' || variant === 'border-ghost'
-        })
-      );
+      setClonedImage(cloneElement(image as ReactElement));
     }
-  }, [image, variant]);
+  }, [image]);
 
   useEffect(() => {
     if (tag) {
-      setClonedTag(
-        cloneElement(tag as ReactElement, {
-          isGhost: variant === 'ghost' || variant === 'border-ghost'
-        })
-      );
+      setClonedTag(cloneElement(tag as ReactElement));
     }
-  }, [tag, variant]);
+  }, [tag]);
 
   const cardContent = (
     <>

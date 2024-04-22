@@ -1,11 +1,11 @@
 .bsds-accordion {
   @include bsds-defaults;
   width: 100%;
-  border-bottom: $border-width-xxs solid $border-color-subtle;
+  border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
 
   &.is-contained {
-    border-right: $border-width-xxs solid $border-color-subtle;
-    border-left: $border-width-xxs solid $border-color-subtle;
+    border-right: var(--border-width-xxs) solid var(--border-color-subtle);
+    border-left: var(--border-width-xxs) solid var(--border-color-subtle);
   }
 
   .bsds-accordion-heading {
@@ -19,19 +19,19 @@
     align-items: center;
     width: 100%;
     margin: 0;
-    border-top: $border-width-xxs solid $border-color-subtle;
+    border-top: var(--border-width-xxs) solid var(--border-color-subtle);
     border-right: 0;
     border-bottom: 0;
     border-left: 0;
-    padding: space(2x);
+    padding: var(--space-2x);
     background: transparent;
-    color: $text-color-primary;
+    color: var(--text-color-primary);
     @include font-family-base-regular;
-    @include font-size($fs-body);
+    font-size: var(--fs-body);
     text-align: left;
 
     svg {
-      margin-left: space(3x);
+      margin-left: var(--space-3x);
     }
 
     &[aria-expanded='true'] {
@@ -44,22 +44,22 @@
 
     &:not([disabled]) {
       &:hover {
-        border-color: $border-color-subtle;
+        border-color: var(--border-color-subtle);
         background: transparent;
-        color: $text-color-action;
+        color: var(--text-color-action);
         text-decoration: underline;
 
         svg {
-          color: $action-primary-40;
+          color: var(--icon-color-action);
         }
       }
 
       &:active {
         background: transparent;
-        color: $text-color-action;
+        color: var(--text-color-action);
 
         svg {
-          color: $action-primary-40;
+          color: var(--icon-color-action);
         }
       }
 
@@ -71,7 +71,7 @@
 
     &[disabled] {
       background: transparent;
-      color: $text-color-disabled;
+      color: var(--text-color-disabled);
       cursor: not-allowed;
     }
   }
@@ -87,7 +87,7 @@
   }
 
   .bsds-accordion-panel-body {
-    padding: space(md) space(2x) space(3x);
+    padding: var(--space-md) var(--space-2x) var(--space-3x);
   }
 
   // Stoplight styles
@@ -99,24 +99,39 @@
 
       &::before {
         align-self: stretch;
-        width: space(6x);
-        margin-right: space(2x);
-        border-left-width: $border-width-sm;
+        width: var(--space-6x);
+        margin-right: var(--space-2x);
+        border-left-width: var(--border-width-sm);
         border-left-style: solid;
-        padding: space(3x) space(md);
+        padding: var(--space-3x) var(--space-md);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: space(3x);
+        background-size: var(--space-3x);
+        content: '';
+      }
+
+      // TODO: (1) Remove this code when icon library is live (second part below).
+      &::after {
+        position: absolute;
+        left: 0;
+        align-self: stretch;
+        width: var(--space-6x);
+        margin-top: 0.313rem; // based on a 16px root value
+        margin-right: var(--space-2x);
+        padding: var(--space-3x) var(--space-md);
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: var(--space-3x);
         content: '';
       }
 
       .bsds-accordion-trigger-text {
         flex: 1;
-        padding: space(2x) 0;
+        padding: var(--space-2x) 0;
       }
 
       svg {
-        margin-right: space(2x);
+        margin-right: var(--space-2x);
       }
 
       &:focus {
@@ -127,18 +142,25 @@
 
     ~ .bsds-accordion-panel {
       .bsds-accordion-panel-body {
-        padding: space(md) space(8x) space(3x);
+        padding: var(--space-md) var(--space-8x) var(--space-3x);
       }
     }
   }
 
   .bsds-accordion-stoplight {
+    // TODO: Should we rename these classes from red/yellow/green to error/warning/success?
     &-red {
       .bsds-accordion-trigger {
         &::before {
-          border-left-color: $border-color-error;
-          background-color: $feedback-error-95;
-          background-image: url('../../assets/images/icon-stoplight-red.svg');
+          border-left-color: var(--border-color-error);
+          background-color: var(--surface-error-subtle);
+        }
+
+        &::after {
+          background-color: var(--icon-color-error);
+
+          // TODO: (1) Second part for removal.
+          mask-image: url('../../assets/images/icon-stoplight-red.svg');
         }
       }
     }
@@ -146,9 +168,15 @@
     &-yellow {
       .bsds-accordion-trigger {
         &::before {
-          border-left-color: $border-color-warning;
-          background-color: $feedback-warning-95;
-          background-image: url('../../assets/images/icon-stoplight-yellow.svg');
+          border-left-color: var(--border-color-warning);
+          background-color: var(--surface-warning-subtle);
+        }
+
+        &::after {
+          background-color: var(--icon-color-warning);
+
+          // TODO: (1) Second part for removal.
+          mask-image: url('../../assets/images/icon-stoplight-yellow.svg');
         }
       }
     }
@@ -156,9 +184,15 @@
     &-green {
       .bsds-accordion-trigger {
         &::before {
-          border-left-color: $border-color-success;
-          background-color: $feedback-success-95;
-          background-image: url('../../assets/images/icon-stoplight-green.svg');
+          border-left-color: var(--border-color-success);
+          background-color: var(--surface-success-subtle);
+        }
+
+        &::after {
+          background-color: var(--icon-color-success);
+
+          // TODO: (1) Second part for removal.
+          mask-image: url('../../assets/images/icon-stoplight-green.svg');
         }
       }
     }

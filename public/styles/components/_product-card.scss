@@ -15,41 +15,20 @@
   .bsds-product-card-ns-title {
     display: inline-block;
     width: fit-content;
-    @include font-size($fs-body);
+    font-size: var(--fs-body);
 
     &-assertive {
       @extend .bsds-product-card-ns-title;
-      @include font-size($fs-body-assertive);
-    }
-
-    &-ghost {
-      @extend .bsds-product-card-ns-title;
-      @extend .bsds-link-ghost;
-
-      &-assertive {
-        @extend .bsds-product-card-ns-title-assertive;
-        @extend .bsds-product-card-ns-title-ghost;
-      }
+      font-size: var(--fs-body-assertive);
     }
   }
 
-  [class*='bsds-link'] {
-    &:not([class*='ghost']) {
-      text-decoration: none;
-      @extend .bsds-link-subtle;
-
-      &:hover {
-        @extend .bsds-link-subtle;
-      }
-    }
-  }
-
-  [class*='-ghost'] {
+  .bsds-link {
     text-decoration: none;
-    @extend .bsds-link-ghost;
+    @extend .bsds-link-subtle;
 
     &:hover {
-      @extend .bsds-link-ghost;
+      @extend .bsds-link-subtle;
     }
   }
 
@@ -58,17 +37,17 @@
   }
 }
 
-.bsds-card-border-light {
+.bsds-card-border {
   &.bsds-product-card {
     padding: 0;
 
     // TODO: ADS-611 this is repeated in content card, level up
     .bsds-card-content {
       margin-top: 0;
-      padding: space(3x);
+      padding: var(--space-3x);
 
       &:not(:first-child) {
-        border-top: $border-width-xxs solid $border-color-subtle;
+        border-top: var(--border-width-xxs) solid var(--border-color-subtle);
       }
     }
   }

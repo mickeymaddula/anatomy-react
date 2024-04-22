@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import ContentCard from './ContentCard';
 import Tag from '../Tag/Tag';
@@ -8,6 +9,8 @@ import { CARD_VARIANTS } from './ContentCard.types';
 const meta = {
   title: 'Components/Content card',
   component: ContentCard,
+  decorators: componentDecorators,
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       options: [undefined, ...CARD_VARIANTS],
@@ -25,8 +28,7 @@ const meta = {
     image: {
       control: false
     }
-  },
-  tags: ['autodocs']
+  }
 } satisfies Meta<typeof ContentCard>;
 
 export default meta;

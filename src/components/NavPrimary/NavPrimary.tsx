@@ -1,6 +1,16 @@
 // TODO: ADS-756 Create default texts object and assign in function params or NavPrimary.defaultProps instead of at each use case then re-enable control in story
 
-import { ChangeEvent, FormEvent, MouseEvent, RefObject, useCallback, useEffect, useRef, useState } from 'react';
+import {
+  ChangeEvent,
+  FormEvent,
+  MouseEvent,
+  ReactElement,
+  RefObject,
+  useCallback,
+  useEffect,
+  useRef,
+  useState
+} from 'react';
 import { Location as ReactLocation } from 'react-router-dom';
 import { RequireOnlyOne, NavItem } from '../../types';
 import Button from '../Button';
@@ -62,13 +72,13 @@ export interface Texts {
 
 export interface NavPrimaryProps {
   logo: {
-    src: string;
+    src: string | ReactElement<SVGElement>;
     alt: string;
     href?: string;
     to?: string;
   };
   logoSecondary?: {
-    src: string;
+    src: string | ReactElement<SVGElement>;
     alt: string;
   };
   texts?: Texts;
@@ -112,6 +122,7 @@ const NavPrimary = ({
   const [isNavTouched, setIsNavTouched] = useState(false);
   const [rootButton, setRootButton] = useState<HTMLButtonElement>();
   const [toggleText, setToggleText] = useState('');
+  const [primaryLogo, setPrimaryLogo] = useState<ReactElement>();
 
   const navRef = useRef<HTMLElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -290,6 +301,14 @@ const NavPrimary = ({
     }
   }, [isMenuExpanded, texts?.menuToggleTextClose, texts?.menuToggleTextOpen]);
 
+  useEffect(() => {
+    if (typeof logo.src === 'string') {
+      setPrimaryLogo(<img src={logo.src} alt={logo.alt} className="bsds-nav-link-logo" />);
+    } else {
+      setPrimaryLogo(<div className="bsds-nav-link-logo">{logo.src}</div>);
+    }
+  }, [logo.src, logo.alt]);
+
   return (
     <header ref={navRef} className={'bsds-nav-header' + (isConstrained ? ' is-constrained' : '')}>
       {!!utilityItems && (
@@ -297,18 +316,21 @@ const NavPrimary = ({
           utilityItems={utilityItems}
           ariaLabel={texts?.utilityNavAriaLabel}
           // eslint-disable-next-line react/jsx-no-leaked-render
-          logoSecondary={logoSecondary?.src ? { src: logoSecondary?.src, alt: logoSecondary?.alt } : undefined}
+          logoSecondary={logoSecondary ? { src: logoSecondary?.src, alt: logoSecondary?.alt } : undefined}
         />
       )}
       <nav className="bsds-nav-primary" aria-label={texts?.primaryNavAriaLabel || 'primary'}>
         <div className="bsds-nav-bar">
-          {logo.to || logo.href ? (
-            <Link to={logo.to} href={logo.href} className="bsds-link-logo" isNavLink>
-              <img src={logo.src} alt={logo.alt} className="bsds-nav-link-logo" />
-            </Link>
-          ) : (
-            <img className="bsds-nav-link-logo" src={logo.src} alt={logo.alt} />
-          )}
+          {
+            // eslint-disable-next-line react/jsx-no-leaked-render
+            logo.to || logo.href ? (
+              <Link to={logo.to} href={logo.href} className="bsds-link-logo" isNavLink>
+                {primaryLogo}
+              </Link>
+            ) : (
+              primaryLogo
+            )
+          }
           <ul className="bsds-nav" role="menubar" onKeyUp={handleKeyUp}>
             {navTree.map((navItem, i) => (
               <li

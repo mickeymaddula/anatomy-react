@@ -2,7 +2,7 @@
   @extend %field-control;
 
   &:read-only {
-    background: $neutral-95;
+    background: var(--surface-subtle);
 
     &:hover {
       cursor: not-allowed;
@@ -16,17 +16,17 @@
   &:not(:disabled) {
     &:not(:read-only) {
       &[aria-invalid='true'] {
-        border-color: $border-color-error;
+        border-color: var(--border-color-error);
 
         &:hover,
         &:focus {
-          border-color: $border-color-error;
+          border-color: var(--border-color-error);
         }
       }
 
       &:hover,
       &:focus {
-        border-color: $border-color-action;
+        border-color: var(--border-color-action);
       }
     }
   }

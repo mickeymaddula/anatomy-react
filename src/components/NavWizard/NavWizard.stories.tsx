@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import NavWizard from './NavWizard';
 import navWizardData from './navWizardData-3Step';
@@ -6,6 +7,7 @@ import navWizardData from './navWizardData-3Step';
 const meta = {
   title: 'Components/Wizard navigation',
   component: NavWizard,
+  decorators: componentDecorators,
   tags: ['autodocs'],
   argTypes: {
     texts: {

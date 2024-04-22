@@ -1,7 +1,6 @@
+import { ReactElement, useEffect, useState } from 'react';
 import Link from '../Link';
 import { RequireOnlyOne, NavItem } from '../../types';
-import logoTagline from '../../stories/assets/logo-bsc-tagline.svg';
-import iconNewWindow from '../../stories/assets/icon-new-window.svg';
 import IconFacebook from '../Icon/icons/IconFacebook';
 import IconTwitter from '../Icon/icons/IconTwitter';
 import IconLinkedin from '../Icon/icons/IconLinkedin';
@@ -32,6 +31,11 @@ export interface FooterBaseProps {
     complianceCodeText?: string;
     copyrightText?: string;
   };
+
+  logo: {
+    src: string | ReactElement<SVGElement>;
+    alt?: string;
+  };
 }
 
 const FooterBase = ({
@@ -39,6 +43,7 @@ const FooterBase = ({
   legalLinkAriaLabel,
   corporateLink,
   texts,
+  logo,
   customizeCookiesLink,
   complianceCode,
   socialMedia
@@ -49,6 +54,16 @@ const FooterBase = ({
     linkedin: <IconLinkedin className="bsds-footer-social-media-icon" />,
     youtube: <IconYoutube className="bsds-footer-social-media-icon" />
   };
+  const [footerLogo, setFooterLogo] = useState<ReactElement>();
+
+  useEffect(() => {
+    if (typeof logo.src === 'string') {
+      setFooterLogo(<img src={logo.src} alt={logo.alt} className="bsds-footer-logo" />);
+    } else {
+      setFooterLogo(<div className="bsds-footer-logo">{logo.src}</div>);
+    }
+  }, [logo]);
+
   return (
     <div className="bsds-footer-base">
       {!!legalLinkItems && (
@@ -69,14 +84,10 @@ const FooterBase = ({
         </nav>
       )}
       <div className="bsds-footer-base-container">
-        <img className="bsds-footer-logo" src={logoTagline} alt="Boston Scientific" />
+        {footerLogo}
         {!!corporateLink && (
           <Link className="bsds-footer-link-corp" href="https://www.bostonscientific.com/">
             {texts?.corporateLinkText ?? 'Boston Scientific home site'}
-            {
-              // eslint-disable-next-line jsx-a11y/alt-text
-              <img src={iconNewWindow} className="bsds-icon-right bsds-footer-icon" aria-hidden />
-            }
           </Link>
         )}
         {!!texts?.tagline && <p className="bsds-footer-tagline">{texts?.tagline}</p>}

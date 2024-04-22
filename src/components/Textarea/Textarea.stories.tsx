@@ -1,11 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { errorText, helpText, placeholderText } from '../../stories/helpers';
+import { componentDecorators } from '../../../.storybook/decorators';
 
 import Textarea from './Textarea';
+import { errorText, helpText, placeholderText } from '../../stories/helpers';
 
 const meta = {
   title: 'Components/Textarea',
   component: Textarea,
+  decorators: componentDecorators,
   tags: ['autodocs'],
   args: {
     label: 'Textarea'
