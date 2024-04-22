@@ -25,7 +25,7 @@ const themesData: { [key: string]: Themes } = {
 };
 
 const withThemeWrapper: Decorator = (Story: StoryFn, context) => {
-  const stylesheetLinks: NodeListOf<HTMLLinkElement> = document.querySelectorAll('link[rel="stylesheet"]');
+  const stylesheetLinks: NodeListOf<HTMLLinkElement> = document.body.querySelectorAll('link[rel="stylesheet"]');
   const previewBg = document.querySelector('.docs-story') as HTMLElement;
 
   function replaceStylesheetLink(stylesheetLink: HTMLLinkElement, href: string) {
