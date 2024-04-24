@@ -7,25 +7,25 @@ interface Themes {
 
 const themesData: { [key: string]: Themes } = {
   'corporate-light': {
-    cssPath: '/node_modules/@boston-scientific/anatomy-tokens/lib/css/corporate/light.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.16/lib/css/corporate/light.css',
     backgroundColor: 'var(--surface-default)'
   },
   'corporate-dark': {
-    cssPath: '/node_modules/@boston-scientific/anatomy-tokens/lib/css/corporate/dark.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.16/lib/css/corporate/dark.css',
     backgroundColor: 'var(--surface-default)'
   },
   'watchman-light': {
-    cssPath: '/node_modules/@boston-scientific/anatomy-tokens/lib/css/watchman/light.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.16/lib/css/watchman/light.css',
     backgroundColor: 'var(--surface-default)'
   },
   'watchman-dark': {
-    cssPath: '/node_modules/@boston-scientific/anatomy-tokens/lib/css/watchman/dark.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.16/lib/css/watchman/dark.css',
     backgroundColor: 'var(--surface-default)'
   }
 };
 
 const withThemeWrapper: Decorator = (Story: StoryFn, context) => {
-  const stylesheetLinks: NodeListOf<HTMLLinkElement> = document.querySelectorAll('link[rel="stylesheet"]');
+  const stylesheetLinks: NodeListOf<HTMLLinkElement> = document.body.querySelectorAll('link[rel="stylesheet"]');
   const previewBg = document.querySelector('.docs-story') as HTMLElement;
 
   function replaceStylesheetLink(stylesheetLink: HTMLLinkElement, href: string) {
