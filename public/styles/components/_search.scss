@@ -35,7 +35,7 @@
     border: 0;
     padding: var(--space-2x);
     background: transparent;
-    color: var(--text-color-primary);
+    color: var(--text-color-default);
 
     &:focus {
       @include focus-default-inset;
@@ -48,7 +48,7 @@
         color: var(--text-color-action);
 
         &:not(:active) {
-          fill: var(--icon-color-action);
+          fill: var(--text-color-action);
         }
       }
     }

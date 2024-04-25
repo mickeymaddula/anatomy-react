@@ -35,16 +35,16 @@
   &-active-filter {
     @include font-family-base-regular;
     border-color: var(--border-color-subtle);
-    background: var(--transparency-zero);
-    color: var(--text-color-primary);
+    background: transparent;
+    color: var(--text-color-default);
     text-align: left;
 
     &:not([disabled]) {
       &:hover,
       &:active {
         border-color: var(--border-color-assertive);
-        background: var(--transparency-zero);
-        color: var(--text-color-primary);
+        background: transparent;
+        color: var(--text-color-default);
       }
     }
   }

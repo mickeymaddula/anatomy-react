@@ -25,7 +25,7 @@
     border-left: 0;
     padding: var(--space-2x);
     background: transparent;
-    color: var(--text-color-primary);
+    color: var(--text-color-default);
     @include font-family-base-regular;
     font-size: var(--fs-body);
     text-align: left;
@@ -50,7 +50,7 @@
         text-decoration: underline;
 
         svg {
-          color: var(--icon-color-action);
+          color: var(--text-color-action);
         }
       }
 
@@ -59,7 +59,7 @@
         color: var(--text-color-action);
 
         svg {
-          color: var(--icon-color-action);
+          color: var(--text-color-action);
         }
       }
 

@@ -1,6 +1,6 @@
 @mixin tag-default {
   display: block;
-  color: var(--text-color-primary);
+  color: var(--text-color-default);
   font-size: var(--fs-small);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-increase);
@@ -27,7 +27,7 @@
 
   &-accent {
     @include tag-accent;
-    border-image-source: var(--gradient-tag);
+    border-image-source: var(--tag-accent-bar-color);
     border-image-slice: 1;
   }
 
@@ -39,7 +39,7 @@
 
   &-featured {
     @include tag-assertive;
-    background: var(--accent-featured-tag);
+    background: var(--tag-featured-surface);
     color: var(--text-color-inverse);
   }
 

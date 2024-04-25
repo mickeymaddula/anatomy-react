@@ -41,7 +41,7 @@
             width: var(--icon-size-sm);
             height: var(--icon-size-sm);
             mask-image: url('../../../assets/images/icon-chevron-right.svg');
-            background-color: var(--text-color-primary);
+            background-color: var(--text-color-default);
             content: '';
           }
         }
@@ -63,7 +63,7 @@
 
         &[aria-expanded='true'] {
           .bsds-nav-link-description {
-            color: var(--text-color-primary);
+            color: var(--text-color-default);
           }
         }
       }
@@ -194,14 +194,14 @@
           &:hover,
           &:active {
             background: transparent;
-            color: var(--text-color-primary);
+            color: var(--text-color-default);
           }
 
           &::after {
             right: var(--space-lg);
             width: var(--icon-size-sm);
             height: var(--icon-size-sm);
-            background: var(--text-color-primary);
+            background: var(--text-color-default);
           }
         }
       }
