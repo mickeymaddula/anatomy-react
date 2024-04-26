@@ -33,7 +33,7 @@ $icon-size: 1em;
 
     &.bsds-button {
       &::after {
-        background: var(--icon-color-action);
+        background: var(--text-color-action);
       }
 
       &[aria-expanded='true'] {
@@ -44,13 +44,13 @@ $icon-size: 1em;
       &:active,
       &[aria-expanded='true'] {
         &::after {
-          background: var(--text-color-button-inverse);
+          background: var(--button-text-color-inverse);
         }
       }
 
       &-assertive {
         &::after {
-          background: var(--text-color-button-inverse);
+          background: var(--button-text-color-inverse);
         }
 
         &[aria-expanded='true'] {
@@ -60,13 +60,13 @@ $icon-size: 1em;
 
       &-text {
         &::after {
-          background: var(--icon-color-action);
+          background: var(--text-color-action);
         }
       }
 
       &-subtle {
         &::after {
-          background: var(--action-default);
+          background: var(--surface-action);
         }
 
         &[aria-expanded='true'] {
@@ -77,7 +77,7 @@ $icon-size: 1em;
         &:active,
         &[aria-expanded='true'] {
           &::after {
-            background: var(--text-color-button-inverse);
+            background: var(--button-text-color-inverse);
           }
         }
       }
@@ -130,7 +130,7 @@ $icon-size: 1em;
       width: 100%;
       border: 0;
       padding: var(--space-lg) var(--space-2x);
-      color: var(--text-color-primary);
+      color: var(--text-color-default);
       font-size: var(--fs-body);
       text-align: inherit;
       text-decoration: none;
@@ -168,11 +168,11 @@ $icon-size: 1em;
       }
 
       &:hover {
-        background: var(--action-default);
+        background: var(--surface-action);
       }
 
       &:active {
-        background: var(--action-active);
+        background: var(--surface-assertive);
       }
     }
 

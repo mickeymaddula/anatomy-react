@@ -11,10 +11,10 @@ body {
 /* stylelint-disable selector-max-id */
 #logoTagline {
   .bsc-logo {
-    fill: var(--bsc-logo);
+    fill: var(--bsc-logo-color-primary);
   }
 
   .bsc-logo-tagline {
-    fill: var(--bsc-logo-tagline);
+    fill: var(--bsc-logo-color-secondary);
   }
 }

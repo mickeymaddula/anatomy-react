@@ -95,7 +95,7 @@
             &::after,
             &[aria-expanded='true']::after {
               mask-image: url('../../../assets/images/icon-search.svg');
-              background-color: var(--text-color-primary);
+              background-color: var(--text-color-default);
               content: '';
             }
           }
@@ -105,13 +105,13 @@
           .bsds-nav-link {
             &::after {
               mask-image: url('../../../assets/images/icon-menu.svg');
-              background-color: var(--text-color-primary);
+              background-color: var(--text-color-default);
             }
 
             &[aria-expanded='true'] {
               &::after {
                 mask-image: url('../../../assets/images/icon-close.svg');
-                background-color: var(--text-color-primary);
+                background-color: var(--text-color-default);
               }
             }
           }
@@ -133,7 +133,7 @@
                 width: $icon-size;
                 height: $icon-size;
                 mask-image: url('../../../assets/images/icon-chevron-down.svg');
-                background-color: var(--text-color-primary);
+                background-color: var(--text-color-default);
                 content: '';
               }
 
@@ -194,7 +194,7 @@
               padding: var(--space-2x);
 
               &::after {
-                background-color: var(--text-color-primary);
+                background-color: var(--text-color-default);
                 content: '';
                 mask-image: url('../../../assets/images/icon-search.svg');
                 mask-position: center;

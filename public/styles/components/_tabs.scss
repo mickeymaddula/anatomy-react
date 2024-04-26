@@ -73,7 +73,7 @@
         color: var(--text-color-action);
 
         &::after {
-          background: var(--action-default);
+          background: var(--border-color-action);
         }
       }
 
@@ -83,7 +83,7 @@
     }
 
     &[aria-selected='true'] {
-      color: var(--text-color-primary);
+      color: var(--text-color-default);
       @include font-family-base-heavy;
 
       &::after {

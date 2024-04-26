@@ -4,8 +4,8 @@
   &:not([disabled]) {
     &:hover {
       border-color: transparent;
-      background: var(--action-hover);
-      color: var(--text-color-button-inverse);
+      background: var(--button-surface-hover);
+      color: var(--button-text-color-inverse);
       text-decoration: none;
       cursor: pointer;
     }
@@ -15,8 +15,8 @@
 @mixin button-active {
   &:not([disabled]) {
     border-color: transparent;
-    background: var(--action-active);
-    color: var(--text-color-button-inverse);
+    background: var(--button-surface-active);
+    color: var(--button-text-color-inverse);
   }
 }
 
@@ -97,7 +97,7 @@
 
     &:hover {
       @include link-hover;
-      color: var(--text-color-button-inverse);
+      color: var(--button-text-color-inverse);
     }
   }
 }
@@ -105,8 +105,8 @@
 @mixin button-assertive {
   @include button-base;
   border-color: transparent;
-  background: var(--action-default);
-  color: var(--text-color-button-inverse);
+  background: var(--surface-action);
+  color: var(--button-text-color-inverse);
   @include button-focus;
   @include button-disabled;
 }
@@ -146,7 +146,7 @@ button {
     &.bsds-link {
       &:hover,
       &:active {
-        color: var(--text-color-primary);
+        color: var(--text-color-default);
       }
     }
 
@@ -175,12 +175,12 @@ button {
   }
 
   &:hover {
-    color: var(--text-color-primary);
+    color: var(--text-color-default);
     @include link-hover;
   }
 
   &:active {
-    color: var(--text-color-primary);
+    color: var(--text-color-default);
     text-decoration-thickness: var(--space-xs);
   }
 
@@ -190,7 +190,7 @@ button {
 }
 
 @mixin link-subtle {
-  color: var(--text-color-primary);
+  color: var(--text-color-default);
   @include font-family-base-heavy;
   text-decoration: underline;
 
@@ -214,21 +214,21 @@ button {
 }
 
 @mixin link-navigation {
-  color: var(--text-color-primary);
+  color: var(--text-color-default);
   @include font-family-base-regular;
   text-decoration: none;
 
   &:visited {
-    color: var(--text-color-primary);
+    color: var(--text-color-default);
   }
 
   &:hover {
-    color: var(--text-color-primary);
+    color: var(--text-color-default);
     text-decoration: underline;
   }
 
   &:active {
-    color: var(--text-color-primary);
+    color: var(--text-color-default);
     text-decoration: underline;
   }
 

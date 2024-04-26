@@ -35,7 +35,7 @@
 
 .bsds-image-caption {
   margin-top: var(--space-md);
-  color: var(--text-color-primary);
+  color: var(--text-color-default);
   font-size: var(--fs-small);
 
   &-center {
@@ -69,8 +69,8 @@
     left: var(--space-2x);
     margin: 0;
     padding: var(--space-md) var(--space-lg);
-    background: var(--transparency-overlay-primary);
-    color: var(--text-color-informational-inverse);
+    background: var(--surface-translucent);
+    color: var(--image-caption-text-color-inverse);
 
     &-center {
       @extend .bsds-image-caption;
