@@ -68,7 +68,7 @@ a {
       &:hover,
       &:active {
         &::after {
-          background: var(--surface-default);
+          background: var(--button-text-color-inverse);
         }
       }
     }
