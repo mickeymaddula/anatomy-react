@@ -1,3 +1,8 @@
+:root {
+  /* stylelint-disable-next-line color-no-hex */
+  --code-snippet: #d63384;
+}
+
 .sb-show-main {
   img {
     width: 100%;
@@ -16,5 +21,53 @@ body {
 
   .bsc-logo-tagline {
     fill: var(--bsc-logo-color-secondary);
+  }
+}
+
+table {
+  width: 100%;
+  margin: var(--space-3x) 0 0;
+  border-collapse: collapse;
+  border: 0;
+
+  caption {
+    margin-top: var(--space-md);
+    padding: 0;
+    color: var(--text-color-default);
+    @include font-size($fs-small);
+  }
+
+  tr {
+    border-bottom: var(--border-width-xxs) solid var(--border-color-subtle);
+
+    th {
+      @include font-family-base-heavy;
+      text-align: inherit;
+    }
+
+    th,
+    td {
+      border: 0;
+      padding: var(--space-2x);
+    }
+
+    > * {
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    td {
+      * {
+        // NOTE: this is used to remove the top margin from the previews in the type scale table, we may want to rethink eventually
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
   }
 }

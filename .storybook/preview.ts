@@ -16,7 +16,8 @@ const preview: Preview = {
         method: 'alphabetical'
         // TODO: uncomment when we build out these sections
         // order: ['Getting started', 'Tokens', 'Components', 'Patterns']
-      }
+      },
+      showPanel: true
     },
     docs: {
       theme
