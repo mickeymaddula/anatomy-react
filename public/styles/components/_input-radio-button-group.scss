@@ -84,7 +84,7 @@
         outline: none;
         border-style: solid;
         border-color: var(--border-color-action);
-        color: var(--text-color-primary);
+        color: var(--text-color-default);
       }
       @include hover-reset;
     }

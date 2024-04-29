@@ -108,14 +108,14 @@
         border: 0;
         padding: 0;
         background: transparent;
-        color: var(--text-color-primary);
+        color: var(--text-color-default);
         text-decoration: none;
 
         &::after {
           width: var(--space-lg);
           height: var(--space-lg);
           padding-left: var(--space-3x);
-          background: var(--icon-color-primary);
+          background: var(--text-color-default);
           content: '';
           /* stylelint-disable-next-line property-no-vendor-prefix */
           -webkit-mask: url('../../../src/stories/assets/icon-new-window.svg') no-repeat 50% 50%;
@@ -128,7 +128,7 @@
           &:focus,
           &:active {
             background: transparent;
-            color: var(--text-color-primary);
+            color: var(--text-color-default);
             text-decoration: underline;
           }
         }
@@ -180,11 +180,11 @@
         .bsds-link-subtle {
           &:visited {
             // TODO: Maybe there should be an icon-color-primary?
-            color: var(--text-color-primary);
+            color: var(--text-color-default);
           }
 
           &:hover {
-            color: var(--icon-color-action);
+            color: var(--text-color-action);
           }
         }
       }

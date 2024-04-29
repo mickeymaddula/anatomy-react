@@ -105,7 +105,7 @@
         }
 
         > .bsds-nav-link-addon {
-          background: var(--action-default);
+          background: var(--surface-action);
           color: var(--text-color-inverse);
         }
       }
@@ -116,10 +116,10 @@
     justify-content: flex-start;
     padding-left: 0;
     font-size: var(--fs-small);
-    fill: var(--icon-color-action); // TODO: ADS-341 revisit fill vs stroke here or in mixin
+    fill: var(--text-color-action); // TODO: ADS-341 revisit fill vs stroke here or in mixin
 
     &:active {
-      fill: var(--icon-color-primary);
+      fill: var(--text-color-default);
     }
   }
 

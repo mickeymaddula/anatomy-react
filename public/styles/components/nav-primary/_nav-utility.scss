@@ -19,7 +19,7 @@
         color: var(--text-color-subtle);
 
         &:hover {
-          color: var(--text-color-primary);
+          color: var(--text-color-default);
         }
       }
 
@@ -40,11 +40,11 @@
           &:hover,
           &:active {
             background: transparent;
-            color: var(--text-color-primary);
+            color: var(--text-color-default);
             text-decoration: underline;
 
             &::after {
-              background: var(--text-color-primary);
+              background: var(--text-color-default);
             }
           }
         }
