@@ -1,6 +1,6 @@
 .token-color {
-  width: 50px;
-  height: 50px;
+  width: var(--space-6x);
+  height: var(--space-6x);
 }
 
 .token-spacing {
@@ -8,12 +8,34 @@
 }
 
 .token-border {
-  width: 50px;
-  height: 50px;
+  width: var(--space-6x);
+  height: var(--space-6x);
+  border-radius: var(--border-radius-sm);
   border: var(--border-width-sm) solid var(--border-color-assertive);
 }
 
+[class*='breakpoint'] {
+  height: var(--space-6x);
+  border-radius: var(--border-radius-sm);
+  border: var(--space-xs) solid var(--border-color-assertive);
+}
+
 .breakpoint-sm-min {
-  /* stylelint-disable-next-line function-url-scheme-disallowed-list */
-  background: url('https://images.ctfassets.net/ly1cjdv8rvqt/2oSuasGICyKcgoCe5gFXjX/addaabfdeae93a87ba7208b87e121c02/breakpoint-sm.svg');
+  width: var(--space-6x);
+}
+
+.breakpoint-md-min {
+  width: var(--space-8x);
+}
+
+.breakpoint-lg-min {
+  width: var(--space-12x);
+}
+
+.breakpoint-xl-min {
+  width: var(--space-15x);
+}
+
+.breakpoint-xxl-min {
+  width: calc(var(--space-15x) + var(--space-2x));
 }

@@ -17,7 +17,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof TokensTable>;
 
-export const Playground: Story = {
+export const Tokens: Story = {
   args: {
     theme: 'corporate',
     mode: 'light'
