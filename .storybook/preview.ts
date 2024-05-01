@@ -13,10 +13,11 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        method: 'alphabetical'
-        // TODO: uncomment when we build out these sections
-        // order: ['Getting started', 'Tokens', 'Components', 'Patterns']
-      }
+        method: 'alphabetical',
+        // TODO: add "Getting started" and "Patterns" when we add those
+        order: ['Tokens', 'Components']
+      },
+      showPanel: true
     },
     docs: {
       theme
