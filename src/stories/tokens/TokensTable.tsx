@@ -26,6 +26,8 @@ const TokensTable = (props: TokensTableProps) => {
     getTokens();
   }, [getTokens]);
 
+  document.body.style.backgroundImage = 'unset';
+
   return (
     <table>
       <thead>
