@@ -29,7 +29,7 @@ const TokensTable = (props: TokensTableProps) => {
   document.body.style.backgroundImage = 'unset';
 
   return (
-    <table>
+    <table className="docs-table">
       <thead>
         <tr>
           <th>Name</th>
