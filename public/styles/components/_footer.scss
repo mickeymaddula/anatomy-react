@@ -118,8 +118,8 @@
           background: var(--text-color-default);
           content: '';
           /* stylelint-disable-next-line property-no-vendor-prefix */
-          -webkit-mask: url('../../../src/stories/assets/icon-new-window.svg') no-repeat 50% 50%;
-          mask: url('../../../src/stories/assets/icon-new-window.svg') no-repeat 50% 50%;
+          -webkit-mask: url('../../assets/images/icon-new-window.svg') no-repeat 50% 50%;
+          mask: url('../../assets/images/icon-new-window.svg') no-repeat 50% 50%;
           mask-size: auto;
         }
 

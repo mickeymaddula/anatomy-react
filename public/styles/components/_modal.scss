@@ -11,7 +11,7 @@
   background: var(--surface-default);
 
   &::backdrop {
-    background: var(--transparency-overlay-primary);
+    background: var(--surface-translucent);
   }
 
   .bsds-modal-header {
