@@ -6,7 +6,7 @@
 
 .bsds-footer {
   @include bsds-defaults-type;
-  background-color: var(--surface-subtle);
+  background-color: var(--footer-surface);
 
   .bsds-nav-footer {
     font-size: var(--fs-body-subtle);

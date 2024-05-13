@@ -26,6 +26,10 @@
         &:hover,
         &:active {
           background: var(--surface-subtle);
+
+          .bsds-nav-link-description {
+            color: var(--primary-nav-link-description-text-color);
+          }
         }
 
         .bsds-nav-link-text {
@@ -63,7 +67,7 @@
 
         &[aria-expanded='true'] {
           .bsds-nav-link-description {
-            color: var(--text-color-default);
+            color: var(--primary-nav-link-description-text-color);
           }
         }
       }
