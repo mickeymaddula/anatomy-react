@@ -22,19 +22,19 @@ const background = {
 
 const themesData: { [key: string]: Themes } = {
   'corporate-light': {
-    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.18/lib/css/corporate/light.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/lib/css/corporate/light.css',
     ...background
   },
   'corporate-dark': {
-    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.18/lib/css/corporate/dark.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/lib/css/corporate/dark.css',
     ...background
   },
   'watchman-light': {
-    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.18/lib/css/watchman/light.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/lib/css/watchman/light.css',
     ...background
   },
   'watchman-dark': {
-    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.18/lib/css/watchman/dark.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/lib/css/watchman/dark.css',
     ...background
   }
 };
