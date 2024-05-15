@@ -18,17 +18,23 @@
     }
 
     .bsds-nav-link-logo {
-      display: flex;
-      flex-wrap: wrap;
-      align-self: center;
-      box-sizing: content-box;
-      width: auto;
-      max-height: 3.375rem;
-      margin: auto;
-      padding: var(--space-2x);
+      &:is(img) {
+        max-height: 3.375rem;
+      }
 
-      &:focus {
-        @include focus-default-inset;
+      &:is(img),
+      svg {
+        display: flex;
+        flex-wrap: wrap;
+        align-self: center;
+        box-sizing: content-box;
+        width: auto;
+        margin: auto;
+        padding: var(--space-2x);
+
+        &:focus {
+          @include focus-default-inset;
+        }
       }
     }
 
@@ -156,8 +162,11 @@
       flex-direction: row;
 
       .bsds-nav-link-logo {
-        margin: 0;
-        padding: var(--space-sm) var(--space-2x);
+        &:is(img),
+        svg {
+          margin: 0;
+          padding: var(--space-md) var(--space-2x);
+        }
       }
     }
   }

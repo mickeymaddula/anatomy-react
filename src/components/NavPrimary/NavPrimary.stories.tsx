@@ -78,7 +78,7 @@ export const Complex: Story = {
 
 export const Cobranded: Story = {
   args: {
-    navItems: simpleData,
+    navItems: complexData,
     logo: {
       src: <LogoDemo />,
       alt: 'Demo logo'
