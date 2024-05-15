@@ -18,23 +18,17 @@
     }
 
     .bsds-nav-link-logo {
-      &:is(img) {
-        max-height: 3.375rem;
-      }
+      display: flex;
+      flex-wrap: wrap;
+      align-self: center;
+      box-sizing: content-box;
+      width: auto;
+      max-height: 3.375rem;
+      margin: auto;
+      padding: var(--space-2x);
 
-      &:is(img),
-      svg {
-        display: flex;
-        flex-wrap: wrap;
-        align-self: center;
-        box-sizing: content-box;
-        width: auto;
-        margin: auto;
-        padding: var(--space-2x);
-
-        &:focus {
-          @include focus-default-inset;
-        }
+      &:focus {
+        @include focus-default-inset;
       }
     }
 
@@ -162,11 +156,8 @@
       flex-direction: row;
 
       .bsds-nav-link-logo {
-        &:is(img),
-        svg {
-          margin: 0;
-          padding: var(--space-md) var(--space-2x);
-        }
+        margin: 0;
+        padding: var(--space-sm) var(--space-2x);
       }
     }
   }
