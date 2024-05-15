@@ -43,7 +43,7 @@ export const WithHelp: Story = {
   render: (args) => (
     <RadioGroup {...args}>
       <InputRadio label="Radio 1" name="groupDefault" value="defaultRadio1" defaultChecked />
-      <InputRadio label="Radio 2" name="groupDefault" value="defaultRadio2" />
+      <InputRadio label="Radio 2" name="groupDefault" value="defaultRadio2" helpText={helpText} />
       <InputRadio label="Radio 3" name="groupDefault" value="defaultRadio3" />
     </RadioGroup>
   )
@@ -52,6 +52,7 @@ export const WithHelp: Story = {
 interface Radio {
   label: string;
   value: string;
+  helpText?: string;
 }
 
 const radios = [
@@ -61,7 +62,8 @@ const radios = [
   },
   {
     label: 'Radio 2',
-    value: 'defaultRadio2'
+    value: 'defaultRadio2',
+    helpText: helpText
   },
   {
     label: 'Radio 3',
@@ -83,6 +85,7 @@ export const WithError = ({ ...args }) => {
           name="groupDefault"
           value={radio.value}
           defaultChecked={i === 0}
+          helpText={radio.helpText ?? undefined}
           forceValidation
           onChange={(e) => handleChange(e, radio)}
         />
@@ -106,6 +109,7 @@ export const WithHelpAndError = ({ ...args }) => {
           name="groupDefault"
           value={radio.value}
           defaultChecked={i === 0}
+          helpText={radio.helpText ?? undefined}
           forceValidation
           onChange={(e) => handleChange(e, radio)}
         />
@@ -119,8 +123,8 @@ export const Disabled: Story = {
   render: (args) => (
     <RadioGroup {...args}>
       <InputRadio label="Radio 1" name="groupDisabled" value="disabledRadio1" defaultChecked disabled />
-      <InputRadio label="Radio 2" name="roupDisabled" value="disabledRadio2" disabled />
-      <InputRadio label="Radio 3" name="roupDisabled" value="disabledRadio3" disabled />
+      <InputRadio label="Radio 2" name="groupDisabled" value="disabledRadio2" disabled />
+      <InputRadio label="Radio 3" name="groupDisabled" value="disabledRadio3" disabled />
     </RadioGroup>
   )
 };
