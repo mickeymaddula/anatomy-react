@@ -49,3 +49,9 @@ export const WithHelpAndError: Story = {
     forceValidation: true
   }
 };
+
+export const Disabled: Story = {
+  args: {
+    disabled: true
+  }
+};

@@ -115,6 +115,16 @@ export const WithHelpAndError = ({ ...args }) => {
 };
 WithHelpAndError.storyName = 'With help and error';
 
+export const Disabled: Story = {
+  render: (args) => (
+    <RadioGroup {...args}>
+      <InputRadio label="Radio 1" name="groupDisabled" value="disabledRadio1" defaultChecked disabled />
+      <InputRadio label="Radio 2" name="roupDisabled" value="disabledRadio2" disabled />
+      <InputRadio label="Radio 3" name="roupDisabled" value="disabledRadio3" disabled />
+    </RadioGroup>
+  )
+};
+
 export const ButtonGroup: Story = {
   name: 'Button group',
   render: (args) => (
@@ -189,6 +199,34 @@ export const ButtonGroupWithHelpAndError: Story = {
       />
       <InputRadio label="Radio 2" name="groupButtonStyleRadio" value="groupButtonStyleRadio2" />
       <InputRadio label="Radio 3" name="groupButtonStyleRadio" value="groupButtonStyleRadio3" inputUnavailable />
+    </RadioGroup>
+  )
+};
+
+export const ButtonGroupDisabled: Story = {
+  name: 'Button group disabled',
+  render: (args) => (
+    <RadioGroup buttonGroup {...args}>
+      <InputRadio
+        label="Radio 1"
+        name="groupButtonStyleRadioDisabled"
+        value="groupButtonStyleRadioDisabled1"
+        defaultChecked
+        disabled
+      />
+      <InputRadio
+        label="Radio 2"
+        name="groupButtonStyleRadioDisabled"
+        value="groupButtonStyleRadioDisabled2"
+        disabled
+      />
+      <InputRadio
+        label="Radio 3"
+        name="groupButtonStyleRadioDisabled"
+        value="groupButtonStyleRadioDisabled3"
+        inputUnavailable
+        disabled
+      />
     </RadioGroup>
   )
 };
