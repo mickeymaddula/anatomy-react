@@ -128,3 +128,17 @@ export const FilterSelect: Story = {
     </Select>
   )
 };
+
+export const Disabled: Story = {
+  args: {
+    label: 'Disabled select'
+  },
+  render: (args) => (
+    <Select {...args} disabled>
+      <Option value="" disabled selected />
+      <Option value="option1">Option 1</Option>
+      <Option value="option2">Option 2</Option>
+      <Option value="option3">Option 3</Option>
+    </Select>
+  )
+};

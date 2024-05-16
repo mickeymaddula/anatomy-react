@@ -55,6 +55,12 @@ export const WithHelpAndError = ({ ...args }) => {
 };
 WithHelpAndError.storyName = 'With help and error';
 
+export const Disabled: Story = {
+  args: {
+    disabled: true
+  }
+};
+
 // TODO: Do we want checkbox group here or with fieldset?
 
 interface Checkbox {
@@ -176,3 +182,14 @@ export const GroupWithHelpAndError = ({ ...args }) => {
   );
 };
 GroupWithHelpAndError.storyName = 'Group with help and error';
+
+export const GroupDisabled = ({ ...args }) => {
+  return (
+    <Fieldset legend="Legend">
+      {checkboxDefaults.map((checkbox, i) => (
+        <InputCheckbox key={'checkboxListDisabled' + checkbox.text} label={checkbox.text} disabled />
+      ))}
+    </Fieldset>
+  );
+};
+GroupDisabled.storyName = 'Group disabled';

@@ -76,3 +76,10 @@ export const ActiveFilter: Story = {
     children: 'Active filter button'
   }
 };
+
+export const Disabled: Story = {
+  args: {
+    children: 'Disabled button',
+    disabled: true
+  }
+};

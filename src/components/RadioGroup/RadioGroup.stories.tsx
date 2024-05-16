@@ -43,7 +43,7 @@ export const WithHelp: Story = {
   render: (args) => (
     <RadioGroup {...args}>
       <InputRadio label="Radio 1" name="groupDefault" value="defaultRadio1" defaultChecked />
-      <InputRadio label="Radio 2" name="groupDefault" value="defaultRadio2" />
+      <InputRadio label="Radio 2" name="groupDefault" value="defaultRadio2" helpText={helpText} />
       <InputRadio label="Radio 3" name="groupDefault" value="defaultRadio3" />
     </RadioGroup>
   )
@@ -52,6 +52,7 @@ export const WithHelp: Story = {
 interface Radio {
   label: string;
   value: string;
+  helpText?: string;
 }
 
 const radios = [
@@ -61,7 +62,8 @@ const radios = [
   },
   {
     label: 'Radio 2',
-    value: 'defaultRadio2'
+    value: 'defaultRadio2',
+    helpText: helpText
   },
   {
     label: 'Radio 3',
@@ -83,6 +85,7 @@ export const WithError = ({ ...args }) => {
           name="groupDefault"
           value={radio.value}
           defaultChecked={i === 0}
+          helpText={radio.helpText ?? undefined}
           forceValidation
           onChange={(e) => handleChange(e, radio)}
         />
@@ -106,6 +109,7 @@ export const WithHelpAndError = ({ ...args }) => {
           name="groupDefault"
           value={radio.value}
           defaultChecked={i === 0}
+          helpText={radio.helpText ?? undefined}
           forceValidation
           onChange={(e) => handleChange(e, radio)}
         />
@@ -114,6 +118,16 @@ export const WithHelpAndError = ({ ...args }) => {
   );
 };
 WithHelpAndError.storyName = 'With help and error';
+
+export const Disabled: Story = {
+  render: (args) => (
+    <RadioGroup {...args}>
+      <InputRadio label="Radio 1" name="groupDisabled" value="disabledRadio1" defaultChecked disabled />
+      <InputRadio label="Radio 2" name="groupDisabled" value="disabledRadio2" disabled />
+      <InputRadio label="Radio 3" name="groupDisabled" value="disabledRadio3" disabled />
+    </RadioGroup>
+  )
+};
 
 export const ButtonGroup: Story = {
   name: 'Button group',
@@ -189,6 +203,34 @@ export const ButtonGroupWithHelpAndError: Story = {
       />
       <InputRadio label="Radio 2" name="groupButtonStyleRadio" value="groupButtonStyleRadio2" />
       <InputRadio label="Radio 3" name="groupButtonStyleRadio" value="groupButtonStyleRadio3" inputUnavailable />
+    </RadioGroup>
+  )
+};
+
+export const ButtonGroupDisabled: Story = {
+  name: 'Button group disabled',
+  render: (args) => (
+    <RadioGroup buttonGroup {...args}>
+      <InputRadio
+        label="Radio 1"
+        name="groupButtonStyleRadioDisabled"
+        value="groupButtonStyleRadioDisabled1"
+        defaultChecked
+        disabled
+      />
+      <InputRadio
+        label="Radio 2"
+        name="groupButtonStyleRadioDisabled"
+        value="groupButtonStyleRadioDisabled2"
+        disabled
+      />
+      <InputRadio
+        label="Radio 3"
+        name="groupButtonStyleRadioDisabled"
+        value="groupButtonStyleRadioDisabled3"
+        inputUnavailable
+        disabled
+      />
     </RadioGroup>
   )
 };
