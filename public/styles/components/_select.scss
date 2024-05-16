@@ -18,30 +18,37 @@
     &.bsds-select {
       background: transparent;
 
-      &:hover,
-      &::after {
-        cursor: pointer;
-      }
-
       &:focus {
         @include focus-default;
       }
 
-      &:hover,
-      &:focus {
-        border-color: var(--border-color-action);
-      }
-
       &:disabled {
+        border-color: var(--border-color-subtle);
         background: var(--surface-subtle);
 
-        &:hover {
+        &:hover,
+        &::after {
           cursor: not-allowed;
         }
       }
 
       &[aria-invalid='true'] {
         border-color: var(--border-color-error);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &:not(:disabled) {
+        &:not([aria-invalid='true']) {
+          &:hover,
+          &:focus,
+          &::after {
+            border-color: var(--border-color-action);
+            cursor: pointer;
+          }
+        }
       }
     }
   }
