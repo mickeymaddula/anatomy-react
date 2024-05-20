@@ -1,4 +1,5 @@
 import { Decorator, StoryFn } from '@storybook/react';
+import axios from 'axios';
 
 interface Themes {
   cssPath: string;
@@ -22,22 +23,47 @@ const background = {
 
 const themesData: { [key: string]: Themes } = {
   'corporate-light': {
-    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/lib/css/corporate/light.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@x.y.z/lib/css/corporate/light.css',
     ...background
   },
   'corporate-dark': {
-    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/lib/css/corporate/dark.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@x.y.z/lib/css/corporate/dark.css',
     ...background
   },
   'watchman-light': {
-    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/lib/css/watchman/light.css',
+    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@x.y.z/lib/css/watchman/light.css',
     ...background
   },
   'watchman-dark': {
-    cssPath: 'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/lib/css/watchman/dark.css',
+    cssPath: `https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@x.y.z/lib/css/watchman/dark.css`,
     ...background
   }
 };
+
+async function currentTokensVersion() {
+  try {
+    const res = await axios.get(
+      'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/package.json'
+    );
+    const tokenVersion = res.data.version;
+
+    console.log(`${tokenVersion}`);
+
+    for (const theme in themesData) {
+      if (themesData.hasOwnProperty(theme)) {
+        themesData[theme].cssPath = themesData[theme].cssPath.replace(
+          'anatomy-tokens@x.y.z',
+          `anatomy-tokens@${tokenVersion}`
+        );
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching anatomy-tokens version:', error);
+    throw error;
+  }
+}
+
+currentTokensVersion();
 
 const withThemeWrapper: Decorator = (Story: StoryFn, context) => {
   const stylesheetLinks: NodeListOf<HTMLLinkElement> = document.body.querySelectorAll('link[rel="stylesheet"]');

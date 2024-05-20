@@ -17,7 +17,7 @@ const TokensTable = (props: TokensTableProps) => {
 
   const getTokens = useCallback(async () => {
     const res = await fetch(
-      `https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/lib/json/${props.theme}/${props.mode}.json`
+      `https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@latest/lib/json/${props.theme}/${props.mode}.json`
     );
     setTokens(await res.json());
   }, [props.mode, props.theme]);
