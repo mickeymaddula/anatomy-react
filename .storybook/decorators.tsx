@@ -47,8 +47,6 @@ async function currentTokensVersion() {
     );
     const tokenVersion = res.data.version;
 
-    console.log(`${tokenVersion}`);
-
     for (const theme in themesData) {
       if (themesData.hasOwnProperty(theme)) {
         themesData[theme].cssPath = themesData[theme].cssPath.replace(
