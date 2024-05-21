@@ -42,6 +42,7 @@ const themesData: { [key: string]: Themes } = {
 
 async function currentTokensVersion() {
   try {
+    // TODO: ADS-1165 update to use stable anatomy-tokens when released
     const res = await axios.get(
       'https://cdn.jsdelivr.net/npm/@boston-scientific/anatomy-tokens@5.0.0-beta.19/package.json'
     );
